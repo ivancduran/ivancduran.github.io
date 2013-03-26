@@ -1,7 +1,7 @@
 <?php header('Content-Type: text/html; charset=UTF-8'); ?>
 
 <!doctype html>
-<html lang="en" img="004" color="0fa1e0">
+<html lang="en" img="007" color="0fa1e0">
 <head>
 	<meta charset="UTF-8">
 	<title>Kraken Framework 0.2</title>
