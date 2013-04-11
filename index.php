@@ -14,6 +14,7 @@
   <script src="js/jquery.scrollTo-1.4.3.1.js"></script>
   <script src="js/kraken.js"></script>
 
+
   <!--[if lt IE 9]>
   <script src="http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,7 +45,6 @@
 	<!--GRIDS-->
 	<div class="grids">
 
-
 <div class="grid-12 mL">
   <div class="grid-10">
     <h1 title="¿Que es Kraken?">
@@ -61,8 +61,8 @@
       El propósito principal es que el usuario final no requiera conocimientos avanzados de jQuery o CSS.
       Con la integración de elementos pre diseñados.
       </div>
-
     </p>
+    <a href="https://github.com/ivancduran/kraken"><img src="img/github.png" class="center" width="100"></a>
   </div>
 
 </div>

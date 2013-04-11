@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: "UbuntuL";
- src: url("fonts/Ubuntu-L.ttf") format("truetype");
+ src: url("fonts/Ubuntu-L.woff") format('woff');
 }
 
 /*DOM Elements*/

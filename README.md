@@ -3,25 +3,27 @@ Kraken
 
 JS, Css, html Framework
 
-<<<<<<< HEAD
-
 
 Changelog:
+
+V 0.4
 ======
+New Kraken configuration in Js
+Remove html elements
+Optimization in js
+Compress Fonts
+New overflow configuration
+New interval configuration
+Menu fix some bugs
+Added Submenu
 
-V 0.2
-------
-*Fix some Bugs
-*Clean Style.css and Kraken.css
-*Clean Fonts
-*Add backgrounds
-*Menu Responsive, Menu Js
-*Js Commands on click button.
-=======
+V 0.3
 ======
-
-
-Changelog:
+New features added
+Compact kraken.js
+New css Menu
+Fix some class
+Compress Images
 
 V 0.2
 ======
@@ -31,4 +33,3 @@ Clean Fonts
 Add backgrounds
 Menu Responsive, Menu Js
 Js Commands on click button.
->>>>>>> bf56e71... Create README.md
