@@ -1,19 +1,35 @@
 $(document).ready(function(){
-
-	var color = $('html').attr('color');
-	var imgBG = $('html').attr('img');
-
-	$('html').css('background','url("./img/bg/'+imgBG+'.png")');
-	$('html').css('background-color','#'+color+'');
-	$('h2').css('color','#'+color+'');
-
-	$('#menu .has-sub ul li a').css('background','#'+color);
-
-	var shadowWrap = $('.wrap').attr('shadow');
-	if(shadowWrap=='on'){
-		$('.wrap').addClass('shadowWrap');
-	}
-
+// Kraken Framework 0.4
+var kraken = {
+	'overflow' : { 'state' : true, 'x' : false, 'y' : true },
+	'bgimg' : { 'state' : true, 'img' : '004' },
+	'bgcolor' : { 'state' : true, 'color' : '0fa1e0' },
+	'largewrap' : { 'state' : true, 'rest' : 'default' },
+	'wrapshadow' : { 'state' : true, 'intense' : 'default', 'size' : 'default'},
+	'slider' : true,
+	'submenu' : true,
+	'span' : { 'state' : true, 'multiply' : '10' },
+	'interval' : { 'state' : false, 'timer' : '2000'},
+}
+///////////////////////
+//Overflow in Short pages
+if(kraken.overflow.state){
+	if(kraken.overflow.x) $('html').css('overflow-x','scroll');	
+	if(kraken.overflow.y) $('html').css('overflow-y','scroll');
+}
+//Background Image in directory img/bg/
+if(kraken.bgimg.state) $('html').css('background','url("./img/bg/'+kraken.bgimg.img+'.png")');
+//Background Color
+if(kraken.bgcolor.state) $('html').css('background-color','#'+kraken.bgcolor.color+'');
+//Wrap height of the screen
+if(kraken.largewrap.state){
+	var RestWarp = ( kraken.largewrap.rest == 'default' ) ? '20' : kraken.largewrap.rest;	
+	$('.wrap').css('min-height',$(document).height() - RestWarp);
+}
+//BorderShadow on Wrap shadow="on"
+if(kraken.wrapshadow.state) $('.wrap').addClass('shadowWrap');
+//Slider
+if(kraken.slider){
 $("#slider").responsiveSlides({
 	auto: true,
 	pager: false,
@@ -27,13 +43,46 @@ $("#slider").responsiveSlides({
 
 	}
 });
+}
+//SubMenu
+if(kraken.submenu){
+	$('.subMenu').hide();
+	var togglesub = true;
+	$('#soluciones').on('click',function(event){
+		event.preventDefault();
+		
+		if(togglesub){
+			$('.subMenu').show().effect("slide", { direction:'up', times:5 }, 450);
+			$('.subMenu').show().effect("highlight", { color: "#fff", times:5 }, 450);
+			togglesub = false;
+		}else{
+			$('.subMenu').hide('slow');
+			togglesub = true;
+		}
+	});
+}
+// Span example in html: <div class="span" value="2.5"></div>
+if(kraken.span.state){
+	$('.span').each(function(){
+		var spanValue = $(this).attr('value');
+		sumValue = spanValue * kraken.span.multiply;
+		$(this).css('margin-bottom',sumValue);
+	});
+}
+//set interval to responsive js
+if(kraken.interval.state){
+	setInterval(function () {
+		//Functions here:
+		console.log('start');
+		//End Functions
+	}, kraken.interval.timer);
+}
 
-$('.span').each(function(){
-	var spanValue = $(this).attr('value');
-	sumValue = spanValue * 10;
-	$(this).css('margin-bottom',sumValue);
-});
-
+if($(document).width()<700){
+	$('.hide').each(function(){
+		$(this).css('display','none');
+	});
+}
 
 $('.cta').on('click',function(){
 	$('.cta').removeClass('ActiveScrollTo');

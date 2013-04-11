@@ -1,10 +1,10 @@
 <?php header('Content-Type: text/html; charset=UTF-8'); ?>
 
 <!doctype html>
-<html lang="en" img="007" color="0fa1e0">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Kraken Framework 0.2</title>
+	<title>Kraken Framework 0.4</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" href="css/kraken.css">
@@ -25,20 +25,21 @@
 <body>
 
 <!-- MENU -->
-<div id='menu' color="02A2E9" class="">
+<div id='menu'>
   <nav class="nav left">
     <ul>
-      <li class="current"><a href="#">Acerca</a></li>
-      <li><a href="#">Demos</a></li>
-      <li><a href="#">Productos</a></li>
-      <li><a href="#">Servicios</a></li>
-      <li><a href="#">Contacto</a></li>
+      <li class="current"><a href="#">Grids</a></li>
+      <li><a href="#">Slider</a></li>
+      <li><a href="#">Menu</a></li>
+      <li><a href="#">Fonts</a></li>
+      <li><a href="#">Shadows</a></li>
+      <li><a href="#">Botones</a></li>
     </ul>
   </nav>
 </div>
 
 <!--WRAP-->
-<div class="wrap" shadow="on">
+<div class="wrap">
 
 	<!--GRIDS-->
 	<div class="grids">
@@ -74,8 +75,9 @@
         </h2>
       </div>
 
-
+<hr>
 <div class="grid-11 mL">
+
   <div class="grid-12">
     <h4>Grids:</h4>
     <p>
@@ -126,6 +128,7 @@
 
 
 <div class="span" value="4.5"></div>
+<hr>
 
 <!-- SLIDERS -->
 <div class="grid-12 mL">
@@ -159,6 +162,7 @@
 
 
 <div class="span" value="4.5"></div>
+<hr>
 
 <div class="grid-11 mL">
   <div class="grid-12">
@@ -184,6 +188,7 @@
 
 
 <div class="span" value="4.5"></div>
+<hr>
 
 <div class="grid-12 mL">
   <div class="grid-12">
@@ -222,62 +227,79 @@
 </div>
 
 <div class="span" value="3.5"></div>
-  <img src="img/1.jpg" class="shadow grid-12" alt="">
-<div class="span" value="8"></div>
+  <hr>
+  <p>
+  <h3 class="grid-12 mL">Shadow</h3>
+  </p>
 
+    <img src="img/1.jpg" class="shadow grid-4" alt="">
 
-<div class="grid-12">
-  <img src="img/1.jpg" class="shadow grid-12" alt="">
-  <div class="span" value="2"></div>
+    <img src="img/2.jpg" class="shadow circle grid-4" alt="">
 
-  <img src="img/2.jpg" class="shadow circle" alt="">
-  <div class="span" value="2"></div>
+    <img src="img/1.jpg" class="shadow grid-4" alt="">
 
-  <img src="img/1.jpg" class="shadow grid-12" alt="">
-  <img src="img/2.jpg" class="shadow grid-3" alt="">
-  <img src="img/3.jpg" class="shadow grid-3" alt="">
-  <img src="img/1.jpg" class="shadow grid-3" alt="">
-  <img src="img/2.jpg" class="shadow grid-3" alt="">
-  <img src="img/3.jpg" class="shadow grid-3" alt="">
-  <img src="img/1.jpg" class="shadow grid-3" alt="">
-  <img src="img/2.jpg" class="shadow grid-3" alt="">
+<div class="span" value="3.5"></div>
+<hr>
+
+<p>
+<h3>Botones</h3>
+</p>
+<div class="span" value="3.5"></div>
+
+<p class="mL">Botones simples:</p>
+
+<div class="grid-2">
+  <a href="#" class="button">Post comment</a>
+</div>
+<div class="grid-2">
+  <a href="#" class="button primary">Publish post</a> 
+</div>
+<div class="grid-2">
+  <a href="#" class="button">Save as draft</a>
+</div>
+<div class="grid-2">
+  <a href="#" class="button pill">This is a pill button</a>
+</div>
+<div class="grid-2">
+  <a href="#" class="button danger">Delete post</a>
+</div>
+<div class="grid-2">
+  <a href="#" class="button big">Create Project</a>
 </div>
 
-<div class="span" value="8"></div>
+<div class="span" value="3.5"></div>
 
+<p class="mL">Grupo:</p>
 
-<a href="#" class="button">Post comment</a>
-
-
-<a href="#" class="button primary">Publish post</a> 
-<a href="#" class="button">Save as draft</a>
-
-<a href="#" class="button pill">This is a pill button</a>
-
-<a href="#" class="button danger">Delete post</a>
-
-<a href="#" class="button big">Create Project</a>
-
-<div class="button-group">
+<div class="grid-4">
+  <div class="button-group">
     <a href="#" class="button primary">Dashboard</a>
     <a href="#" class="button">Inbox</a>
     <a href="#" class="button">Account</a>
     <a href="#" class="button">Logout</a>
+  </div>
 </div>
 
-<ul class="button-group">
-    <li><a href="#" class="button primary pill">Dashboard</a></li>
-    <li><a href="#" class="button pill">Inbox</a></li>
-    <li><a href="#" class="button pill">Account</a></li>
-    <li><a href="#" class="button pill">Logout</a></li>
-</ul>
+<div class="grid-4">
+  <ul class="button-group">
+      <li><a href="#" class="button primary pill">Dashboard</a></li>
+      <li><a href="#" class="button pill">Inbox</a></li>
+      <li><a href="#" class="button pill">Account</a></li>
+      <li><a href="#" class="button pill">Logout</a></li>
+  </ul>
+</div>
 
-<div class="button-group minor-group">
+<div class="grid-4">
+  <div class="button-group minor-group">
     <a href="#" class="button primary">Dashboard</a>
     <a href="#" class="button">Inbox</a>
     <a href="#" class="button">Account</a>
     <a href="#" class="button">Logout</a>
+  </div>
 </div>
+
+<div class="span" value="3.5"></div>
+
 
 <!--END GRIDS-->
   </div>
