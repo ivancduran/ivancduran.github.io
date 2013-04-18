@@ -8,7 +8,7 @@ JS, Css, html Framework
 
 V 0.5
 ======
-- New rezise Js addons
+- New resize Js addons
 - New backgrounds
 - Fix menu bar in mobiles
 
