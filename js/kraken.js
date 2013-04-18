@@ -1,15 +1,16 @@
 $(document).ready(function(){
 // Kraken Framework 0.4
 var kraken = {
-	'overflow' : { 'state' : true, 'x' : false, 'y' : true },
-	'bgimg' : { 'state' : true, 'img' : '004' },
-	'bgcolor' : { 'state' : true, 'color' : '0fa1e0' },
-	'largewrap' : { 'state' : true, 'rest' : 'default' },
-	'wrapshadow' : { 'state' : true, 'intense' : 'default', 'size' : 'default'},
-	'slider' : true,
-	'submenu' : true,
-	'span' : { 'state' : true, 'multiply' : '10' },
-	'interval' : { 'state' : false, 'timer' : '2000'},
+	overflow : { state : true, x : false, y : true },
+	bgimg : { state : true, img : '004' },
+	bgcolor : { state : true, color : '0fa1e0' },
+	largewrap : { state : true, rest : 'default' },
+	wrapshadow : { state : true, intense : 'default', size : 'default'},
+	slider : true,
+	submenu : true,
+	span : { state : true, multiply : '10' },
+	interval : { state : false, timer : '2000'},
+	hide : { state : true, resize : true, size : '700' },
 }
 ///////////////////////
 //Overflow in Short pages
@@ -23,7 +24,7 @@ if(kraken.bgimg.state) $('html').css('background','url("./img/bg/'+kraken.bgimg.
 if(kraken.bgcolor.state) $('html').css('background-color','#'+kraken.bgcolor.color+'');
 //Wrap height of the screen
 if(kraken.largewrap.state){
-	var RestWarp = ( kraken.largewrap.rest == 'default' ) ? '20' : kraken.largewrap.rest;	
+	var RestWarp = ( kraken.largewrap.rest == 'default' ) ? '20' : kraken.largewrap.rest;
 	$('.wrap').css('min-height',$(document).height() - RestWarp);
 }
 //BorderShadow on Wrap shadow="on"
@@ -78,10 +79,26 @@ if(kraken.interval.state){
 	}, kraken.interval.timer);
 }
 
-if($(document).width()<700){
-	$('.hide').each(function(){
-		$(this).css('display','none');
-	});
+if(kraken.hide.state){
+	if($(document).width() < kraken.hide.size){
+		$('.hide').each(function(){
+			$(this).hide();
+		});
+	}
+
+	if(kraken.hide.resize){
+		$(window).resize(function(){
+			if($(document).width() < kraken.hide.size){
+				$('.hide').each(function(){
+					$(this).hide();
+				});
+			}else{
+				$('.hide').each(function(){
+					$(this).show();
+				});
+			}
+		});
+	}
 }
 
 $('.cta').on('click',function(){

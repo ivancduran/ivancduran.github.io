@@ -234,7 +234,7 @@
 
     <img src="img/1.jpg" class="shadow grid-4" alt="">
 
-    <img src="img/2.jpg" class="shadow circle grid-4" alt="">
+    <img src="img/2.jpg" class="shadow circle grid-4 hide" alt="">
 
     <img src="img/1.jpg" class="shadow grid-4" alt="">
 
