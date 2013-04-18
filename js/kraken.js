@@ -2,15 +2,15 @@ $(document).ready(function(){
 // Kraken Framework 0.4
 var kraken = {
 	overflow : { state : true, x : false, y : true },
-	bgimg : { state : true, img : '004' },
+	bgimg : { state : true, img : '004', size : 'default'},
 	bgcolor : { state : true, color : '0fa1e0' },
 	largewrap : { state : true, rest : 'default' },
 	wrapshadow : { state : true, intense : 'default', size : 'default'},
-	slider : true,
+	slider : {state : true, auto : true, pager : false, nav : true, speed : 500},
 	submenu : true,
 	span : { state : true, multiply : '10' },
 	interval : { state : false, timer : '2000'},
-	hide : { state : true, resize : true, size : '700' },
+	hide : { state : true, resize : true, size : 700 },
 }
 ///////////////////////
 //Overflow in Short pages
@@ -19,7 +19,7 @@ if(kraken.overflow.state){
 	if(kraken.overflow.y) $('html').css('overflow-y','scroll');
 }
 //Background Image in directory img/bg/
-if(kraken.bgimg.state) $('html').css('background','url("./img/bg/'+kraken.bgimg.img+'.png")');
+if(kraken.bgimg.state) $('html').css({'background' : 'url("./img/bg/'+kraken.bgimg.img+'.png")' , 'background-size' : kraken.bgimg.size });
 //Background Color
 if(kraken.bgcolor.state) $('html').css('background-color','#'+kraken.bgcolor.color+'');
 //Wrap height of the screen
@@ -30,12 +30,12 @@ if(kraken.largewrap.state){
 //BorderShadow on Wrap shadow="on"
 if(kraken.wrapshadow.state) $('.wrap').addClass('shadowWrap');
 //Slider
-if(kraken.slider){
+if(kraken.slider.state){
 $("#slider").responsiveSlides({
-	auto: true,
-	pager: false,
-	nav: true,
-	speed: 500,
+	auto: kraken.slider.auto,
+	pager: kraken.slider.pager,
+	nav: kraken.slider.nav,
+	speed: kraken.slider.speed,
 	namespace: "callbacks",
 	before: function () {
 
@@ -85,7 +85,6 @@ if(kraken.hide.state){
 			$(this).hide();
 		});
 	}
-
 	if(kraken.hide.resize){
 		$(window).resize(function(){
 			if($(document).width() < kraken.hide.size){
