@@ -1,6 +1,7 @@
 $(document).ready(function(){
 // Kraken Framework 0.4
 var kraken = {
+	pagesize : { state : true, width: 1024, },
 	overflow : { state : true, x : false, y : true },
 	bgimg : { state : true, img : '004', size : 'default'},
 	bgcolor : { state : true, color : '0fa1e0' },
@@ -11,8 +12,11 @@ var kraken = {
 	span : { state : true, multiply : '10' },
 	interval : { state : false, timer : '2000'},
 	hide : { state : true, resize : true, size : 700 },
+	fonts : {},
 }
 ///////////////////////
+//Page Width size
+if(kraken.pagesize.state) $('.grids').css({'max-width' : kraken.pagesize.width}), $('.wrap').css({'max-width' : kraken.pagesize.width});
 //Overflow in Short pages
 if(kraken.overflow.state){
 	if(kraken.overflow.x) $('html').css('overflow-x','scroll');	

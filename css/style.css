@@ -172,71 +172,9 @@ hr{
 .footer a:hover {text-decoration:none; color:#FFF;}
 .footer a:active {text-decoration:none; color:#FFF;}
 
-
-.W{
-/*  -webkit-transform: translate(2em,0);
-   -webkit-transform: rotate(2deg);*/
-animation:AnimPhoto 1s;
--moz-animation:AnimPhoto  1s;
--webkit-animation:AnimPhoto  1s;
--o-animation:AnimPhoto  1s;
-width:100%;
+.footer ul li {
+	list-style-type: none;
 }
-
-
-@-webkit-keyframes AnimPhoto
-{
-0%   {width:0%;}
-100%  {width:100%;}
-
-}
-
-
-
-.test{
-position:relative;
-animation:myfirst 5s;
--moz-animation:myfirst 5s; /* Firefox */
--webkit-animation:myfirst 5s; /* Safari and Chrome */
--o-animation:myfirst 5s; /* Opera */
-}
-
-@keyframes myfirst
-{
-0%   {left:0px; top:0px;}
-25%  {left:200px; top:0px;}
-50%  {left:200px; top:200px;}
-75%  {left:0px; top:200px;}
-100% {left:0px; top:0px;}
-}
-
-@-moz-keyframes myfirst /* Firefox */
-{
-0%   {left:0px; top:0px;}
-25%  {left:200px; top:0px;}
-50%  {left:200px; top:200px;}
-75%  {left:0px; top:200px;}
-100% {left:0px; top:0px;}
-}
-
-@-webkit-keyframes myfirst /* Safari and Chrome */
-{
-0%   {left:0px; top:0px;-webkit-transform: rotate(0deg);}
-25%  {left:400px; top:0px;-webkit-transform: rotate(180deg);}
-50%  {left:0px; top:0px;-webkit-transform: rotate(0deg);}
-75%  {left:0px; top:0px;-webkit-transform: rotate(-360deg);}
-100% {left:0px; top:0px;-webkit-transform: rotate(360deg);}
-}
-
-@-o-keyframes myfirst /* Opera */
-{
-0%   {left:0px; top:0px;}
-25%  {left:200px; top:0px;}
-50%  {left:200px; top:200px;}
-75%  {left:0px; top:200px;}
-100% {left:0px; top:0px;}
-}
-
 
 /*********************************MEDIA*********************************/
 
