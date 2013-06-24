@@ -7,15 +7,6 @@ input{
 	padding-left: 5px;
 }
 
-input{
-	border: 2px solid #ccc;
-	background: url("../img/input_bg.png") no-repeat scroll 0 0 transparent;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-	padding-left: 5px;
-}
-
 textarea{
 	border: 2px solid #ccc;
 	background: url("../img/input_bg.png") no-repeat scroll 0 0 transparent;
@@ -64,7 +55,7 @@ hr{
 }
 
 .mL{
-	margin-left: 25px;
+	margin-left: 4%;
 }
 
 .arrowL{
