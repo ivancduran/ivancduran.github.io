@@ -60,7 +60,38 @@
   text-align: center;
 }
 
-@media screen and (max-width: 600px) {
+/*Sub Menu */
+
+.nav li ul {
+  position:absolute;
+  visibility: hidden;
+  text-align: center;
+  border-top:3px solid #3c3c3c; border-bottom:3px solid #3c3c3c;
+  margin: 0px 0 0 0;
+  padding:0;
+  background-color: #141414;
+}
+
+.nav li ul li {
+  display:block;
+  float:none;
+  margin: 2px;
+}
+
+.nav li ul li a:link, .nav li ul li a:visited {
+  background-color:#141414;
+  width: 72%;
+  display: table;
+}
+
+.nav li ul li a:hover{
+  background-color: #32323a;
+  border-radius: 0px;
+}
+
+
+
+@media screen and (max-width: 700px) {
 
   #menu {
     border-top: solid 1px #aaa;
@@ -130,5 +161,44 @@
     left: 50%;
     margin-left: -90px;
   }
+
+
+  /*Sub Menu*/
+  .nav li ul {
+    position:relative;
+    visibility: visible;
+    text-align: center;
+    border-top: 1px solid #c3c3c3; border-bottom: 1px solid #c3c3c3;
+    background-color: #ccc;
+  }
+
+  .nav li ul li {
+    display:block;
+    float:none;
+      margin: 0px;
+  }
+
+  .nav li ul li a {
+    padding-left: 45px;
+  }
+
+  .nav li ul a:hover {
+    width: 100%;
+    border-radius: 0px;
+  }
+
+  .nav li ul li a:link, .nav li ul li a:visited {     background-color:#ccc;
+}
+
+  .nav li ul li a:hover {
+    background-color: #32323a;
+  }
+
+  .nav li ul li:hover {
+    background-color: #32323a;
+  }
+
+
+
   
 }
