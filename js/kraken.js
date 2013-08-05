@@ -68,7 +68,7 @@ $("#slider").responsiveSlides({
 	}
 });
 }
-// SubMenu
+//SubMenu
 if(kraken.submenu){
 	$('.subMenu').hide();
 	var togglesub = true;
@@ -84,6 +84,21 @@ if(kraken.submenu){
 			togglesub = true;
 		}
 	});
+
+		if($(document).width() > kraken.hide.size){
+			function openSubMenu() {
+				// $(this).find('ul').css({opacity: 0, visibility: "visible"}).animate({opacity: 1, top: 32}, 400);
+				 $(this).find('ul').css('visibility', 'visible');
+			};
+			function closeSubMenu() {
+				// $(this).find('ul').css({opacity: 1.0, visibility: "hidden"}).animate({opacity: 0}, 400);
+				$(this).find('ul').css('visibility', 'hidden');
+			};
+			$('.nav > ul > li,a').bind('mouseover', openSubMenu);
+			$('.nav > ul > li').bind('mouseout', closeSubMenu);
+		}else{
+			$(this).find('ul').css('visibility', 'visible');
+		}
 }
 // Span example in html: <div class="span" value="2.5"></div>
 if(kraken.span.state){

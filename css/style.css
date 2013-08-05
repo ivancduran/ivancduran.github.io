@@ -1,3 +1,12 @@
+/*nav, li, img {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .5s cubic-bezier(0.500, 0.885, 0.32, 1.1);
+  -moz-transition: all .5s cubic-bezier(0.500, 0.885, 0.32, 1.1);
+  transition: all .5s cubic-bezier(0.500, 0.885, 0.32, 1.1);
+}*/
+
 input{
 	border: 2px solid #ccc;
 	background: url("../img/input_bg.png") no-repeat scroll 0 0 transparent;
@@ -188,10 +197,6 @@ hr{
 	height: 100px;
 }
 
-html{
-	background-color: black;
-}
-
 }
 
 /*normal phone*/
@@ -199,9 +204,6 @@ html{
 .circle{
 	width: 200px;
 	height: 200px;
-}
-html{
-	background-color: red;
 }
 
 }
@@ -213,13 +215,6 @@ html{
 	height: 300px;
 }
 
-html{
-	background-color: black;
-}
-
-
-
-
 }
 
 /*ipad*/
@@ -228,10 +223,6 @@ html{
 .circle{
 	width: 400px;
 	height: 400px;
-}
-
-html{
-	background-color: red;
 }
 
 }
