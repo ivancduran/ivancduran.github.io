@@ -1,6 +1,23 @@
+(function(window,document,undefined){
 $(document).ready(function(){
-// Kraken Framework 0.4
-var kraken = {
+console.time("t1");
+// Kraken Framework 0.5
+var _options = {
+	// pagesize : { state : false, width: 1024, },
+	// overflow : { state : false, x : false, y : true },
+	// bgimg : { state : false, img : '004', size : 'default'},
+	// bgcolor : { state : false, color : '0fa1e0' },
+	// largewrap : { state : false, rest : 'default' },
+	// wrapshadow : { state : false, intense : 'default', size : 'default'},
+	// slider : {state : false, auto : true, pager : false, nav : true, speed : 500},
+	// submenu : true,
+	// span : { state : false, multiply : '10' },
+	// interval : { state : false, timer : '2000'},
+	// hide : { state : false, resize : true, size : 700 },
+	// fonts : {},
+}
+
+var _default = {
 	pagesize : { state : true, width: 1024, },
 	overflow : { state : true, x : false, y : true },
 	bgimg : { state : true, img : '004', size : 'default'},
@@ -14,6 +31,8 @@ var kraken = {
 	hide : { state : true, resize : true, size : 700 },
 	fonts : {},
 }
+
+var kraken = $.extend(true, _default, _options);
 ///////////////////////
 // Page Width size
 if(kraken.pagesize.state) $('.grids').css({'max-width' : kraken.pagesize.width}), $('.wrap').css({'max-width' : kraken.pagesize.width});
@@ -135,6 +154,7 @@ $('.cta').on('click',function(){
 	
 });
 
-
-
+console.timeEnd("t1");
 });
+
+})(this,this.document);
