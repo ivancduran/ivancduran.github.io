@@ -7,6 +7,9 @@
   background: -ms-linear-gradient(top, #32323a 0%, #141414 100%);
   background: linear-gradient(to bottom, #32323a 0%, #141414 100%);
   /*border-bottom: 2px solid #0fa1e0;*/
+  position: fixed;
+  z-index: 9;
+  width: 100%;
 }
 
 /* nav */
@@ -143,10 +146,14 @@
   .nav ul:hover {
     background-image: none;
   }
-  .nav ul:hover li {
+/*  .nav ul:hover li {
     display: block;
     margin: 0 0 5px;
-  }
+  }*/
+/*  .click {
+    display: block;
+    margin: 0 0 5px;
+  }*/
   .nav ul:hover .current {
     background: url('../img/icon-check.png') no-repeat 10px 7px;
   }
