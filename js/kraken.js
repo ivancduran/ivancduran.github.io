@@ -58,7 +58,6 @@ $("#slider").responsiveSlides({
 });
 }
 //SubMenu
-
 if(kraken.menu.state){
 	$('.grids > #menu').css({'position':'relative', 'width':'auto', 'z-index':'8'});
 	$('.subMenu').hide();
