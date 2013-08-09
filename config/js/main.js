@@ -17,4 +17,19 @@ function rgb2hex(rgb) {
 
 	});
 
+
+	$('.font_[value=1]').css({'font-family':'UbuntuL'});
+	$('.font_[value=2]').css({'font-family':'Gentium'});
+	$('.font_[value=3]').css({'font-family':'Lato'});
+	$('.font_[value=4]').css({'font-family':'OpenSans'});
+	$('.font_[value=5]').css({'font-family':'Satellite'});
+
+	$('.font_').hide();
+	$('.font_[value=1]').show();
+
+	$('.c_font').on('click',function(){
+		var val = $(this).attr('value');
+		$('.font_').hide();
+		$('.font_[value='+val+']').show();
+	});
 });
