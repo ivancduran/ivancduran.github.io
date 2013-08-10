@@ -1,14 +1,8 @@
 /*Font Face*/
 /* Lato: all */
-/* Gentium: p y h2 */
 /* OpenSans: h1 y h2 */
 /* Satellite: h1 y h2 */
 /* UbuntuL: all */
-
-@font-face {
-  font-family: "Gentium";
- src: url("fonts/GentiumBookBasic.woff") format('woff');
-}
 
 @font-face {
   font-family: "Lato";
