@@ -1,6 +1,5 @@
 // Kraken Framework 0.6
 var Kraken = function(_options){
-$(document).ready(function(){
 
 console.time("Kraken Load Time");
 
@@ -79,13 +78,16 @@ if(kraken.menu.state){
 		if($(document).width() > kraken.hide.size){
 			function openSubMenu() {
 				// $(this).find('ul').css({opacity: 0, visibility: "visible"}).animate({opacity: 1, top: 32}, 400);
-				 $(this).find('ul').css('visibility', 'visible');
+				console.log('open');
+				$(this).find('ul').css('visibility', 'visible');
 			};
 			function closeSubMenu() {
+				console.log('close');
 				// $(this).find('ul').css({opacity: 1.0, visibility: "hidden"}).animate({opacity: 0}, 400);
 				$(this).find('ul').css('visibility', 'hidden');
 			};
-			$('.nav > ul > li,a').bind('mouseover', openSubMenu);
+
+			$('.nav > ul > li').bind('mouseover', openSubMenu);
 			$('.nav > ul > li').bind('mouseout', closeSubMenu);
 		}else{
 			$(this).find('ul').css('visibility', 'visible');
@@ -114,7 +116,7 @@ if(kraken.hide.state){
 			$(this).hide();
 		});
 
-		MenuBack();
+		MenuBack(1);
 	}
 	if(kraken.hide.resize){
 		$(window).resize(function(){
@@ -133,7 +135,8 @@ if(kraken.hide.state){
 	}
 }
 
-function MenuBack(){
+function MenuBack(options){
+	if(options){
 		$(".nav a").on('click',function(event) {
 			if(!$('.menuBack').is(":visible")){
 			var altura = $('body').height();
@@ -143,26 +146,63 @@ function MenuBack(){
 				$('.menuBack').css({'height' : altura }).animate({ opacity: .8 }).fadeIn();
 			}
 		});
-
 		$('.menuBack').on('click',function(){
 			$('.menuBack').animate({ opacity: 0}).fadeOut();
 			$('.nav ul li').removeAttr('style');
 		});
+	}else{
+			$('.menuBack').animate({ opacity: 0}).fadeOut();
+			$('.nav ul li').removeAttr('style');
+	}
 }
 
-$('.cta').on('click',function(){
-	$('.cta').removeClass('ActiveScrollTo');
-	$('.cta').removeClass('W');
-	$(this).addClass('ActiveScrollTo');
-	$(this).addClass('W');
-
-	setTimeout(function(){
-		$.scrollTo('.ActiveScrollTo',500);
-	}, 500);
-	
+$('.MenuClose').on('click',function(){
+	MenuBack(0);
 });
+
+
+Kraken.progress = function(options){
+	if(!isNaN(options.progress)){
+		$(options.obj).children().css('width',''+options.progress+'%').html('<span>'+options.progress+'%</span>');
+	}else{
+		console.log('Not Num');
+	}
+}
+
+// var count = 100;
+// var timerbar = setInterval(function(){
+//   if(count>=50){
+//     progress({
+//       obj: ".Barra",
+//       progress: count
+//     });
+//     count = count - 2;
+//   }else{
+//     clearInterval(timerbar);
+//   }
+// },300);
+
+
+// var Plugin = function(option){
+// 	this.init();
+// 	if(option=='hola'){
+// 		this.test();
+// 	}
+// }
+
+// Plugin.prototype = {
+// 		init: function () {
+// 				console.log("xD");
+// 		},
+// 		test: function () {
+// 				console.log("test");
+// 		}
+// };
+
+// var tester = Plugin;
+// new tester('hola');
 
 console.timeEnd("Kraken Load Time");
 
-});
+
 }

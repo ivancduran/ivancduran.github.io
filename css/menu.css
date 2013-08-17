@@ -30,7 +30,7 @@
   display: inline-block;
 }
 .nav a {
-  padding: 3px 12px;
+  padding: 5px 15px;
   text-decoration: none;
   color: #999;
   line-height: 100%;
@@ -79,7 +79,7 @@
 .nav li ul li {
   display:block;
   float:none;
-  margin: 2px;
+  margin: 0px;
 }
 
 .nav li ul li a:link, .nav li ul li a:visited {

@@ -6,12 +6,20 @@ JS, Css, html Framework
 
 **Changelog:**
 
+V 0.6
+======
+- Js new code
+- Progress bar
+- Caption img
+- Remove img example
+- Add tooltip options
+- configuration File
+
 V 0.5
 ======
 - New resize Js addons
 - New backgrounds
 - Fix menu bar in mobiles
-
 
 V 0.4
 ======
