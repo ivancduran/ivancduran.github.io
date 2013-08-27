@@ -1,5 +1,5 @@
 // Kraken Framework 0.6
-var Kraken = function(_options){
+var Kraken = function (_options) {
 
 console.time("Kraken Load Time");
 
@@ -140,7 +140,7 @@ function MenuBack(options){
 		$(".nav a").on('click',function(event) {
 			if(!$('.menuBack').is(":visible")){
 			var altura = $('body').height();
-			   	event.preventDefault();
+			event.preventDefault();
 				// $('.nav ul li').addClass('click');
 				$('.nav ul li').css({'display' : 'block', 'margin' : '0 0 5px', 'z-index' : '999'});
 				$('.menuBack').css({'height' : altura }).animate({ opacity: .8 }).fadeIn();
