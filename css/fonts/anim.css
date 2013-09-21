@@ -1,0 +1,7 @@
+.sken{
+	-webkit-transform: skew(180deg, 90deg);
+	-moz-transform: skew(180deg, 90deg);
+	-o-transform: skew(180deg, 90deg);
+	-ms-transform: skew(180deg, 90deg);
+	transform: skew(180deg, 90deg);
+}

@@ -1,7 +1,8 @@
 // Kraken Framework 0.6
-var Kraken = function (_options) {
-
+;(function ( $, window, document, undefined ) {
 console.time("Kraken Load Time");
+
+var Kraken = function (_options) {
 
 var _default = {
 	pagesize : { state : true, width: 1024, },
@@ -160,7 +161,8 @@ $('.MenuClose').on('click',function(){
 	MenuBack(0);
 });
 
-Kraken.progress = function(options){
+
+this.progress = function(options){
 	if(!isNaN(options.progress)){
 		$(options.obj).children().css('width',''+options.progress+'%').html('<span>'+options.progress+'%</span>');
 	}else{
@@ -203,5 +205,19 @@ Kraken.progress = function(options){
 
 console.timeEnd("Kraken Load Time");
 
-
 }
+
+$.Kraken = function (_options) {
+    if(!(this instanceof $)) {
+    	jQuery.Kraken = new Kraken(_options); 
+    }
+    return this.each(function () {
+        if (!$.data(this, "plugin_" + Kraken)) {
+            $.data(this, "plugin_" + Kraken, jQuery.Kraken = new Kraken(this,_options));
+        }
+    });
+};
+
+
+
+})( jQuery, window, document );	

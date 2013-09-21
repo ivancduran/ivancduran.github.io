@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Kraken Framework 0.7</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+
+	<link rel="stylesheet" href="css/kraken.css">
+
+	<script lang="javascript" src="js/jquery.min.js"></script>
+  <script src="js/responsiveslides.min.js"></script>
+  <script src="js/kraken.p.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+  // Kraken({
+  //     pagesize : { width: 800, },
+  // });
+
+    ///////////////// progress bar
+
+    // Kraken.progress({
+    //   obj: ".bar3",
+    //   progress: 80
+    // });
+
+    // Kraken.progress({
+    //   obj: ".bar5",
+    //   progress: 80
+    // });
+
+  /// Test Kraken.p
+  // $({
+  //     pagesize : { width: 900 },
+  //   }).Kraken();
+
+  $.Kraken({ pagesize : { width: 900 } });
+  // $.Kraken({ pagesize : { width: 900 } }).progress({obj: ".bar3",progress: 80});
+  $('.bar3').KrakenTrigger('Progress', { progress : 80 } );
+
+
+$('.botton').on('click', function(){
+
+  $('.bar1').KrakenTrigger('Progress', { progress : 100} );
+
+});
+  // $('.bar3').KrakenTrigger.Progress({ progress : 80})
+
+});
+
+</script>
+
+  <!--[if lt IE 9]>
+  <script src="http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <meta property="og:description" content="Framework basado en html5 para diseñar prototipos funcionales fácil y rápido. El propósito principal es que el usuario final no requiera conocimientos avanzados de jQuery o CSS. Con la integración de elementos pre diseñados. Tan simple como sea posible." /> 
+</head>
+
+<body>
+
+<!-- MENU -->
+<div id='menu'>
+  <nav class="nav center">
+    <ul>
+      <li class="current"><a href="#">Grids</a></li>
+      <li><a href="#">Slider</a></li>
+      <li><a href="#">Menu</a>
+        <ul>
+          <li><a href="#">test 1</a></li>
+          <li><a href="#" class="MenuClose">Close</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Fonts</a></li>
+      <li><a href="#">Shadows</a></li>
+      <li><a href="#">Botones</a></li>
+    </ul>
+  </nav>
+</div>
+
+<!--WRAP-->
+<div class="wrap">
+
+	<!--GRIDS-->
+	<div class="grids">
+
+
+<div class="span" value="3.5"></div>
+
+<div class="grid-12">
+<h3>Progress Bar</h3>
+
+  <input type="button" value="Click Me!" class="botton button big">
+  
+    <div class="progress bar1">
+      <span style="width: 20%;"><span>20%</span></span>
+    </div>
+
+    <div class="progress bar2">
+      <span class="green" style="width: 40%;"><span>40%</span></span>
+    </div>
+
+    <div class="progress bar3">
+      <span class="orange" style="width: 60%;"><span>60%</span></span>
+    </div>
+
+    <div class="progress bar4">
+      <span class="red" style="width: 80%;"><span>80%</span></span>
+    </div>
+
+    <div class="progress bar5">
+      <span class="blue" style="width: 100%;"><span>100%</span></span>
+    </div>
+</div>
+
+<div class="span" value="3.5"></div>
+
+
+<!--END GRIDS-->
+  </div>
+
+<!--END WRAP-->
+</div>
+
+<!-- <div class="bottom-bar center">hola</div> -->
+
+<div class="menuBack"></div>
+</body>
+</html>

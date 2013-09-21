@@ -4,7 +4,27 @@ Kraken
 JS, Css, html Framework
 -----------------------
 
+Features for the new version:
+----------------------------
+
+- Modal Engine (0.8)
+- Regex Engine (0.9)
+- Mobile for Phonegap/Cordova (***)
+- Express/Jade snippets (***)
+
+
 **Changelog:**
+
+V 0.7
+======
+- New global engine
+- New Trigger engine
+- New Progress Bar engine
+- Tooltips mod
+- Captions mod
+- Jquery Plugin
+- Config Options
+- Regex Eval
 
 V 0.6
 ======

@@ -1,95 +1,103 @@
-// Kraken Framework 0.6
-var Kraken = function(_options){
-
+// Kraken Framework 0.7
+;(function ( $, window, document, undefined ) {
 console.time("Kraken Load Time");
 
-var _default = {
-	pagesize : { state : true, width: 1024, },
-	overflow : { state : true, x : false, y : true },
-	bgimg : { state : true, img : '004', size : 'default'},
-	bgcolor : { state : true, color : '0fa1e0' },
-	largewrap : { state : true, rest : 'default' },
-	wrapshadow : { state : true, intense : 'default', size : 'default'},
-	slider : { state : true, auto : true, pager : false, nav : true, speed : 500},
-	menu : { state : true, submenu: true, },
-	span : { state : true, multiply : '10' },
-	interval : { state : false, timer : '2000'},
-	hide : { state : true, resize : true, size : 700 },
-	fonts : {},
+var pluginName = "Kraken",
+			_default = {
+			pagesize : { state : true, width: 1024, },
+			overflow : { state : true, x : false, y : true },
+			bgimg : { state : true, img : '004', size : 'default'},
+			bgcolor : { state : true, color : '0fa1e0' },
+			largewrap : { state : true, rest : 'default' },
+			wrapshadow : { state : true, intense : 'default', size : 'default'},
+			slider : { state : true, auto : true, pager : false, nav : true, speed : 500},
+			menu : { state : true, submenu: true, },
+			span : { state : true, multiply : '10' },
+			interval : { state : false, timer : '2000'},
+			hide : { state : true, resize : true, size : 700 },
+			fonts : {}
+	};
+
+var Plugin = function ( _options ){
+
+	this.settings  = $.extend(true, _default, _options);
+	//If state     = true
+	this._defaults = _default;
+	this._name     = pluginName;
+	this.init();
+
+	if(this.settings.pagesize.state) 		this.pagesize(this.settings.pagesize);
+	if(this.settings.overflow.state) 		this.overflow(this.settings.overflow);
+	if(this.settings.bgimg.state) 			this.bgimg(this.settings.bgimg);
+	if(this.settings.bgcolor.state) 		this.bgcolor(this.settings.bgcolor);
+	if(this.settings.largewrap.state) 		this.largewrap(this.settings.largewrap);
+	if(this.settings.wrapshadow.state) 		this.wrapshadow(this.settings.wrapshadow);
+	if(this.settings.slider.state) 			this.slider(this.settings.slider);
+	if(this.settings.menu.state) 			this.menu(this.settings.hide);
+	if(this.settings.span.state) 			this.span(this.settings.span);
+	if(this.settings.hide.state) 			this.hide(this.settings.hide);
+
 }
 
-var Plugin = function(_options){
-	var kraken = $.extend(true, _default, _options);
-	//If state = true
-	this.init();
-	if(kraken.pagesize.state) 		this.pagesize(kraken.pagesize);
-	if(kraken.overflow.state) 		this.overflow(kraken.overflow);
-	if(kraken.bgimg.state) 			this.bgimg(kraken.bgimg);
-	if(kraken.bgcolor.state) 		this.bgcolor(kraken.bgcolor);
-	if(kraken.largewrap.state) 		this.largewrap(kraken.largewrap);
-	if(kraken.wrapshadow.state) 	this.wrapshadow(kraken.wrapshadow);
-	if(kraken.slider.state) 		this.slider(kraken.slider);
-	// if(kraken.menu.state) 			this.menu(kraken.hide);
-	if(kraken.span.state) 			this.menu(kraken.span);
-	if(kraken.hide.state) 			this.menu(kraken.hide);
+globals = {
+
+	MenuBack : function ( options ){
+	if(options){
+		$(".nav a").on('click',function(event) {
+			if(!$('.menuBack').is(":visible")){
+			var altura = $('body').height();
+			   	event.preventDefault();
+				// $('.nav ul li').addClass('click');
+				$('.nav ul li').css({'display' : 'block', 'margin' : '0 0 5px', 'z-index' : '999'});
+				$('.menuBack').css({'height' : altura }).animate({ opacity: .8 }).fadeIn();
+			}
+		});
+		$('.menuBack').on('click',function(){
+			$('.menuBack').animate({ opacity: 0}).fadeOut();
+			$('.nav ul li').removeAttr('style');
+		});
+	}else{
+			$('.menuBack').animate({ opacity: 0}).fadeOut();
+			$('.nav ul li').removeAttr('style');
+	}}
+
 }
 
 Plugin.prototype = {
 		init: function () {
-			function MenuBack(options){
-				if(options){
-					$(".nav a").on('click',function(event) {
-						if(!$('.menuBack').is(":visible")){
-						var altura = $('body').height();
-						   	event.preventDefault();
-							// $('.nav ul li').addClass('click');
-							$('.nav ul li').css({'display' : 'block', 'margin' : '0 0 5px', 'z-index' : '999'});
-							$('.menuBack').css({'height' : altura }).animate({ opacity: .8 }).fadeIn();
-						}
-					});
-					$('.menuBack').on('click',function(){
-						$('.menuBack').animate({ opacity: 0}).fadeOut();
-						$('.nav ul li').removeAttr('style');
-					});
-				}else{
-						$('.menuBack').animate({ opacity: 0}).fadeOut();
-						$('.nav ul li').removeAttr('style');
-				}
-			}
-
 			$('.MenuClose').on('click',function(){
-				MenuBack(0);
+				globals.MenuBack(0);
 			});
 		},
-		pagesize: function(kraken){
+		pagesize: function (kraken){
 			// Page Width size
 			$('.grids').css({'max-width' : kraken.width}), $('.wrap').css({'max-width' : kraken.width});
 		},
-		overflow: function(kraken){
+		overflow: function (kraken){
 			// Overflow in Short pages
 			if(kraken.x) $('html').css('overflow-x','scroll');
 			if(kraken.y) $('html').css('overflow-y','scroll');
 		},
-		bgimg: function(kraken){
+		bgimg: function (kraken){
 			// Background Image in directory img/bg/
 			$('html').css({'background' : 'url("./img/bg/'+kraken.img+'.png")' , 'background-size' : kraken.size });
 		},
-		bgcolor: function(kraken){
+		bgcolor: function (kraken){
 			// Background Color
 			$('html').css('background-color','#'+kraken.color+'');
 		},
-		largewrap: function(kraken){
+		largewrap: function (kraken){
 			// Wrap height of the screen
 			var RestWarp = ( kraken.rest == 'default' ) ? '20' : kraken.rest;
 			setTimeout(function(){
 				$('.wrap').css('min-height',$(document).height() - RestWarp);
 			},350);
 		},
-		wrapshadow: function(kraken){
+		wrapshadow: function (kraken){
 			// BorderShadow on Wrap shadow="on"
 			if(kraken.state) $('.wrap').addClass('shadowWrap');
 		},
-		slider: function(kraken){
+		slider: function (kraken){
 			// Slider
 			$("#slider").responsiveSlides({
 				auto: kraken.auto,
@@ -105,14 +113,14 @@ Plugin.prototype = {
 				}
 			});
 		},
-		menu: function(kraken){
+		menu: function (kraken){
 			//SubMenu
 			$('.grids > #menu').css({'position':'relative', 'width':'auto', 'z-index':'8'});
 			$('.subMenu').hide();
 			var togglesub = true;
 			$('#soluciones').on('click',function(event){
 				event.preventDefault();
-				
+				console.log('click');
 				if(togglesub){
 					$('.subMenu').show().effect("slide", { direction:'up', times: 5 }, 450);
 					$('.subMenu').show().effect("highlight", { color: "#fff", times: 5 }, 450);
@@ -138,29 +146,29 @@ Plugin.prototype = {
 				$(this).find('ul').css('visibility', 'visible');
 			}
 		},
-		span: function(kraken){
+		span: function (kraken){
 			// Span example in html: <div class="span" value="2.5"></div>
 			$('.span').each(function(){
 				var spanValue = $(this).attr('value');
-				sumValue = spanValue * kraken.span.multiply;
+				sumValue = spanValue * kraken.multiply;
 				$(this).css('margin-bottom',sumValue);
 			});
 		},
-		interval: function(kraken){
+		interval: function (kraken){
 			// Set interval to responsive js
 			setInterval(function () {
 				// Functions here:
 				console.log('start');
 				// End Functions
-			}, kraken.interval.timer);
+			}, kraken.timer);
 		},
-		hide: function(kraken){
+		hide: function (kraken){
 			if($(document).width() < kraken.size){
 				$('.hide').each(function(){
 					$(this).hide();
 				});
 
-				MenuBack(1);
+			globals.MenuBack(1);
 			}
 			if(kraken.resize){
 				$(window).resize(function(){
@@ -177,11 +185,95 @@ Plugin.prototype = {
 					}
 				});
 			}
-		}
+		},
 };
 
-var Start = new Plugin(_options);
+Triggers = function (func, options, element){
+	this.element     = element;
+	// this.settings = $.extend(true, t_default, t_options);
+	this._defaults   = _default;
+	this._name       = PNTrigger;
 
+	switch(func){
+	case 'Progress':
+		this.Progress(this.element, options);
+	break;
+	default:
+		console.log('Trigger undefined');
+	break;
+	}
+
+}
+
+Triggers.prototype = {
+
+	Progress : function (element, options){
+		if(!isNaN(options.progress)){
+			$(element).children().css('width',''+options.progress+'%').html('<span>'+options.progress+'%</span>');
+			return this;
+		}else{
+			console.log('Progress is not a number');
+		}
+	},
+	test : function(){
+		console.log('test');
+	}
+
+}
+
+
+// $.fn.KT_Progress = function(options) {
+// 	console.log(this);
+//         if(!isNaN(options.progress)){
+// 			$(this).children().css('width',''+options.progress+'%').html('<span>'+options.progress+'%</span>');
+//         	return this;
+// 		}else{
+// 			console.log('Not Num');
+// 		}
+//     };
+
+
+PNTrigger =  pluginName+'Trigger';
+
+$.fn[ PNTrigger ] = function ( func, options ) {
+				return this.each(function() {
+						if ( !$.data( this, "plugin_" + PNTrigger ) ) {
+								$.data( this, "plugin_" + PNTrigger, new Triggers( func, options, this ) );
+						}
+				});
+		};
+
+// var Kraken = new Plugin(_options);
+
+
+// $.fn[ pluginName ] = function ( _options ) {
+// 				return this.each(function() {
+// 						if ( !$.data( this, "plugin_" + pluginName ) ) {
+// 								$.data( this, "plugin_" + pluginName, new Plugin( this, _options ) );
+// 						}
+// 				});
+// 		};
+
+// $[pluginName] = $.fn[pluginName] = function (_options) {
+//     if(!(this instanceof $)) { $.extend(_default, _options) }
+//     return this.each(function () {
+//         if (!$.data(this, "plugin_" + pluginName)) {
+//             $.data(this, "plugin_" + pluginName, new Plugin(this, _options));
+//         }
+//     });
+// };
+
+$[pluginName] = function (_options) {
+    if(!(this instanceof $)) { 
+    	var settings = $.extend(true, _default, _options);
+    	jQuery.pluginName = new Plugin(settings); 
+    }
+    return this.each(function () {
+        if (!$.data(this, "plugin_" + pluginName)) {
+            $.data(this, "plugin_" + pluginName, jQuery.pluginName = new Plugin(this,_options));
+        }
+    });
+};
 
 // Kraken.progress = function(options){
 // 	if(!isNaN(options.progress)){
@@ -224,4 +316,4 @@ var Start = new Plugin(_options);
 console.timeEnd("Kraken Load Time");
 
 
-}
+})( jQuery, window, document );	

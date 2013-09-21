@@ -9,14 +9,17 @@
 
 	<script lang="javascript" src="js/jquery.min.js"></script>
   <script src="js/responsiveslides.min.js"></script>
-  <script src="js/kraken.js"></script>
+  <script src="js/kraken.p.js"></script>
 
 <script>
+
 $(document).ready(function(){
 
-  Kraken({
-      pagesize : { width: 800, },
-  });
+  // Kraken({
+  //     pagesize : { width: 800, },
+  // });
+
+    ///////////////// progress bar
 
     // Kraken.progress({
     //   obj: ".bar3",
@@ -27,7 +30,15 @@ $(document).ready(function(){
     //   obj: ".bar5",
     //   progress: 80
     // });
-      
+
+  /// Test Kraken.p
+  // $({
+  //     pagesize : { width: 900 },
+  //   }).Kraken();
+
+  $.Kraken({ pagesize : { width: 900 } });
+  // $.Kraken({ pagesize : { width: 900 } }).progress({obj: ".bar3",progress: 80});
+
 });
 
 </script>
@@ -368,7 +379,7 @@ $(document).ready(function(){
 <div class="grid-12">
 <h3>Progress Bar</h3>
   
-    <div class="progress">
+    <div class="progress bar1">
       <span style="width: 20%;"><span>20%</span></span>
     </div>
 

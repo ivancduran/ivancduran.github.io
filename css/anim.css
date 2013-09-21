@@ -1,0 +1,23 @@
+.sken{
+	-webkit-transform: skew(180deg, 90deg);
+	-moz-transform: skew(180deg, 90deg);
+	-o-transform: skew(180deg, 90deg);
+	-ms-transform: skew(180deg, 90deg);
+	transform: skew(180deg, 90deg);
+}
+
+.scale{
+	-webkit-transform: scale(3);
+	-moz-transform: scale(3);
+	-o-transform: scale(3);
+	-ms-transform: scale(3);
+	transform: scale(3);
+}
+
+.rotate{
+	-webkit-transform: rotateX(360deg) rotateY(320deg) rotateZ(1080deg);
+	-moz-transform: rotateX(360deg) rotateY(320deg) rotateZ(1080deg);
+	-o-transform: rotateX(360deg) rotateY(320deg) rotateZ(1080deg);
+	-ms-transform: rotateX(360deg) rotateY(320deg) rotateZ(1080deg);
+	transform: rotateX(360deg) rotateY(320deg) rotateZ(1080deg);
+}
