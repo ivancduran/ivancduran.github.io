@@ -152,18 +152,12 @@ hr{
 }
 
 .footer{
-	margin: 0px;
+/*	margin: 0px;
 	padding: 25px;
 	box-shadow: 1px 1px 30px rgba(50, 50, 50, 0.1);
 	border-radius:5px;
 	color: #fff;
-	background: #141414;
-	background: -moz-linear-gradient(top, #32323a 0%, #141414 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #32323a), color-stop(100%, #141414));
-	background: -webkit-linear-gradient(top, #32323a 0%, #141414 100%);
-	background: -o-linear-gradient(top, #32323a 0%, #141414 100%);
-	background: -ms-linear-gradient(top, #32323a 0%, #141414 100%);
-	background: linear-gradient(to bottom, #32323a 0%, #141414 100%);
+	background: #141414;*/
 }
 
 .bottom-bar {
@@ -200,6 +194,42 @@ hr{
 	z-index: 7;
 	opacity: 0;
 	display: none;
+}
+
+footer {
+	text-align: left;
+	color: #FFF;
+	font-size: 12px;
+	width: 100%;
+	height: 280px;
+	width: 100%;
+	line-height: 10px;
+	clear: both;
+	position: fixed;
+	z-index: -20;
+	bottom: 0px;
+}
+
+.footer{
+	background: #333;
+}
+
+.background-top{
+	margin: 0px;
+	padding: 25px;
+	border-radius:5px;
+	color: #fff;
+	background: #333;
+	height: 50%;
+	width: 96%;
+	position: absolute;
+	z-index: -20;
+	top: 0px;
+	opacity: .2;
+
+	-moz-box-shadow: 0px 0px 18px #333;
+-webkit-box-shadow: 0px 0px 18px #333;
+box-shadow: 0px 0px 18px #333;
 }
 
 /*********************************MEDIA*********************************/

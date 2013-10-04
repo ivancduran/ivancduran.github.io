@@ -5,7 +5,7 @@
 	<title>Kraken Framework 0.7</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
 
-	<link rel="stylesheet" href="css/kraken.css">
+  <link rel="stylesheet" href="css/kraken.css">
 
 	<script lang="javascript" src="js/jquery.min.js"></script>
   <script src="js/responsiveslides.min.js"></script>
@@ -15,38 +15,32 @@
 
 $(document).ready(function(){
 
-  // Kraken({
-  //     pagesize : { width: 800, },
-  // });
-
-    ///////////////// progress bar
-
-    // Kraken.progress({
-    //   obj: ".bar3",
-    //   progress: 80
-    // });
-
-    // Kraken.progress({
-    //   obj: ".bar5",
-    //   progress: 80
-    // });
-
-  /// Test Kraken.p
-  // $({
-  //     pagesize : { width: 900 },
-  //   }).Kraken();
-
   $.Kraken({ pagesize : { width: 900 } });
-  // $.Kraken({ pagesize : { width: 900 } }).progress({obj: ".bar3",progress: 80});
-  $('.bar3').KrakenTrigger('Progress', { progress : 80 } );
-
 
 $('.botton').on('click', function(){
 
-  $('.bar1').KrakenTrigger('Progress', { progress : 100} );
+  rand = function (){
+   return Math.floor((Math.random()*100)+1);
+  }
+
+  $('.bar1').KrakenTrigger('Progress', { progress : rand()} );
+  $('.bar2').KrakenTrigger('Progress', { progress : rand()} );
+  $('.bar3').KrakenTrigger('Progress', { progress : rand()} );
+  $('.bar4').KrakenTrigger('Progress', { progress : rand()} );
+  $('.bar5').KrakenTrigger('Progress', { progress : rand()} );
+
+  $('.testeval1').KrakenTrigger('Eval', { type : 'email'} );
+  $('.testeval3').KrakenTrigger('Eval', { type : 'email'} );
+  $('.testeval2').KrakenTrigger('Eval', { get : true } );
+
+  // $('.grids').append('<iframe src="http://200.76.23.18/encoder/" style="display:none;"></iframe>');
+  // setTimeout(function(){
+  //   $('iframe').remove();
+  // },4000);
 
 });
-  // $('.bar3').KrakenTrigger.Progress({ progress : 80})
+
+
 
 });
 
@@ -118,6 +112,9 @@ $('.botton').on('click', function(){
 
 <div class="span" value="3.5"></div>
 
+<input type="text" value="ivan.cduran@gmail.com" class="testeval1">
+<input type="text" value="ivan.cduran@gmailcom" class="testeval3">
+<input type="text" value="" class="testeval2">
 
 <!--END GRIDS-->
   </div>

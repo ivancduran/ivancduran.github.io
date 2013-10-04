@@ -15,29 +15,9 @@
 
 $(document).ready(function(){
 
-  // Kraken({
-  //     pagesize : { width: 800, },
-  // });
-
-    ///////////////// progress bar
-
-    // Kraken.progress({
-    //   obj: ".bar3",
-    //   progress: 80
-    // });
-
-    // Kraken.progress({
-    //   obj: ".bar5",
-    //   progress: 80
-    // });
-
-  /// Test Kraken.p
-  // $({
-  //     pagesize : { width: 900 },
-  //   }).Kraken();
-
-  $.Kraken({ pagesize : { width: 900 } });
-  // $.Kraken({ pagesize : { width: 900 } }).progress({obj: ".bar3",progress: 80});
+  //New version
+  $.Kraken({ pagesize : { width: 1024 } });
+  $('.bar3').KrakenTrigger('Progress', { progress : 80 } );
 
 });
 
@@ -54,6 +34,8 @@ $(document).ready(function(){
 <body>
 
 <!-- MENU -->
+<div class="background-top"></div>
+
 <div id='menu'>
   <nav class="nav center">
     <ul>
@@ -435,11 +417,24 @@ $(document).ready(function(){
   </figure>
 </div>
 
+
 <!--END GRIDS-->
   </div>
 
 <!--END WRAP-->
 </div>
+
+
+<footer class="center">
+  <div class="footer wrap">
+  <img src="img/kraken.png" class="grid-12">
+    <div class="grid-4">1</div>
+    <div class="grid-4">1</div>
+    <div class="grid-4">1</div>
+  </div>
+
+</footer>
+
 
 <!-- <div class="bottom-bar center">hola</div> -->
 

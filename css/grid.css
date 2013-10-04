@@ -3,7 +3,6 @@
   padding: 10px;
   margin: 0 auto;
 }
-
 .grids {
   width: auto;
   max-width: 940px;
@@ -14,7 +13,7 @@
   /* Clear the floats */
   /*letter-spacing: -.25em; *//* Fix inline-block weirdness */
 }
-.grids [class*="grid-"] {
+.grids [class*="grid-"], .footer [class*="grid-"]{
   display: inline-block;
   margin: 0 0 0 1.3%;
   -webkit-box-sizing: border-box; /* Allow padding & borders on grids without breaking. IE8+ */
