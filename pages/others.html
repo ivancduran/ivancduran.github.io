@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Kraken Framework 0.5</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, user-scalable=no">
+
+	<link rel="stylesheet" href="../css/kraken.css">
+
+	<script lang="javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="../js/responsiveslides.min.js"></script>
+	<script src="../js/jquery.scrollTo-1.4.3.1.js"></script>
+	<script src="../js/kraken.js"></script>
+
+	<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+<script>
+$(document).ready(function(){
+
+  //New version
+  $.Kraken({ pagesize : { width: 1024 } });
+
+});
+</script>
+
+ 	<meta property="og:description" content="Kraken FrameWork" /> 
+</head>
+
+<body>
+
+<!--MENU-->
+<div id='menu'>
+  <nav class="nav center">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="grids.html">Grids</a></li>
+      <li><a href="slider.html">Slider</a></li>
+      <li><a href="#">Menu Test</a>
+        <ul>
+          <li><a href="#">Test 1</a></li>
+          <li><a href="#" class="MenuClose">Test 2</a></li>
+        </ul>
+      </li>
+      <li><a href="fonts.html">Fonts</a></li>
+      <li><a href="progress.html">Progress</a></li>
+      <li><a href="buttons.html">Buttons</a></li>
+      <li class="current"><a href="others.html">Others</a></li>
+    </ul>
+  </nav>
+</div>
+<!--END MENU-->
+
+<!--WRAP-->
+<div class="wrap">
+
+	<!--GRIDS-->
+	<div class="grids">
+
+<div class="span" value="3.5"></div>
+
+<div class="grid-12 mL">
+  <div class="grid-12">
+    <h4>Shadow</h4>
+  </div>
+</div>
+
+    <img src="http://placehold.it/800x400&text=Grid+4" class="shadow grid-4" alt="">
+
+    <img src="http://placehold.it/800x400&text=Grid+4" class="shadow circle grid-4 hide" alt="">
+
+    <img src="http://placehold.it/800x400&text=Grid+4" class="shadow grid-4" alt="">
+
+<div class="span" value="3.5"></div>
+<hr>
+
+<div class="grid-12">
+  <h3>Tooltip</h3>
+
+  <a href="#0" tooltip-text="I appear on top." class="tooltip-1">Top</a>
+  <a href="#0" tooltip-text="I appear on top." class="tooltip-2">Bottom</a>
+</div>
+
+<div class="span" value="3.5"></div>
+<hr>
+
+<div class="grid-12">
+<h3>Caption</h3>
+
+  <figure class="effeckt-caption effeckt-caption-1 grid-6">
+    <img src="http://placehold.it/300x200&text=caption+2" alt="">
+    <figcaption>
+      <div class="effeckt-figcaption-wrap">
+        <h3>Appear</h3>
+        <p>Lorem ipsum dolar.</p>
+      </div>
+    </figcaption>
+  </figure>
+
+  <figure class="effeckt-caption effeckt-caption-5 grid-6">
+    <img src="http://placehold.it/300x200&text=caption+2" alt="">
+    <figcaption>
+      <div class="effeckt-figcaption-wrap">
+        <h3>Cover</h3>
+        <p>Lorem ipsum dolar.</p>
+      </div>
+    </figcaption>
+  </figure>
+</div>
+
+<!--END SLIDER-->
+
+<div class="span" value="4.5"></div>
+<!--END GRIDS-->
+
+
+	</div>
+
+<!--END WRAP-->
+</div>
+
+</body>
+</html>

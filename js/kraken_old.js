@@ -1,8 +1,7 @@
 // Kraken Framework 0.6
-;(function ( $, window, document, undefined ) {
-console.time("Kraken Load Time");
-
 var Kraken = function (_options) {
+
+console.time("Kraken Load Time");
 
 var _default = {
 	pagesize : { state : true, width: 1024, },
@@ -161,8 +160,7 @@ $('.MenuClose').on('click',function(){
 	MenuBack(0);
 });
 
-
-this.progress = function(options){
+Kraken.progress = function(options){
 	if(!isNaN(options.progress)){
 		$(options.obj).children().css('width',''+options.progress+'%').html('<span>'+options.progress+'%</span>');
 	}else{
@@ -205,19 +203,5 @@ this.progress = function(options){
 
 console.timeEnd("Kraken Load Time");
 
+
 }
-
-$.Kraken = function (_options) {
-    if(!(this instanceof $)) {
-    	jQuery.Kraken = new Kraken(_options); 
-    }
-    return this.each(function () {
-        if (!$.data(this, "plugin_" + Kraken)) {
-            $.data(this, "plugin_" + Kraken, jQuery.Kraken = new Kraken(this,_options));
-        }
-    });
-};
-
-
-
-})( jQuery, window, document );	

@@ -1,186 +1,322 @@
-// Kraken Framework 0.6
-var Kraken = function (_options) {
-
+// Kraken Framework 0.7
+;(function ( $, window, document, undefined ) {
 console.time("Kraken Load Time");
 
-var _default = {
-	pagesize : { state : true, width: 1024, },
-	overflow : { state : true, x : false, y : true },
-	bgimg : { state : true, img : '004', size : 'default'},
-	bgcolor : { state : true, color : '0fa1e0' },
-	largewrap : { state : true, rest : 'default' },
-	wrapshadow : { state : true, intense : 'default', size : 'default'},
-	slider : { state : true, auto : true, pager : false, nav : true, speed : 500},
-	menu : { state : true, submenu: true, },
-	span : { state : true, multiply : '10' },
-	interval : { state : false, timer : '2000'},
-	hide : { state : true, resize : true, size : 700 },
-	fonts : {},
+var pluginName = "Kraken",
+			_default = {
+			pagesize   : { state : true, width: 1024, },
+			overflow   : { state : true, x : false, y : true },
+			bgimg      : { state : true, img : '004', size : 'default'},
+			bgcolor    : { state : true, color : '0fa1e0' },
+			largewrap  : { state : true, rest : 'default' },
+			wrapshadow : { state : true, intense : 'default', size : 'default'},
+			slider     : { state : true, auto : true, pager : false, nav : true, speed : 500},
+			menu       : { state : true, submenu: true, },
+			span       : { state : true, multiply : '10' },
+			interval   : { state : false, timer : '2000'},
+			hide       : { state : true, resize : true, size : 700 },
+			show       : { state : false, resize : true, size : 700 },
+			footer     : { state : true, resize : true },
+			fonts      : {}
+	};
+var PNTrigger  =  pluginName+'Trigger';
+var arrSuccess = [];
+var arrError   = [];
+
+var Plugin = function ( _options ){
+
+	this.settings  = $.extend(true, _default, _options);
+	this._defaults = _default;
+	this._name     = pluginName;
+	this.init();
+
+	if(this.settings.pagesize.state) 		this.pagesize(this.settings.pagesize);
+	if(this.settings.overflow.state) 		this.overflow(this.settings.overflow);
+	if(this.settings.bgimg.state) 			this.bgimg(this.settings.bgimg);
+	if(this.settings.bgcolor.state) 		this.bgcolor(this.settings.bgcolor);
+	if(this.settings.largewrap.state) 		this.largewrap(this.settings.largewrap);
+	if(this.settings.wrapshadow.state) 		this.wrapshadow(this.settings.wrapshadow);
+	if(this.settings.slider.state) 			this.slider(this.settings.slider);
+	if(this.settings.menu.state) 			this.menu(this.settings.hide);
+	if(this.settings.span.state) 			this.span(this.settings.span);
+	if(this.settings.hide.state) 			this.hide(this.settings.hide);
+	if(this.settings.show.state) 			this.show(this.settings.show);
+	if(this.settings.footer.state) 			this.footer(this.settings.pagesize);
+
 }
 
-var kraken = $.extend(true, _default, _options);
-///////////////////////
-// Page Width size
-if(kraken.pagesize.state) $('.grids').css({'max-width' : kraken.pagesize.width}), $('.wrap').css({'max-width' : kraken.pagesize.width});
-// Overflow in Short pages
-if(kraken.overflow.state){
-	if(kraken.overflow.x) $('html').css('overflow-x','scroll');	
-	if(kraken.overflow.y) $('html').css('overflow-y','scroll');
-}
-// Background Image in directory img/bg/
-if(kraken.bgimg.state) $('html').css({'background' : 'url("./img/bg/'+kraken.bgimg.img+'.png")' , 'background-size' : kraken.bgimg.size });
-// Background Color
-if(kraken.bgcolor.state) $('html').css('background-color','#'+kraken.bgcolor.color+'');
-// Wrap height of the screen
-if(kraken.largewrap.state){
-	var RestWarp = ( kraken.largewrap.rest == 'default' ) ? '20' : kraken.largewrap.rest;
-	setTimeout(function(){
-		$('.wrap').css('min-height',$(document).height() - RestWarp);
-	},350);
-}
-// BorderShadow on Wrap shadow="on"
-if(kraken.wrapshadow.state) $('.wrap').addClass('shadowWrap');
-// Slider
-if(kraken.slider.state){
-$("#slider").responsiveSlides({
-	auto: kraken.slider.auto,
-	pager: kraken.slider.pager,
-	nav: kraken.slider.nav,
-	speed: kraken.slider.speed,
-	namespace: "callbacks",
-	before: function () {
+globals = {
 
+	MenuBack : function ( options ){
+		$('body').append('<div class="menuBack"></div>');
+		if(options){
+			$(".nav a").on('click',function(event) {
+				if(!$('.menuBack').is(":visible")){
+				var altura = $('body').height();
+				   	event.preventDefault();
+					// $('.nav ul li').addClass('click');
+					$('.nav ul li').css({'display' : 'block', 'margin' : '0 0 5px', 'z-index' : '999'});
+					$('.menuBack').css({'height' : altura }).animate({ opacity: .8 }).fadeIn();
+				}
+			});
+			$('.menuBack').on('click',function(){
+				$('.menuBack').animate({ opacity: 0}).fadeOut();
+				$('.nav ul li').removeAttr('style');
+			});
+		}else{
+				$('.menuBack').animate({ opacity: 0}).fadeOut();
+				$('.nav ul li').removeAttr('style');
+		}
 	},
-	after: function () {
-
-	}
-});
-}
-//SubMenu
-if(kraken.menu.state){
-	$('.grids > #menu').css({'position':'relative', 'width':'auto', 'z-index':'8'});
-	$('.subMenu').hide();
-	var togglesub = true;
-	$('#soluciones').on('click',function(event){
-		event.preventDefault();
-		
-		if(togglesub){
-			$('.subMenu').show().effect("slide", { direction:'up', times: 5 }, 450);
-			$('.subMenu').show().effect("highlight", { color: "#fff", times: 5 }, 450);
-			togglesub = false;
-		}else{
-			$('.subMenu').hide('slow');
-			togglesub = true;
+	eval : {
+		success: function ( options ){
+			arrSuccess.push(options);
+		},
+		error : function ( options ){
+			arrError.push(options);
+		},
+		count : function (){
+			return arrSuccess.length;
 		}
+	}
+	
 
-	});
+}
 
-		if($(document).width() > kraken.hide.size){
-			function openSubMenu() {
-				// $(this).find('ul').css({opacity: 0, visibility: "visible"}).animate({opacity: 1, top: 32}, 400);
-				console.log('open');
+
+Plugin.prototype = {
+		init: function () {
+			$('.MenuClose').on('click',function(){
+				globals.MenuBack(0);
+			});
+		},
+		pagesize: function (kraken){
+			// Page Width size
+			$('.grids').css({'max-width' : kraken.width}), $('.wrap').css({'max-width' : kraken.width});
+		},
+		overflow: function (kraken){
+			// Overflow in Short pages
+			if(kraken.x) $('html').css('overflow-x','scroll');
+			if(kraken.y) $('html').css('overflow-y','scroll');
+		},
+		bgimg: function (kraken){
+			// Background Image in directory img/bg/
+			$('html').css({'background' : 'url("./img/bg/'+kraken.img+'.png")' , 'background-size' : kraken.size });
+		},
+		bgcolor: function (kraken){
+			// Background Color
+			$('html').css('background-color','#'+kraken.color+'');
+		},
+		largewrap: function (kraken){
+			// Wrap height of the screen
+			var wrap = '.wrap';
+			var RestWarp = ( kraken.rest == 'default' ) ? '14' : kraken.rest;
+			setTimeout(function(){
+				if($(window).height() > $(wrap).height()){
+					$(wrap).css('min-height',$(document).height() - (RestWarp * 1.5) - ($('footer').height() / 2) );
+				}else{
+					$(wrap).css('min-height',$(document).height() - RestWarp - $('footer').height() );
+				}
+			},150);
+		},
+		wrapshadow: function (kraken){
+			// BorderShadow on Wrap shadow="on"
+			if(kraken.state) $('.wrap').addClass('shadowWrap');
+		},
+		slider: function (kraken){
+			// Slider
+			$("#slider").responsiveSlides({
+				auto      : kraken.auto,
+				pager     : kraken.pager,
+				nav       : kraken.nav,
+				speed     : kraken.speed,
+				namespace : "callbacks",
+				before    : function () {
+				
+				},
+				after     : function () {
+				
+				}
+			});
+		},
+		menu: function (kraken){
+			//SubMenu
+			$('.grids > #menu').css({'position':'relative', 'width':'auto', 'z-index':'8'});
+			$('.subMenu').hide();
+			var togglesub = true;
+			$('#soluciones').on('click',function(event){
+				event.preventDefault();
+				console.log('click');
+				if(togglesub){
+					$('.subMenu').show().effect("slide", { direction:'up', times: 5 }, 450);
+					$('.subMenu').show().effect("highlight", { color: "#fff", times: 5 }, 450);
+					togglesub = false;
+				}else{
+					$('.subMenu').hide('slow');
+					togglesub = true;
+				}
+
+			});
+			if($(document).width() > kraken.size){
+				function openSubMenu() {
+					// $(this).find('ul').css({opacity: 0, visibility: "visible"}).animate({opacity: 1, top: 32}, 400);
+					 $(this).find('ul').css('visibility', 'visible');
+				};
+				function closeSubMenu() {
+					// $(this).find('ul').css({opacity: 1.0, visibility: "hidden"}).animate({opacity: 0}, 400);
+					$(this).find('ul').css('visibility', 'hidden');
+				};
+				$('.nav > ul > li,a').bind('mouseover', openSubMenu);
+				$('.nav > ul > li').bind('mouseout', closeSubMenu);
+			}else{
 				$(this).find('ul').css('visibility', 'visible');
-			};
-			function closeSubMenu() {
-				console.log('close');
-				// $(this).find('ul').css({opacity: 1.0, visibility: "hidden"}).animate({opacity: 0}, 400);
-				$(this).find('ul').css('visibility', 'hidden');
-			};
-
-			$('.nav > ul > li').bind('mouseover', openSubMenu);
-			$('.nav > ul > li').bind('mouseout', closeSubMenu);
-		}else{
-			$(this).find('ul').css('visibility', 'visible');
-		}
-}
-// Span example in html: <div class="span" value="2.5"></div>
-if(kraken.span.state){
-	$('.span').each(function(){
-		var spanValue = $(this).attr('value');
-		sumValue = spanValue * kraken.span.multiply;
-		$(this).css('margin-bottom',sumValue);
-	});
-}
-// Set interval to responsive js
-if(kraken.interval.state){
-	setInterval(function () {
-		// Functions here:
-		console.log('start');
-		// End Functions
-	}, kraken.interval.timer);
-}
-
-if(kraken.hide.state){
-	if($(document).width() < kraken.hide.size){
-		$('.hide').each(function(){
-			$(this).hide();
-		});
-
-		MenuBack(1);
-	}
-	if(kraken.hide.resize){
-		$(window).resize(function(){
-			if($(document).width() < kraken.hide.size){
+			}
+		},
+		span: function (kraken){
+			// Span example in html: <div class="span" value="2.5"></div>
+			$('.span').each(function(){
+				var spanValue = $(this).attr('value');
+				sumValue = spanValue * kraken.multiply;
+				$(this).css('margin-bottom',sumValue);
+			});
+		},
+		interval: function (kraken){
+			// Set interval to responsive js
+			setInterval(function () {
+				// Functions here:
+				console.log('start');
+				// End Functions
+			}, kraken.timer);
+		},
+		hide: function (kraken){
+			if($(document).width() < kraken.size){
 				$('.hide').each(function(){
 					$(this).hide();
 				});
 
-				// MenuBack();
-			}else{
-				$('.hide').each(function(){
-					$(this).show();
+			globals.MenuBack(1);
+			}
+			if(kraken.resize){
+				$(window).resize(function(){
+					if($(document).width() < kraken.size){
+						$('.hide').each(function(){
+							$(this).hide();
+						});
+
+						// MenuBack();
+					}else{
+						$('.hide').each(function(){
+							$(this).show();
+						});
+					}
 				});
 			}
-		});
+		},
+		show: function(kraken){
+
+		},
+		footer: function(kraken){
+
+			$('.wrap').css({'margin-bottom': $('footer').height() });
+			// $('.footer').css({'max-width': kraken.width});
+
+		}
+
+};
+
+Triggers = function (func, options, element){
+	this.element     = element;
+	// this.settings = $.extend(true, t_default, t_options);
+	this._defaults   = _default;
+	this._name       = PNTrigger;
+
+	switch(func){
+	case 'Progress':
+		$.data(this.element ,"return", this.Progress(this.element, options));
+	break;
+	case 'Eval':
+		$.data(this.element ,"return", this.Eval(this.element, options));
+	break;
+	default:
+		console.log('Trigger undefined');
+	break;
 	}
+
 }
 
-function MenuBack(options){
-	if(options){
-		$(".nav a").on('click',function(event) {
-			if(!$('.menuBack').is(":visible")){
-			var altura = $('body').height();
-			event.preventDefault();
-				// $('.nav ul li').addClass('click');
-				$('.nav ul li').css({'display' : 'block', 'margin' : '0 0 5px', 'z-index' : '999'});
-				$('.menuBack').css({'height' : altura }).animate({ opacity: .8 }).fadeIn();
+Triggers.prototype = {
+
+	Progress : function (element, options){
+		if(!isNaN(options.progress)){
+			$(element).children().css('width',''+options.progress+'%').html('<span>'+options.progress+'%</span>');
+			// return this;
+			return options.progress;
+		}else{
+			console.log('Progress is not a number');
+		}
+	},
+	Eval : function(element, options){
+		defaults = {
+			type : 'none',
+			get  : false,
+			show : false
+		}
+
+    	var settings = $.extend(true, defaults, options);
+
+		var regex = {
+			'password': /(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{8,10})$/,
+			'date'    : /^\d{1,2}\/\d{1,2}\/\d{2,4}$/,
+			'email'   : /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/,
+			'url'     : /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \?=.-]*)*\/?$/,
+			'phone'   : /^\+?\d{1,3}?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$/,
+			'ip'   	  : /^(([1-9]?[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]).){3}([1-9]?[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/,
+			'user'    : /^[a-z\d_]{4,15}$/,
+			'credit'  : /^((67\d{2})|(4\d{3})|(5[1-5]\d{2})|(6011))(-?\s?\d{4}){3}|(3[4,7])\ d{2}-?\s?\d{6}-?\s?\d{5}$/,
+			'zipcode' : /^([1-9]{2}|[0-9][1-9]|[1-9][0-9])[0-9]{3}$/,
+		}
+
+		if(settings.get == true){
+			if(settings.show == true ){
+				$(element).val(globals.eval.count);
 			}
-		});
-		$('.menuBack').on('click',function(){
-			$('.menuBack').animate({ opacity: 0}).fadeOut();
-			$('.nav ul li').removeAttr('style');
-		});
-	}else{
-			$('.menuBack').animate({ opacity: 0}).fadeOut();
-			$('.nav ul li').removeAttr('style');
+			return globals.eval.count;
+		}else{
+			if(settings.type in regex && $(element).val().match(regex[settings.type]) && settings.get == false){
+				globals.eval.success(settings.type);
+			}else{
+				$(element).addClass('animated shake');
+				globals.eval.error(settings.type);
+				setTimeout(function(){
+					$(element).removeClass('animated shake');
+				},1000);
+			}
+			return settings.type;
+		}
+
 	}
+
 }
 
-$('.MenuClose').on('click',function(){
-	MenuBack(0);
-});
+$.fn[ PNTrigger ] = function ( func, options ) {
+				return this.each(function() {
+						// if ( !$.data( this, "plugin_" + PNTrigger ) ) {
+								$.data( this, "plugin_" + PNTrigger, new Triggers( func, options, this ));
+						// }
+				});
+		};
 
-Kraken.progress = function(options){
-	if(!isNaN(options.progress)){
-		$(options.obj).children().css('width',''+options.progress+'%').html('<span>'+options.progress+'%</span>');
-	}else{
-		console.log('Not Num');
-	}
-}
-
-// var count = 100;
-// var timerbar = setInterval(function(){
-//   if(count>=50){
-//     progress({
-//       obj: ".Barra",
-//       progress: count
-//     });
-//     count = count - 2;
-//   }else{
-//     clearInterval(timerbar);
-//   }
-// },300);
-
+$[pluginName] = function (_options) {
+    if(!(this instanceof $)) { 
+    	var settings = $.extend(true, _default, _options);
+    	jQuery.pluginName = new Plugin(settings); 
+    }
+    return this.each(function () {
+        if (!$.data(this, "plugin_" + pluginName)) {
+            $.data(this, "plugin_" + pluginName, jQuery.pluginName = new Plugin(this,_options));
+        }
+    });
+};
 
 // var Plugin = function(option){
 // 	this.init();
@@ -188,7 +324,6 @@ Kraken.progress = function(options){
 // 		this.test();
 // 	}
 // }
-
 // Plugin.prototype = {
 // 		init: function () {
 // 				console.log("xD");
@@ -197,11 +332,10 @@ Kraken.progress = function(options){
 // 				console.log("test");
 // 		}
 // };
-
 // var tester = Plugin;
 // new tester('hola');
 
 console.timeEnd("Kraken Load Time");
 
 
-}
+})( jQuery, window, document );	

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kraken Framework 0.5</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, user-scalable=no">
+
+  <link rel="stylesheet" href="../css/kraken.css">
+
+  <script lang="javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="../js/responsiveslides.min.js"></script>
+  <script src="../js/jquery.scrollTo-1.4.3.1.js"></script>
+  <script src="../js/kraken.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+<script>
+$(document).ready(function(){
+
+  //New version
+  $.Kraken({ pagesize : { width: 1024 } });
+  // $('.bar3').KrakenTrigger('Progress', { progress : 80 } );
+
+});
+</script>
+
+  <meta property="og:description" content="Kraken FrameWork" /> 
+</head>
+
+<body>
+
+<!--MENU-->
+<div id='menu'>
+  <nav class="nav center">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="grids.html">Grids</a></li>
+      <li><a href="slider.html">Slider</a></li>
+      <li><a href="#">Menu Test</a>
+        <ul>
+          <li><a href="#">Test 1</a></li>
+          <li><a href="#" class="MenuClose">Test 2</a></li>
+        </ul>
+      </li>
+      <li><a href="fonts.html">Fonts</a></li>
+      <li><a href="progress.html">Progress</a></li>
+      <li class="current"><a href="buttons.html">Buttons</a></li>
+      <li><a href="others.html">Others</a></li>
+    </ul>
+  </nav>
+</div>
+<!--END MENU-->
+
+<!--WRAP-->
+<div class="wrap">
+
+  <!--GRIDS-->
+  <div class="grids">
+
+<div class="span" value="3.5"></div>
+
+<!--BUTTONS-->
+
+<div class="grid-12">
+  <p>
+    <h3>Botones</h3>
+  </p>
+</div>
+
+<div class="span" value="3.5"></div>
+
+<p class="mL">Botones simples:</p>
+
+<div class="grid-2">
+  <a href="#" class="button">Post comment</a>
+</div>
+<div class="grid-2">
+  <a href="#" class="button primary">Publish post</a> 
+</div>
+<div class="grid-2">
+  <a href="#" class="button">Save as draft</a>
+</div>
+<div class="grid-2">
+  <a href="#" class="button pill">This is a pill button</a>
+</div>
+<div class="grid-2">
+  <a href="#" class="button danger">Delete post</a>
+</div>
+<div class="grid-2">
+  <a href="#" class="button big">Create Project</a>
+</div>
+
+<div class="span" value="3.5"></div>
+
+<p class="mL">Grupo:</p>
+
+<div class="grid-4">
+  <div class="button-group">
+    <a href="#" class="button primary">Dashboard</a>
+    <a href="#" class="button">Inbox</a>
+    <a href="#" class="button">Account</a>
+    <a href="#" class="button">Logout</a>
+  </div>
+</div>
+
+<div class="grid-4">
+  <ul class="button-group">
+      <li><a href="#" class="button primary pill">Dashboard</a></li>
+      <li><a href="#" class="button pill">Inbox</a></li>
+      <li><a href="#" class="button pill">Account</a></li>
+      <li><a href="#" class="button pill">Logout</a></li>
+  </ul>
+</div>
+
+<div class="grid-4">
+  <div class="button-group minor-group">
+    <a href="#" class="button primary">Dashboard</a>
+    <a href="#" class="button">Inbox</a>
+    <a href="#" class="button">Account</a>
+    <a href="#" class="button">Logout</a>
+  </div>
+</div>
+
+<div class="span" value="3.5"></div>
+
+<div class="grid-12">
+  <p>
+    <h3>Botones Iconos</h3>
+  </p>
+  
+  <a href="#" class="button icon arrowup">Up</a>
+  <a href="#" class="button icon arrowdown">Down</a>
+  <a href="#" class="button icon arrowleft">Left</a>
+  <a href="#" class="button icon arrowright">Rigth</a>
+  <a href="#" class="button icon approve">Approve</a>
+  <a href="#" class="button icon add">Add</a>
+  <a href="#" class="button icon remove">Remove</a>
+  <a href="#" class="button icon log">Log</a>
+  <a href="#" class="button icon calendar">Calendar</a>
+  <a href="#" class="button icon chat">Chat</a>
+  <a href="#" class="button icon clock">Clock</a>
+  <a href="#" class="button icon settings">Settings</a>
+  <a href="#" class="button icon comment">Comment</a>
+  <a href="#" class="button icon fork">Fork</a>
+  <a href="#" class="button icon like">Like</a>
+  <a href="#" class="button icon favorite">Favorite</a>
+  <a href="#" class="button icon home">Home</a>
+  <a href="#" class="button icon key">Key</a>
+  <a href="#" class="button icon lock">Lock</a>
+  <a href="#" class="button icon unlock">Unlock</a>
+  <a href="#" class="button icon loop">Loop</a>
+  <a href="#" class="button icon search">Search</a>
+  <a href="#" class="button icon mail">Mail</a>
+  <a href="#" class="button icon move">Move</a>
+  <a href="#" class="button icon edit">Edit</a>
+  <a href="#" class="button icon pin">Pin</a>
+  <a href="#" class="button icon reload">Relod</a>
+  <a href="#" class="button icon rss">RSS</a>
+  <a href="#" class="button icon tag">Tag</a>
+  <a href="#" class="button icon trash">Trash</a>
+  <a href="#" class="button icon user">User</a>
+
+</div>
+<!--END BUTTONS-->
+
+
+<!--END GRIDS-->
+
+<div class="span" value="4.5"></div>
+
+  </div>
+
+<!--END WRAP-->
+</div>
+
+</body>
+</html>

@@ -25,6 +25,8 @@ V 0.7
 - Jquery Plugin
 - Config Options
 - Regex Eval
+- Pages Documentation
+- Animations
 
 V 0.6
 ======

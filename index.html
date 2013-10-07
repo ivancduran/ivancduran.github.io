@@ -9,7 +9,7 @@
 
 	<script lang="javascript" src="js/jquery.min.js"></script>
   <script src="js/responsiveslides.min.js"></script>
-  <script src="js/kraken.p.js"></script>
+  <script src="js/kraken.js"></script>
 
 <script>
 
@@ -17,7 +17,7 @@ $(document).ready(function(){
 
   //New version
   $.Kraken({ pagesize : { width: 1024 } });
-  $('.bar3').KrakenTrigger('Progress', { progress : 80 } );
+  // $('.bar3').KrakenTrigger('Progress', { progress : 80 } );
 
 });
 
@@ -34,22 +34,24 @@ $(document).ready(function(){
 <body>
 
 <!-- MENU -->
-<div class="background-top"></div>
+<!-- <div class="background-top"></div> -->
 
 <div id='menu'>
   <nav class="nav center">
     <ul>
-      <li class="current"><a href="#">Grids</a></li>
-      <li><a href="#">Slider</a></li>
-      <li><a href="#">Menu</a>
+      <li class="current"><a href="#">Home</a></li>
+      <li><a href="pages/grids.html">Grids</a></li>
+      <li><a href="pages/slider.html">Slider</a></li>
+      <li><a href="#">Menu Test</a>
         <ul>
-          <li><a href="#">test 1</a></li>
-          <li><a href="#" class="MenuClose">Close</a></li>
+          <li><a href="#">Test 1</a></li>
+          <li><a href="#" class="MenuClose">Test 2</a></li>
         </ul>
       </li>
-      <li><a href="#">Fonts</a></li>
-      <li><a href="#">Shadows</a></li>
-      <li><a href="#">Botones</a></li>
+      <li><a href="pages/fonts.html">Fonts</a></li>
+      <li><a href="pages/progress.html">Progress</a></li>
+      <li><a href="pages/buttons.html">Buttons</a></li>
+      <li><a href="pages/others.html">Others</a></li>
     </ul>
   </nav>
 </div>
@@ -67,7 +69,7 @@ $(document).ready(function(){
     </h1>
   </div>
 <img src="img/kraken.png" class="krakenLogo grid-4" rel="image_src" width="250" alt="">
-  <div class="grid-8 box">
+  <div class="grid-8 box solid">
     <p>
       <div class="toptext">
         Framework basado en html5 para diseñar prototipos funcionales fácil y rápido.
@@ -90,332 +92,9 @@ $(document).ready(function(){
         </h2>
       </div>
 
-<hr>
-<div class="grid-11 mL">
-
-  <div class="grid-12">
-    <h4>Grids:</h4>
-    <p>
-      Basado en un sistema de grids de 12 columnas usted puede modificar cualquier cosa sin temor a romper algo.
-    </p>
-  </div>
-</div>
-
-
-<!-- GRIDS EXAMPLE -->
-<div class="grid-12 bgGray">Grid 12</div>
-
-<div class="grid-11 bgGray">Grid 11</div>
-<div class="grid-1 bgGray">Grid 1</div>
-
-<div class="grid-10 bgGray">Grid 10</div>
-<div class="grid-2 bgGray">Grid 2</div>
-
-<div class="grid-9 bgGray">Grid 9</div>
-<div class="grid-3 bgGray">Grid 3</div>
-
-<div class="grid-8 bgGray">Grid 8</div>
-<div class="grid-4 bgGray">Grid 4</div>
-
-<div class="grid-7 bgGray">Grid 7</div>
-<div class="grid-5 bgGray">Grid 5</div>
-
-<div class="grid-6 bgGray">Grid 6</div>
-<div class="grid-6 bgGray">Grid 6</div>
-
-<div class="grid-5 bgGray">Grid 5</div>
-<div class="grid-7 bgGray">Grid 7</div>
-
-<div class="grid-4 bgGray">Grid 4</div>
-<div class="grid-8 bgGray">Grid 8</div>
-
-<div class="grid-3 bgGray">Grid 3</div>
-<div class="grid-9 bgGray">Grid 9</div>
-
-<div class="grid-2 bgGray">Grid 2</div>
-<div class="grid-10 bgGray">Grid 10</div>
-
-<div class="grid-1 bgGray">Grid 1</div>
-<div class="grid-11 bgGray">Grid 11</div>
-
-<div class="grid-12 bgGray">Grid 12</div>
-
-
-
-<div class="span" value="4.5"></div>
-<hr>
-
-<!-- SLIDERS -->
-<div class="grid-12 mL">
-  <div class="grid-12">
-    <h4>Slider:</h4>
-    <p>
-      Kraken cuenta con un slider completamente responsivo y configurable.
-    </p>
-  </div>
-</div>
-
-	<div class="slider">
-    <div class="callbacks_container">
-      <ul class="rslides" id="slider">
-        <li>
-          <img src="http://placehold.it/800x400&text=uno" alt="">
-          <p class="caption">Hola!</p>
-        </li>
-        <li>
-          <img src="http://placehold.it/800x400&text=dos" alt="">
-          <p class="caption">Soy un Slider!</p>
-        </li>
-        <li>
-          <img src="http://placehold.it/800x400&text=tres" alt="">
-          <p class="caption">Whoaaa!</p>
-        </li>
-      </ul>
-    </div>
-	</div>
-
-
-<div class="span" value="4.5"></div>
-<hr>
-
-<div class="grid-11 mL">
-  <div class="grid-12">
-    <h4>Menu:</h4>
-    <p>
-      Menú responsivo y configurable. Se adapta a los automáticamente a los colores de tu diseño.
-    </p>
-  </div>
-</div>
-
-
-<div id='menu' color="333333" class="">
-  <nav class="nav left">
-    <ul>
-      <li class="current"><a href="#">Acerca</a></li>
-      <li><a href="#">Demos</a></li>
-      <li><a href="#">Productos</a></li>
-      <li><a href="#">Servicios</a></li>
-      <li><a href="#">Contacto</a></li>
-    </ul>
-  </nav>
-</div>
-
-
-<div class="span" value="4.5"></div>
-<hr>
-
-<div class="grid-12 mL">
-  <div class="grid-12">
-    <h4>Fonts:</h4>
-    <p>
-      Todos tus textos de adapran automáticamente a tu pantalla, no tienes que programar nada, solo preocupate por escribir.
-    </p>
-    <div class="midText box">Helvetica, Arial, GentiumBookBasic, Lato,  OpenSans, Satellite, Ubuntu fonts.</div>
-  </div>
-</div>
-
-<div class="grid-12">
-
-  <h1>Titulo de prueba</h1>
-
-  <h2>Subtitulo de prueba</h2>
-
-  <h3>Texto</h3>
-
-  <h4>Texto</h4>
-
-  <p class="box">box</p>
-
-<div class="span" value="2.5"></div>
-
-  <p class="box inset">box inset</p>
-
-
-<div class="span" value="2.5"></div>
-
-
-  <input type="text" value="Input">
-  <div class="span" value="2.5"></div>
-
-  <textarea name="test" id="" cols="50" rows="4" class="grid-10">Text Area</textarea>
-</div>
-
 <div class="span" value="3.5"></div>
   <hr>
-  <p>
-  <h3 class="grid-12 mL">Shadow</h3>
-  </p>
 
-    <img src="http://placehold.it/800x400&text=Grid+4" class="shadow grid-4" alt="">
-
-    <img src="http://placehold.it/800x400&text=Grid+4" class="shadow circle grid-4 hide" alt="">
-
-    <img src="http://placehold.it/800x400&text=Grid+4" class="shadow grid-4" alt="">
-
-<div class="span" value="3.5"></div>
-<hr>
-
-<div class="grid-12">
-  <p>
-    <h3>Botones</h3>
-  </p>
-</div>
-
-<div class="span" value="3.5"></div>
-
-<p class="mL">Botones simples:</p>
-
-<div class="grid-2">
-  <a href="#" class="button">Post comment</a>
-</div>
-<div class="grid-2">
-  <a href="#" class="button primary">Publish post</a> 
-</div>
-<div class="grid-2">
-  <a href="#" class="button">Save as draft</a>
-</div>
-<div class="grid-2">
-  <a href="#" class="button pill">This is a pill button</a>
-</div>
-<div class="grid-2">
-  <a href="#" class="button danger">Delete post</a>
-</div>
-<div class="grid-2">
-  <a href="#" class="button big">Create Project</a>
-</div>
-
-<div class="span" value="3.5"></div>
-
-<p class="mL">Grupo:</p>
-
-<div class="grid-4">
-  <div class="button-group">
-    <a href="#" class="button primary">Dashboard</a>
-    <a href="#" class="button">Inbox</a>
-    <a href="#" class="button">Account</a>
-    <a href="#" class="button">Logout</a>
-  </div>
-</div>
-
-<div class="grid-4">
-  <ul class="button-group">
-      <li><a href="#" class="button primary pill">Dashboard</a></li>
-      <li><a href="#" class="button pill">Inbox</a></li>
-      <li><a href="#" class="button pill">Account</a></li>
-      <li><a href="#" class="button pill">Logout</a></li>
-  </ul>
-</div>
-
-<div class="grid-4">
-  <div class="button-group minor-group">
-    <a href="#" class="button primary">Dashboard</a>
-    <a href="#" class="button">Inbox</a>
-    <a href="#" class="button">Account</a>
-    <a href="#" class="button">Logout</a>
-  </div>
-</div>
-
-<div class="span" value="3.5"></div>
-
-<div class="grid-12">
-  <p>
-    <h3>Botones Iconos</h3>
-  </p>
-  
-  <a href="#" class="button icon arrowup">Up</a>
-  <a href="#" class="button icon arrowdown">Down</a>
-  <a href="#" class="button icon arrowleft">Left</a>
-  <a href="#" class="button icon arrowright">Rigth</a>
-  <a href="#" class="button icon approve">Approve</a>
-  <a href="#" class="button icon add">Add</a>
-  <a href="#" class="button icon remove">Remove</a>
-  <a href="#" class="button icon log">Log</a>
-  <a href="#" class="button icon calendar">Calendar</a>
-  <a href="#" class="button icon chat">Chat</a>
-  <a href="#" class="button icon clock">Clock</a>
-  <a href="#" class="button icon settings">Settings</a>
-  <a href="#" class="button icon comment">Comment</a>
-  <a href="#" class="button icon fork">Fork</a>
-  <a href="#" class="button icon like">Like</a>
-  <a href="#" class="button icon favorite">Favorite</a>
-  <a href="#" class="button icon home">Home</a>
-  <a href="#" class="button icon key">Key</a>
-  <a href="#" class="button icon lock">Lock</a>
-  <a href="#" class="button icon unlock">Unlock</a>
-  <a href="#" class="button icon loop">Loop</a>
-  <a href="#" class="button icon search">Search</a>
-  <a href="#" class="button icon mail">Mail</a>
-  <a href="#" class="button icon move">Move</a>
-  <a href="#" class="button icon edit">Edit</a>
-  <a href="#" class="button icon pin">Pin</a>
-  <a href="#" class="button icon reload">Relod</a>
-  <a href="#" class="button icon rss">RSS</a>
-  <a href="#" class="button icon tag">Tag</a>
-  <a href="#" class="button icon trash">Trash</a>
-  <a href="#" class="button icon user">User</a>
-
-</div>
-
-<div class="span" value="3.5"></div>
-
-<div class="grid-12">
-<h3>Progress Bar</h3>
-  
-    <div class="progress bar1">
-      <span style="width: 20%;"><span>20%</span></span>
-    </div>
-
-    <div class="progress bar2">
-      <span class="green" style="width: 40%;"><span>40%</span></span>
-    </div>
-
-    <div class="progress bar3">
-      <span class="orange" style="width: 60%;"><span>60%</span></span>
-    </div>
-
-    <div class="progress bar4">
-      <span class="red" style="width: 80%;"><span>80%</span></span>
-    </div>
-
-    <div class="progress bar5">
-      <span class="blue" style="width: 100%;"><span>100%</span></span>
-    </div>
-</div>
-
-<div class="span" value="3.5"></div>
-
-<div class="grid-12">
-  <h3>Tooltip</h3>
-
-  <a href="#0" tooltip-text="I appear on top." class="tooltip-1">Top</a>
-  <a href="#0" tooltip-text="I appear on top." class="tooltip-2">Bottom</a>
-</div>
-
-<div class="span" value="3.5"></div>
-
-<div class="grid-12">
-<h3>Caption</h3>
-
-  <figure class="effeckt-caption effeckt-caption-1 grid-6">
-    <img src="http://placehold.it/300x200&text=caption+2" alt="">
-    <figcaption>
-      <div class="effeckt-figcaption-wrap">
-        <h3>Appear</h3>
-        <p>Lorem ipsum dolar.</p>
-      </div>
-    </figcaption>
-  </figure>
-
-  <figure class="effeckt-caption effeckt-caption-5 grid-6">
-    <img src="http://placehold.it/300x200&text=caption+2" alt="">
-    <figcaption>
-      <div class="effeckt-figcaption-wrap">
-        <h3>Cover</h3>
-        <p>Lorem ipsum dolar.</p>
-      </div>
-    </figcaption>
-  </figure>
-</div>
 
 
 <!--END GRIDS-->
@@ -427,7 +106,7 @@ $(document).ready(function(){
 
 <footer class="center">
   <div class="footer wrap">
-  <img src="img/kraken.png" class="grid-12">
+  <!-- <img src="img/kraken.png" class="grid-12"> -->
     <div class="grid-4">1</div>
     <div class="grid-4">1</div>
     <div class="grid-4">1</div>
@@ -438,6 +117,5 @@ $(document).ready(function(){
 
 <!-- <div class="bottom-bar center">hola</div> -->
 
-<div class="menuBack"></div>
 </body>
 </html>
