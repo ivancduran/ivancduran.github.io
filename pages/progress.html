@@ -15,7 +15,12 @@
 
 $(document).ready(function(){
 
-$.Kraken({ pagesize : { width: 1024 }, largewrap : { state : false } });
+  //New version
+  $.Kraken({ 
+    pagesize : { width: 1024 },
+    bgimg    : { img : '007' },  
+    bgcolor  : { color : 'e8ae39'},
+  });
 
   rand = function (){
    return Math.floor((Math.random()*100)+1);
