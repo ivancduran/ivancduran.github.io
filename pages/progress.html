@@ -9,14 +9,13 @@
 
   <script lang="javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="../js/responsiveslides.min.js"></script>
-  <script src="../js/jquery.scrollTo-1.4.3.1.js"></script>
   <script src="../js/kraken.js"></script>
 
 <script>
 
 $(document).ready(function(){
 
-$.Kraken({ pagesize : { width: 1024 } });
+$.Kraken({ pagesize : { width: 1024 }, largewrap : { state : false } });
 
   rand = function (){
    return Math.floor((Math.random()*100)+1);

@@ -4,6 +4,7 @@ console.time("Kraken Load Time");
 
 var pluginName = "Kraken",
 			_default = {
+			relative   : { state : true },
 			pagesize   : { state : true, width: 1024, },
 			overflow   : { state : true, x : false, y : true },
 			bgimg      : { state : true, img : '004', size : 'default'},
@@ -30,6 +31,7 @@ var Plugin = function ( _options ){
 	this._name     = pluginName;
 	this.init();
 
+	// if(this.settings.relative.state) 		this.relative(this.settings.relative);
 	if(this.settings.pagesize.state) 		this.pagesize(this.settings.pagesize);
 	if(this.settings.overflow.state) 		this.overflow(this.settings.overflow);
 	if(this.settings.bgimg.state) 			this.bgimg(this.settings.bgimg);
@@ -90,6 +92,39 @@ Plugin.prototype = {
 				globals.MenuBack(0);
 			});
 		},
+		relative: function(kraken){
+				var settings = {};
+				settings.basePath = null;
+
+				if (!settings.basePath) {
+				  (function (name) {
+				    var scripts = document.getElementsByTagName('script');
+
+				    for (var i = scripts.length - 1; i >= 0; --i) {
+				      var src = scripts[i].src;
+				      var l = src.length;
+				      var length = name.length;
+
+				      if (src.substr(l - length) == name) {
+				        // set a global propery here
+				        settings.basePath = src.substr(0, l - length);
+
+				      }
+				    }
+				  })('kraken.js');
+
+				  if(settings.basePath != null){
+					var spliter = settings.basePath.split('/');
+					var location = Array();
+					  for (var i = 0; i < spliter.length - 2; i++) {
+					  	if(spliter[i]!="") location.push(spliter[i]); location.push('/');
+					  	
+					  }
+					return location.join("");		  
+				  };
+
+				}
+		},
 		pagesize: function (kraken){
 			// Page Width size
 			$('.grids').css({'max-width' : kraken.width}), $('.wrap').css({'max-width' : kraken.width});
@@ -101,7 +136,9 @@ Plugin.prototype = {
 		},
 		bgimg: function (kraken){
 			// Background Image in directory img/bg/
-			$('html').css({'background' : 'url("./img/bg/'+kraken.img+'.png")' , 'background-size' : kraken.size });
+			if(this.relative() != null) var path = this.relative();
+
+				$('html').css({'background' : 'url("'+path+'img/bg/'+kraken.img+'.png")' , 'background-size' : kraken.size });
 		},
 		bgcolor: function (kraken){
 			// Background Color
@@ -111,13 +148,13 @@ Plugin.prototype = {
 			// Wrap height of the screen
 			var wrap = '.wrap';
 			var RestWarp = ( kraken.rest == 'default' ) ? '14' : kraken.rest;
-			setTimeout(function(){
-				if($(window).height() > $(wrap).height()){
-					$(wrap).css('min-height',$(document).height() - (RestWarp * 1.5) - ($('footer').height() / 2) );
-				}else{
-					$(wrap).css('min-height',$(document).height() - RestWarp - $('footer').height() );
-				}
-			},150);
+			// setTimeout(function(){
+			// 	if($(window).height() > $(wrap).height()){
+			// 		$(wrap).css('min-height',$(document).height() - (RestWarp * 1.5) - ($('footer').height() / 2) );
+			// 	}else{
+			// 		$(wrap).css('min-height',$(document).height() - RestWarp - $('footer').height() );
+			// 	}
+			// },250);
 		},
 		wrapshadow: function (kraken){
 			// BorderShadow on Wrap shadow="on"

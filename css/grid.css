@@ -1,8 +1,11 @@
 .wrap {
   max-width: 940px;
-  padding: 10px;
+  padding: 0 10px 0 10px;
   margin: 0 auto;
+  overflow-x: scroll;
+  min-height: 100%;
 }
+
 .grids {
   width: auto;
   max-width: 940px;
@@ -11,7 +14,9 @@
   /* So we can make grids out of lists. */
   overflow: hidden;
   /* Clear the floats */
-  /*letter-spacing: -.25em; *//* Fix inline-block weirdness */
+  /*clear: both;*/
+  /* Fix inline-block weirdness */
+  /*letter-spacing: -.25em; */
 }
 .grids [class*="grid-"], .footer [class*="grid-"]{
   display: inline-block;
