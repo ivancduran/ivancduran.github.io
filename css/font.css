@@ -68,6 +68,39 @@ p, ul, ol, dl, blockquote {
     margin-bottom: 1.5em; /* 24 / 16 */
 }
 
+
+.size-1{
+    font-size: 3em; /* 48 / 16 */
+    line-height: 1em; /* 48 / 48 */
+    margin-bottom: .5em; /* 24 / 48 */
+}
+.size-2{
+    font-size: 2.25em; /* 36 / 16 */
+    line-height: 1.333333333333333em; /* 48 / 36 */
+    margin-bottom: .6666666666666667em; /* 24 / 36 */
+    color: #02A2E9;
+}
+.size-3{
+    font-size: 1.5em; /* 24 / 16 */
+    line-height: 1em; /* 24 / 24 */
+    margin-bottom: 1em; /* 24 / 24 */
+}
+.size-4{
+    font-size: 1.3125em; /* 21 / 16 */
+    line-height: 1.142857142857143em; /* 24 / 21 */
+    margin-bottom: 1.142857142857143em; /* 24 / 21 */
+}
+.size-5{
+    font-size: 1.125em; /* 18 / 16 */
+    line-height: 1.333333333333333em; /* 24 / 18 */
+    margin-bottom: 1.333333333333333em; /* 24 / 18 */
+}
+.size-6{
+    font-size: 1em; /* 16 / 16 */
+    line-height: 1.5em; /* 24 / 16 */
+    margin-bottom: 1.5em; /* 24 / 16 */
+}
+
 /*test*/
 /*p {
     font-family: "Satellite",Arial, Helvetica, sans-serif;
