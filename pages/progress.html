@@ -35,6 +35,8 @@ $('.botton').on('click', function(){
   $('.bar4').KrakenTrigger('Progress', { progress : rand()} );
   $('.bar5').KrakenTrigger('Progress', { progress : rand()} );
 
+  console.log($('.bar5').KrakenTrigger('Progress', { progress : rand()} ).data().return);
+
   $('.testeval1').KrakenTrigger('Eval', { type : 'email'} );
   $('.testeval3').KrakenTrigger('Eval', { type : 'email'} );
   $('.testeval2').KrakenTrigger('Eval', { get : true } );

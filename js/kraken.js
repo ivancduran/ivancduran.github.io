@@ -1,6 +1,5 @@
 // Kraken Framework 0.7
 ;(function ( $, window, document, undefined ) {
-console.time("Kraken Load Time");
 
 var pluginName = "Kraken",
 			_default = {
@@ -78,7 +77,10 @@ globals = {
 			arrError.push(options);
 		},
 		count : function (){
-			return arrSuccess.length;
+			arrShow = arrSuccess;
+			arrSuccess = null;
+			arrSuccess = Array();
+			return arrShow.length;
 		}
 	}
 	
@@ -371,8 +373,6 @@ $[pluginName] = function (_options) {
 // };
 // var tester = Plugin;
 // new tester('hola');
-
-console.timeEnd("Kraken Load Time");
 
 
 })( jQuery, window, document );	
