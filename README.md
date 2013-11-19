@@ -8,12 +8,18 @@ Features for the new version:
 ----------------------------
 
 - Modal Engine (0.8)
-- Regex Engine (0.9)
 - Mobile for Phonegap/Cordova (***)
 - Express/Jade snippets (***)
 
-
 **Changelog:**
+
+V 0.8
+======
+- Fix bars
+- Fix Height
+- Fix Menu
+- Non Clases
+- Show style and js
 
 V 0.7
 ======
