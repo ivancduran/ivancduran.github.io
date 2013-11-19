@@ -11,7 +11,7 @@ var pluginName = "Kraken",
 			largewrap  : { state : true, rest : 'default' },
 			wrapshadow : { state : true, intense : 'default', size : 'default'},
 			slider     : { state : true, auto : true, pager : false, nav : true, speed : 500},
-			menu       : { state : true, submenu: true, },
+			menu       : { state : true, submenu : true, move : true},
 			span       : { state : true, multiply : '10' },
 			interval   : { state : false, timer : '2000'},
 			hide       : { state : true, resize : true, size : 700 },
@@ -38,7 +38,7 @@ var Plugin = function ( _options ){
 	if(this.settings.largewrap.state) 		this.largewrap(this.settings.largewrap);
 	if(this.settings.wrapshadow.state) 		this.wrapshadow(this.settings.wrapshadow);
 	if(this.settings.slider.state) 			this.slider(this.settings.slider);
-	if(this.settings.menu.state) 			this.menu(this.settings.hide);
+	if(this.settings.menu.state) 			this.menu(this.settings.menu, this.settings.hide);
 	if(this.settings.span.state) 			this.span(this.settings.span);
 	if(this.settings.hide.state) 			this.hide(this.settings.hide);
 	if(this.settings.show.state) 			this.show(this.settings.show);
@@ -178,7 +178,7 @@ Plugin.prototype = {
 				}
 			});
 		},
-		menu: function (kraken){
+		menu: function (krakenMenu, krakenSize){
 			//SubMenu
 			$('.grids > #menu').css({'position':'relative', 'width':'auto', 'z-index':'8'});
 			$('.subMenu').hide();
@@ -196,7 +196,7 @@ Plugin.prototype = {
 				}
 
 			});
-			if($(document).width() > kraken.size){
+			if($(document).width() > krakenSize.size){
 				function openSubMenu() {
 					// $(this).find('ul').css({opacity: 0, visibility: "visible"}).animate({opacity: 1, top: 32}, 400);
 					 $(this).find('ul').css('visibility', 'visible');
@@ -209,6 +209,23 @@ Plugin.prototype = {
 				$('.nav > ul > li').bind('mouseout', closeSubMenu);
 			}else{
 				$(this).find('ul').css('visibility', 'visible');
+			}
+
+			if(krakenMenu.move==true){
+				 var Menu = '#menu';
+				 var pageTop = $(window).scrollTop();
+				    if(pageTop==0){
+				      $(Menu).addClass('menuTop');
+				    }
+				  $(window).scroll(function(event) {
+				    pageTop = $(window).scrollTop()
+				    if(pageTop<20){
+				      $(Menu).addClass('menuTop');
+				    }else{
+				      $(Menu).removeClass('menuTop');
+				      $(Menu).addClass('menuMove');
+				    }
+				  });
 			}
 		},
 		span: function (kraken){

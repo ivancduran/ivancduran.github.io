@@ -22,25 +22,6 @@ $(document).ready(function(){
     bgcolor  : { },
   });
 
-
- var Menu = '#menu';
- var pageTop = $(window).scrollTop();
-    if(pageTop==0){
-      $(Menu).addClass('menuTop');
-    }
-
-  $(window).scroll(function(event) {
-    pageTop = $(window).scrollTop()
-    if(pageTop<20){
-      $(Menu).addClass('menuTop');
-    }else{
-
-      $(Menu).removeClass('menuTop');
-      $(Menu).addClass('menuMove');
-
-    }
-  });
-
 });
 
 </script>
