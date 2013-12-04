@@ -19,6 +19,7 @@ var pluginName = "Kraken",
 			footer     : { state : true, resize : true },
 			fonts      : {}
 	};
+
 var PNTrigger  =  pluginName+'Trigger';
 var arrSuccess = [];
 var arrError   = [];
@@ -101,16 +102,18 @@ Plugin.prototype = {
 				if (!settings.basePath) {
 				  (function (name) {
 				    var scripts = document.getElementsByTagName('script');
+				      var nameMin = 'kraken.min.js';
+				      var lengthMin = nameMin.length;
 
 				    for (var i = scripts.length - 1; i >= 0; --i) {
 				      var src = scripts[i].src;
 				      var l = src.length;
 				      var length = name.length;
 
-				      if (src.substr(l - length) == name) {
+
+				      if ( (src.substr(l - length) == name ) || (src.substr(l - lengthMin) == nameMin )) {
 				        // set a global propery here
 				        settings.basePath = src.substr(0, l - length);
-
 				      }
 				    }
 				  })('kraken.js');
@@ -139,7 +142,6 @@ Plugin.prototype = {
 		bgimg: function (kraken){
 			// Background Image in directory img/bg/
 			if(this.relative() != null) var path = this.relative();
-
 				$('html').css({'background' : 'url("'+path+'img/bg/'+kraken.img+'.png")' , 'background-size' : kraken.size });
 		},
 		bgcolor: function (kraken){
