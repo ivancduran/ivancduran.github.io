@@ -5,13 +5,13 @@
 /* UbuntuL: all */
 
 @font-face {
-  font-family: "Lato";
- src: url("../css/fonts/Lato.woff") format('woff');
+    font-family: 'Lato';
+    src: url("fonts/Lato.woff") format('woff');
 }
 
 /*DOM Elements*/
 body {
-	font: 100%/1.5 'Lato','Helvetica Neue', Helvetica, Arial, sans-serif;
+	font: 100%/1.5 'Lato','Helvetica Neue', sans-serif;
 }
 
 html{

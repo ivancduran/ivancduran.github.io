@@ -275,7 +275,7 @@ Plugin.prototype = {
 		},
 		footer: function(kraken){
 
-			$('.wrap').css({'margin-bottom': $('footer').height() });
+			$('.wrap').css({'margin-bottom': $('footer').height() -10 });
 			// $('.footer').css({'max-width': kraken.width});
 
 		}
