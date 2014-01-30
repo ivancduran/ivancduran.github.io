@@ -109,15 +109,6 @@ footer {
   position: absolute;
 }
 
-.circle {
-  width: 300px;
-  height: 300px;
-  border: 1px solid #ccc;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-}
-
 .bgGray {
   background-color: #E8E8E8;
   border-radius: 8px;
@@ -257,30 +248,6 @@ footer {
 
 /*********************************MEDIA*********************************/
 /*landscape phone*/
-@media screen and (max-width: 320px) {
-  .circle {
-    width: 100px;
-    height: 100px;
-  }
-}
 /*normal phone*/
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .circle {
-    width: 200px;
-    height: 200px;
-  }
-}
 /*large phone and tablets*/
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .circle {
-    width: 300px;
-    height: 300px;
-  }
-}
 /*ipad*/
-@media screen and (min-width: 767px) and (max-width: 1024px) {
-  .circle {
-    width: 400px;
-    height: 400px;
-  }
-}

@@ -17,8 +17,9 @@ var pluginName = "Kraken",
 			hide       : { state : true, resize : true, size : 700 },
 			show       : { state : false, resize : true, size : 700 },
 			footer     : { state : true, resize : true },
-			fonts      : {}
-	};
+			modal      : { state : true },
+			fonts      : {},
+		};
 
 var PNTrigger  =  pluginName+'Trigger';
 var arrSuccess = [];
@@ -44,6 +45,7 @@ var Plugin = function ( _options ){
 	if(this.settings.hide.state) 			this.hide(this.settings.hide);
 	if(this.settings.show.state) 			this.show(this.settings.show);
 	if(this.settings.footer.state) 			this.footer(this.settings.pagesize);
+	if(this.settings.modal.state)			this.modal(this.settings.modal);
 
 }
 
@@ -275,9 +277,39 @@ Plugin.prototype = {
 		},
 		footer: function(kraken){
 
-			$('.wrap').css({'margin-bottom': $('footer').height() -10 });
+			$('.wrap').css({'margin-bottom': $('footer').height() - 10 });
 			// $('.footer').css({'max-width': kraken.width});
 
+		},
+		modal : function(kraken){
+			var overlay = document.querySelector( '.md-overlay' );
+			[].slice.call( document.querySelectorAll( '.md-trigger' ) ).forEach( function( el, i ) {
+				var modal = document.querySelector( '#' + el.getAttribute( 'data-modal' ) ),
+					close = modal.querySelector( '.md-close' );
+				function removeModal( hasPerspective ) {
+					$(modal).removeClass('md-show');
+					if( hasPerspective ) {
+						$(document.documentElement).removeClass('md-perspective');
+					}
+				}
+				function removeModalHandler() {
+					removeModal( $(el).hasClass('md-setperspective') ); 
+				}
+				el.addEventListener( 'click', function( ev ) {
+					$(modal).addClass('md-show');
+					overlay.removeEventListener( 'click', removeModalHandler );
+					overlay.addEventListener( 'click', removeModalHandler );
+					if( $(el).hasClass('md-setperspective') ) {
+						setTimeout( function() {
+							$(document.documentElement).addClass('md-perspective');
+						}, 25 );
+					}
+				});
+				close.addEventListener( 'click', function( ev ) {
+					ev.stopPropagation();
+					removeModalHandler();
+				});
+			} );
 		}
 
 };
@@ -294,6 +326,9 @@ Triggers = function (func, options, element){
 	break;
 	case 'Eval':
 		$.data(this.element ,"return", this.Eval(this.element, options));
+	break;
+	case 'Modal':
+		$.data(this.element ,"return", this.Modal(this.element, options));
 	break;
 	default:
 		console.log('Trigger undefined');
@@ -352,6 +387,15 @@ Triggers.prototype = {
 			return settings.type;
 		}
 
+	},
+	Modal : function(element, options){
+		$(element).children().find('h3').text(options.title);
+		$(element).children().find('div > .md-text').text(options.text);
+
+		if(options.close.length>0){
+			$(element).children().find('.md-close').text(options.close);
+		}
+		
 	}
 
 }
