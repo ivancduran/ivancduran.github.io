@@ -310,6 +310,9 @@ Plugin.prototype = {
 					removeModalHandler();
 				});
 			} );
+			$('.md-close, .md-overlay').click(function() {
+            	$('.md-show').removeClass('md-show');
+       		});
 		}
 
 };
