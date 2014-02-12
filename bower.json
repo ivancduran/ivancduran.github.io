@@ -9,13 +9,13 @@
   "main": [
     "js/kraken.js",
     "css/kraken.css",
-    "scss/kraken.scss",
+    "scss/kraken.scss"
   ],
   "keywords": [
     "css",
     "html5",
     "js",
-    "responsive",
+    "responsive"
   ],
   "license": "MIT",
   "ignore": [
