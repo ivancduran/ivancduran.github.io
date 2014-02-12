@@ -2,7 +2,6 @@
   max-width: 940px;
   padding: 0 10px 0 10px;
   margin: 0 auto;
-  /*overflow-x: scroll;*/
   min-height: 100%;
 }
 
@@ -14,9 +13,7 @@
   /* So we can make grids out of lists. */
   overflow: hidden;
   /* Clear the floats */
-  /*clear: both;*/
-  /* Fix inline-block weirdness */
-  /*letter-spacing: -.25em; */
+  // clear: both;
 }
 .grids [class*="grid-"], .footer [class*="grid-"]{
   display: inline-block;
@@ -41,16 +38,16 @@
 .grid-11 {width: 89.583%;}
 .grid-12 {width: 97.5%; /*width: 100%;*/ margin: 0;}
 /*.grid-12 {width: 97.195%; margin: 0;}*/
-.grid-0 {/*width: 97.917%;*/ width: 100%; margin: 0;}
+.grid-0 {width: 100%; margin: 0;}
 
 .non-1 {width: 6.15%;}
 .non-2 {width: 14.583%;}
 .non-3 {width: 22.917%;}
-.non-4, .grid-one-third {width: 31.25%;}
+.non-4, .non-one-third {width: 31.25%;}
 .non-5 {width: 39.583%;}
-.non-6, .grid-half {width: 47.917%;}
+.non-6, .non-half {width: 47.917%;}
 .non-7 {width: 56.25%;}
-.non-8, .grid-two-thirds {width: 64.583%;}
+.non-8, .non-two-thirds {width: 64.583%;}
 .non-9 {width: 72.917%;}
 .non-10 {width: 81.25%;}
 .non-11 {width: 89.583%;}

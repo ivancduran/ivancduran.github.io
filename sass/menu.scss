@@ -51,15 +51,8 @@
   /*background: #999;*/
   color: #fff;
   border-radius: 5px;
-
-  
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#cacaca), to(#848484));
   background-image: -moz-linear-gradient(top, #cacaca, #848484);
-
-  /*
-  box-shadow: inset 0 0 10px #000;
-  -moz-box-shadow: inset 0 0 10px #000;
-  -webkit-box-shadow: inset 0 0 10px #000;*/
 }
 
 /* left nav */
@@ -85,10 +78,6 @@
   visibility: hidden;
   text-align: center;
   display: block;
-  /*border-top:3px solid #3c3c3c; border-bottom:3px solid #3c3c3c;*/
-  /*margin: 0px 0 0 0;*/
-  /*padding:0;*/
-  /*background-color: #141414;*/
 }
 
 .nav li ul li {

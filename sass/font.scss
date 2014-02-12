@@ -1,8 +1,30 @@
 /*Font Face*/
-/* Lato: all */
-/* OpenSans: h1 y h2 */
-/* Satellite: h1 y h2 */
-/* UbuntuL: all */
+
+$size1   : 3em;
+$line1   : 1em;
+$margin1 : .5em;
+
+$size2   : 2.25em;
+$line2   : 1.333333333333333em;
+$margin2 : .6666666666666667em;
+
+$size3   : 1.5em;
+$line3   : 1em;
+$margin3 : 1em;
+
+$size4   : 1.3125em;
+$line4   : 1.142857142857143em;
+$margin4 : 1.142857142857143em;
+
+$size5   : 1.125em;
+$line5   : 1.333333333333333em;
+$margin5 : 1.333333333333333em;
+
+$size6   : 1em;
+$line6   : 1.5em;
+$margin6 : 1.5em;
+
+$margin7 : 1.5em;
 
 @font-face {
     font-family: 'Lato';
@@ -14,74 +36,37 @@ body {
 	font: 100%/1.5 'Lato','Helvetica Neue', sans-serif;
 }
 
-html{
-    text-shadow: 0px 0px 15px rgba(150, 150, 150, 0.4);
+h1, .size-1 {
+    font-size: $size1; /* 48 / 16 */
+    line-height: $line1; /* 48 / 48 */
+    margin-bottom: $margin1; /* 24 / 48 */
 }
-
-h1 {
-    font-size: 3em; /* 48 / 16 */
-    line-height: 1em; /* 48 / 48 */
-    margin-bottom: .5em; /* 24 / 48 */
-}
-h2 {
-    font-size: 2.25em; /* 36 / 16 */
-    line-height: 1.333333333333333em; /* 48 / 36 */
-    margin-bottom: .6666666666666667em; /* 24 / 36 */
+h2, .size-2 {
+    font-size: $size2; /* 36 / 16 */
+    line-height: $line2; /* 48 / 36 */
+    margin-bottom: $margin2; /* 24 / 36 */
     color: #02A2E9;
 }
-h3 {
-    font-size: 1.5em; /* 24 / 16 */
-    line-height: 1em; /* 24 / 24 */
-    margin-bottom: 1em; /* 24 / 24 */
+h3, .size-3 {
+    font-size: $size3; /* 24 / 16 */
+    line-height: $line3; /* 24 / 24 */
+    margin-bottom: $margin3; /* 24 / 24 */
 }
-h4 {
-    font-size: 1.3125em; /* 21 / 16 */
-    line-height: 1.142857142857143em; /* 24 / 21 */
-    margin-bottom: 1.142857142857143em; /* 24 / 21 */
+h4, .size-4 {
+    font-size: $size4; /* 21 / 16 */
+    line-height: $line4; /* 24 / 21 */
+    margin-bottom: $margin4; /* 24 / 21 */
 }
-h5 {
-    font-size: 1.125em; /* 18 / 16 */
-    line-height: 1.333333333333333em; /* 24 / 18 */
-    margin-bottom: 1.333333333333333em; /* 24 / 18 */
+h5, .size-5 {
+    font-size: $size5; /* 18 / 16 */
+    line-height: $line5; /* 24 / 18 */
+    margin-bottom: $margin5; /* 24 / 18 */
 }
-h6 {
-    font-size: 1em; /* 16 / 16 */
-    line-height: 1.5em; /* 24 / 16 */
-    margin-bottom: 1.5em; /* 24 / 16 */
+h6, .size-6 {
+    font-size: $size6; /* 16 / 16 */
+    line-height: $line6; /* 24 / 16 */
+    margin-bottom: $margin6; /* 24 / 16 */
 }
 p, ul, ol, dl, blockquote {
-    margin-bottom: 1.5em; /* 24 / 16 */
-}
-
-
-.size-1{
-    font-size: 3em; /* 48 / 16 */
-    line-height: 1em; /* 48 / 48 */
-    margin-bottom: .5em; /* 24 / 48 */
-}
-.size-2{
-    font-size: 2.25em; /* 36 / 16 */
-    line-height: 1.333333333333333em; /* 48 / 36 */
-    margin-bottom: .6666666666666667em; /* 24 / 36 */
-    color: #02A2E9;
-}
-.size-3{
-    font-size: 1.5em; /* 24 / 16 */
-    line-height: 1em; /* 24 / 24 */
-    margin-bottom: 1em; /* 24 / 24 */
-}
-.size-4{
-    font-size: 1.3125em; /* 21 / 16 */
-    line-height: 1.142857142857143em; /* 24 / 21 */
-    margin-bottom: 1.142857142857143em; /* 24 / 21 */
-}
-.size-5{
-    font-size: 1.125em; /* 18 / 16 */
-    line-height: 1.333333333333333em; /* 24 / 18 */
-    margin-bottom: 1.333333333333333em; /* 24 / 18 */
-}
-.size-6{
-    font-size: 1em; /* 16 / 16 */
-    line-height: 1.5em; /* 24 / 16 */
-    margin-bottom: 1.5em; /* 24 / 16 */
+    margin-bottom: $margin7; /* 24 / 16 */
 }
