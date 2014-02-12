@@ -1,15 +1,26 @@
+/*Font Face*/
+
+/* Lato: all */
+
+/* OpenSans: h1 y h2 */
+
+/* Satellite: h1 y h2 */
+
+/* UbuntuL: all */
+
 @font-face {
   font-family: 'Lato';
   src: url("fonts/Lato.woff") format("woff");
 }
 
 /*DOM Elements*/
+
 body {
   font: 100%/1.5 'Lato','Helvetica Neue', sans-serif;
 }
 
 html {
-  /*text-shadow: 0px 0px 15px rgba(150, 150, 150, 0.4);*/
+  text-shadow: 0px 0px 15px rgba(150, 150, 150, 0.4);
 }
 
 h1 {
@@ -67,7 +78,11 @@ h6 {
   /* 24 / 16 */
 }
 
-p, ul, ol, dl, blockquote {
+p,
+ul,
+ol,
+dl,
+blockquote {
   margin-bottom: 1.5em;
   /* 24 / 16 */
 }

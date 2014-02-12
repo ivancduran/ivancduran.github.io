@@ -1,27 +1,29 @@
 /*fix wrap*/
-html, body {
+
+html,
+body {
   height: auto;
   min-height: 100%;
   height: 100%;
 }
 
-nav, li, img, .progress > span {
+nav,
+li,
+img,
+.progress > span {
   /*  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;*/
   -webkit-transition: all 0.5s cubic-bezier(0.5, 0.885, 0.32, 1.1);
-  -moz-transition: all 0.5s cubic-bezier(0.5, 0.885, 0.32, 1.1);
   transition: all 0.5s cubic-bezier(0.5, 0.885, 0.32, 1.1);
 }
 
-input[type=text], textarea {
+input[type=text],
+textarea {
   border: 1px solid #aaaaaa;
   /*background: url("../img/input_bg.png") no-repeat scroll 0 0 transparent;*/
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   padding-left: 5px;
-  -moz-box-shadow: inset 0px 0px 15px #c9c9c9;
   -webkit-box-shadow: inset 0px 0px 15px #c9c9c9;
   box-shadow: inset 0px 0px 15px #c9c9c9;
 }
@@ -50,7 +52,6 @@ footer {
 .wrap {
   background-color: #FAF9F7;
   -webkit-transition: all 0.2s cubic-bezier(0.5, 0.885, 0.32, 1.1);
-  -moz-transition: all 0.2s cubic-bezier(0.5, 0.885, 0.32, 1.1);
   transition: all 0.2s cubic-bezier(0.5, 0.885, 0.32, 1.1);
 }
 
@@ -127,12 +128,12 @@ footer {
   margin: 0px;
   padding: 25px;
   background-color: #E8E8E8;
+  -webkit-box-shadow: 1px 1px 30px rgba(50, 50, 50, 0.1);
   box-shadow: 1px 1px 30px rgba(50, 50, 50, 0.1);
   border-radius: 5px;
 }
 
 .inset {
-  -moz-box-shadow: inset 1px 1px 17px #6e6d6e;
   -webkit-box-shadow: inset 1px 1px 17px #6e6d6e;
   box-shadow: inset 1px 1px 17px #6e6d6e;
 }
@@ -140,13 +141,11 @@ footer {
 .solid {
   border: 1px solid #CCC;
   background-color: #dcdcdc;
-  background: -moz-linear-gradient(top, #e1e1e1 0%, #d5d5d5);
   background: -webkit-gradient(linear, left top, left bottom, from(#e1e1e1), to(#d5d5d5));
 }
 
 .shadow {
   -webkit-box-shadow: 0 8px 6px -6px black;
-  -moz-box-shadow: 0 8px 6px -6px black;
   box-shadow: 0 8px 6px -6px black;
 }
 
@@ -216,7 +215,6 @@ footer {
   z-index: -20;
   top: 0px;
   opacity: .2;
-  -moz-box-shadow: 0px 0px 18px #333;
   -webkit-box-shadow: 0px 0px 18px #333;
   box-shadow: 0px 0px 18px #333;
 }
@@ -247,7 +245,11 @@ footer {
 }
 
 /*********************************MEDIA*********************************/
+
 /*landscape phone*/
+
 /*normal phone*/
+
 /*large phone and tablets*/
+
 /*ipad*/
