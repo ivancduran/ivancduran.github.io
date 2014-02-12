@@ -1,5 +1,13 @@
-.container {
+body {
+  background: url("../img/noise.png");
   background-color: #FAF9F7;
+}
+
+.container {
+  background: url("../img/bg-uniform.png");
+  background-color: #FFF;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.39);
+  box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.39);
 }
 
 .bgGray {
