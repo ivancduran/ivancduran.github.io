@@ -19,7 +19,6 @@
     "source",
     "spec",
     ".DS_Store",
-    ".bowerrc",
     ".gitignore",
     ".jshintignore",
     ".jshintrc",
