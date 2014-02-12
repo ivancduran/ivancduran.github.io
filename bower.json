@@ -1,0 +1,28 @@
+{
+  "name": "Kraken",
+  "version": "0.8.0",
+  "homepage": "https://github.com/ivancduran/kraken",
+  "authors": [
+    "ivancduran"
+  ],
+  "description": "css ad js framework",
+  "main": [
+    "js/kraken.js",
+    "css/kraken.css",
+    "scss/kraken.scss",
+  ],
+  "keywords": [
+    "css",
+    "html5",
+    "js",
+    "responsive",
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
