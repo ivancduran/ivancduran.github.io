@@ -11,9 +11,6 @@ nav,
 li,
 img,
 .progress > span {
-  /*  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;*/
   -webkit-transition: all 0.5s cubic-bezier(0.5, 0.885, 0.32, 1.1);
   transition: all 0.5s cubic-bezier(0.5, 0.885, 0.32, 1.1);
 }
