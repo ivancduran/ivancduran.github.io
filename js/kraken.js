@@ -1,4 +1,4 @@
-// Kraken Framework 0.7
+// Kraken Framework 0.8
 ;(function ( $, window, document, undefined ) {
 
 var pluginName = "Kraken",

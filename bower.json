@@ -9,7 +9,8 @@
   "main": [
     "js/kraken.js",
     "css/kraken.css",
-    "scss/kraken.scss"
+    "scss/kraken.scss",
+    "css/compile.css"
   ],
   "keywords": [
     "css",
