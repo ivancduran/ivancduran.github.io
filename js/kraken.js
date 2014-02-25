@@ -274,37 +274,30 @@ Plugin.prototype = {
 
 		},
 		modal : function(kraken){
-			var overlay = document.querySelector( '.md-overlay' );
-			[].slice.call( document.querySelectorAll( '.md-trigger' ) ).forEach( function( el, i ) {
-				var modal = document.querySelector( '#' + el.getAttribute( 'data-modal' ) ),
-					close = modal.querySelector( '.md-close' );
-				function removeModal( hasPerspective ) {
-					$(modal).removeClass('md-show');
-					if( hasPerspective ) {
-						$(document.documentElement).removeClass('md-perspective');
-					}
-				}
-				function removeModalHandler() {
-					removeModal( $(el).hasClass('md-setperspective') ); 
-				}
-				el.addEventListener( 'click', function( ev ) {
-					$(modal).addClass('md-show');
-					overlay.removeEventListener( 'click', removeModalHandler );
-					overlay.addEventListener( 'click', removeModalHandler );
-					if( $(el).hasClass('md-setperspective') ) {
-						setTimeout( function() {
-							$(document.documentElement).addClass('md-perspective');
-						}, 25 );
-					}
+			
+			$('.md-trigger').each(function(index, v) {
+				$(this).on('click', function(){
+					modal = $(this).attr('data-modal');
+					$('#'+modal).addClass('md-show');
+					$('.md-overlay').css({ "opacity": "1", "visibility":"visible" });
 				});
-				close.addEventListener( 'click', function( ev ) {
-					ev.stopPropagation();
-					removeModalHandler();
-				});
-			} );
-			$('.md-close, .md-overlay').click(function() {
-            	$('.md-show').removeClass('md-show');
+			});
+
+			var remove = function(){
+				$('.md-show').removeClass('md-show');
+				$('.md-overlay').css({ "opacity": "0", "visibility":"hidden" });
+			}
+
+			$(document).keyup(function(e) {
+			  if (e.keyCode == 27) {
+			  	remove();
+			  }
+			});
+
+			$(document).on('click', '.md-close, .md-overlay', function() {
+            	remove();
        		});
+       		
 		}
 
 };
@@ -384,13 +377,21 @@ Triggers.prototype = {
 
 	},
 	Modal : function(element, options){
-		$(element).children().find('h3').text(options.title);
-		$(element).children().find('div > .md-text').text(options.text);
-
-		if(options.close.length>0){
-			$(element).children().find('.md-close').text(options.close);
+		if( (typeof options == "object") && (options !== null) ){
+			$(element).children().find('h3').text(options.title);
+			$(element).children().find('div > .md-text').text(options.text);
+			if(options.close.length>0){
+				$(element).children().find('.md-close').text(options.close);
+			}
+		}else{
+			if(options){	
+				$(element).addClass('md-show');
+				$('.md-overlay').css({ "opacity": "1", "visibility":"visible" });
+			}else{
+				$(element).removeClass('md-show');
+				$('.md-overlay').css({ "opacity": "0", "visibility":"hidden" });
+			}
 		}
-		
 	}
 
 }
