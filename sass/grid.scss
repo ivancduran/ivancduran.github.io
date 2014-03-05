@@ -3,6 +3,7 @@
   padding: 0 10px 0 10px;
   margin: 0 auto;
   min-height: 100%;
+  // fix toltip
 }
 
 .grids {
@@ -11,9 +12,9 @@
   /*margin: 0 0 0 -1.7%;*/
   list-style: none;
   /* So we can make grids out of lists. */
-  overflow: hidden;
+  overflow: visible;
   /* Clear the floats */
-  // clear: both;
+  clear: both;
 }
 .grids [class*="grid-"], .footer [class*="grid-"]{
   display: inline-block;
@@ -25,7 +26,7 @@
   letter-spacing: 0; /* And restore our letter spacing. */
 }
 
-.grid-1 {width: 6.15%;}
+.grid-1 {width: 6.3%;}
 .grid-2 {width: 14.583%;}
 .grid-3 {width: 22.917%;}
 .grid-4, .grid-one-third {width: 31.25%;}
@@ -36,11 +37,11 @@
 .grid-9 {width: 72.917%;}
 .grid-10 {width: 81.25%;}
 .grid-11 {width: 89.583%;}
-.grid-12 {width: 97.5%; /*width: 100%;*/ margin: 0;}
+.grid-12 {width: 97.45%; /*width: 100%;*/ margin: 0;}
 /*.grid-12 {width: 97.195%; margin: 0;}*/
 .grid-0 {width: 100%; margin: 0;}
 
-.non-1 {width: 6.15%;}
+.non-1 {width: 6.3%;}
 .non-2 {width: 14.583%;}
 .non-3 {width: 22.917%;}
 .non-4, .non-one-third {width: 31.25%;}
@@ -51,7 +52,7 @@
 .non-9 {width: 72.917%;}
 .non-10 {width: 81.25%;}
 .non-11 {width: 89.583%;}
-.non-12 {width: 97.5%; margin: 0;}
+.non-12 {width: 97.45%; margin: 0;}
 .non-0 { width: 100%;}
 
 @media screen and (max-width: 700px) {
