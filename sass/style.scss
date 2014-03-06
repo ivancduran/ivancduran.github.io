@@ -75,11 +75,10 @@ footer {
 }
 
 .box{
+	border-radius: 4px;
+	background-color: #fafafa;
     margin: 0px;
     padding: 25px;
-    background-color: #E8E8E8;
-    box-shadow: 1px 1px 30px rgba(50, 50, 50, 0.1);
-    border-radius:5px;
 }
 
 .inset{
@@ -89,22 +88,15 @@ footer {
 }
 
 .solid{
-	border: 1px solid #CCC;
-	background-color: #dcdcdc;
-	background: -moz-linear-gradient(
-		top,
-		#e1e1e1 0%,
-		#d5d5d5);
-	background: -webkit-gradient(
-		linear, left top, left bottom, 
-		from(#e1e1e1),
-		to(#d5d5d5));
+	background: #fafafa;
+	color: #373737;
+	border: 1px solid #c1ccd4;
 }
 
 .shadow{
-	-webkit-box-shadow: 0 8px 6px -6px black;
-	-moz-box-shadow: 0 8px 6px -6px black;
-	box-shadow: 0 8px 6px -6px black;
+	-webkit-box-shadow: 0 8px 6px -6px #ccc;
+	-moz-box-shadow: 0 8px 6px -6px #ccc;
+	box-shadow: 0 8px 6px -6px #ccc;
 }
 
 .Back{
@@ -135,7 +127,7 @@ footer {
 }
 
 .footer{
-	background: #333;
+	background: #474747;
 	padding-top:10px;
 }
 

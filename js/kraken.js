@@ -268,9 +268,15 @@ Plugin.prototype = {
 
 		},
 		footer: function(kraken){
+			var re = function(){
+				val = ($('footer').height() - 10 - $('.wrap').offset().top);
+				$('.wrap').css({'margin-bottom': val });
+			}
+				re();
 
-			$('.wrap').css({'margin-bottom': $('footer').height() - 10 });
-			// $('.footer').css({'max-width': kraken.width});
+			$(window).resize(function(){
+				re();
+			});
 
 		},
 		modal : function(kraken){

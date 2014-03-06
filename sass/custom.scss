@@ -1,21 +1,29 @@
-// page container
-body{
-  background: url("../img/noise.png");
-  background-color: #FAF9F7;
+// Custom
+body {
+  // background: url("../img/noise.png");
+  background-color: #f0f0f0;
+}
+
+.wrap { 
+  margin-top: 4%;
+}
+/*landscape phone*/
+@media screen and (max-width: 700px) {
+  .wrap {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
 }
 
 .container {
-  background: url("../img/bg-uniform.png");
-  background-color: #FFF;
-  -webkit-box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.39);
-  -moz-box-shadow:    0px 0px 8px 0px rgba(50, 50, 50, 0.39);
-  box-shadow:         0px 0px 8px 0px rgba(50, 50, 50, 0.39);
+  // background: url("../img/bg-uniform.png");
+  background-color: #ffffff;
+  border: 1px solid #e0e1db;
 }
 
 .bgGray {
   background-color: #E8E8E8;
-  border-radius: 8px;
   margin: 5px 0px 5px 0px;
   padding: 5px 0px 5px 0px;
-  border: 4px solid #fff;
+  border: 1px solid #e0e1db;
 }
