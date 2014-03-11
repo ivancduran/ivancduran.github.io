@@ -27,6 +27,26 @@ $(document).ready(function(){
     bgcolor  : { color : '51fddf'},
   });
 
+  var counterValue = parseInt($('.bubble').html()); // Get the current bubble value
+
+  function removeAnimation(){
+    setTimeout(function() {
+    $('.bubble').removeClass('animbubble')
+    }, 1000);           
+  }
+
+  $('#decrease').on('click',function(){
+    counterValue--; // decrement
+    $('.bubble').html(counterValue).addClass('animbubble'); // animate it
+    removeAnimation(); // remove CSS animating class
+  });
+
+  $('#increase').on('click',function(){
+    counterValue++; // increment
+    $('.bubble').html(counterValue).addClass('animbubble'); // animate it
+    removeAnimation(); // remove CSS animating class 
+  });
+
 });
 </script>
 
@@ -168,6 +188,17 @@ $(document).ready(function(){
   <a href="#" class="button icon user">User</a>
 
 </div>
+
+<br><br>
+<div class="button big pointer">
+  <span class="bubble">10</span>
+  Bubble Bubble Bubble Bubble Bubble Bubble 
+</div>
+
+<br>
+
+<div id="decrease" class="button pointer">Decrease</div>
+<div id="increase" class="button pointer">Increase</div>
 <!--END BUTTONS-->
 
 

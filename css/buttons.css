@@ -518,3 +518,13 @@
 .button-container .button-group {
   vertical-align: top;
 }
+
+.bubble {
+  background: #e02424;
+  position: absolute;
+  right: 5px;
+  top: -12px;
+  padding: 2px 6px;
+  color: #fff;
+  border-radius: 3px;
+}

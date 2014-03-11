@@ -95,3 +95,34 @@
     transform: rotate(359deg);
   }
 }
+
+.animbubble {
+  -webkit-animation: bubble 1s cubic-bezier(0, 1, 1, 0);
+  animation: bubble 1s cubic-bezier(0, 1, 1, 0);
+}
+
+@-webkit-keyframes bubble {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  to {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+
+@keyframes bubble {
+  from {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  to {
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}

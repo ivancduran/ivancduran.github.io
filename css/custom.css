@@ -22,7 +22,7 @@ body {
 
 .bgGray {
   background-color: #E8E8E8;
-  margin: 5px 0px 5px 0px;
-  padding: 5px 0px 5px 0px;
+  margin: 5px 0px;
+  padding: 5px 0px;
   border: 1px solid #e0e1db;
 }
