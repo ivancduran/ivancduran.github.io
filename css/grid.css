@@ -6,8 +6,7 @@
   position: relative;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .grids {
   width: auto;
@@ -16,11 +15,9 @@
   /* So we can make grids out of lists. */
   overflow: visible;
   /* Clear the floats */
-  clear: both;
-}
+  clear: both; }
 
-.grids [class*="grid-"],
-.footer [class*="grid-"] {
+.grids [class*="grid-"], .footer [class*="grid-"] {
   display: inline-block;
   margin: 0 0% 0 1.5%;
   -webkit-box-sizing: border-box;
@@ -29,78 +26,50 @@
   box-sizing: border-box;
   vertical-align: top;
   letter-spacing: 0;
-  /* And restore our letter spacing. */
-}
+  /* And restore our letter spacing. */ }
 
-.grid-1,
-.non-1 {
-  width: 6.43333%;
-}
+.grid-1, .non-1 {
+  width: 6.43333%; }
 
-.grid-2,
-.non-2 {
-  width: 14.66667%;
-}
+.grid-2, .non-2 {
+  width: 14.66667%; }
 
-.grid-3,
-.non-3 {
-  width: 22.9%;
-}
+.grid-3, .non-3 {
+  width: 22.9%; }
 
-.grid-4,
-.non-4 {
-  width: 31.13333%;
-}
+.grid-4, .non-4 {
+  width: 31.13333%; }
 
-.grid-5,
-.non-5 {
-  width: 39.36667%;
-}
+.grid-5, .non-5 {
+  width: 39.36667%; }
 
-.grid-6,
-.non-6 {
-  width: 47.6%;
-}
+.grid-6, .non-6 {
+  width: 47.6%; }
 
-.grid-7,
-.non-7 {
-  width: 55.83333%;
-}
+.grid-7, .non-7 {
+  width: 55.83333%; }
 
-.grid-8,
-.non-8 {
-  width: 64.06667%;
-}
+.grid-8, .non-8 {
+  width: 64.06667%; }
 
-.grid-9,
-.non-9 {
-  width: 72.3%;
-}
+.grid-9, .non-9 {
+  width: 72.3%; }
 
-.grid-10,
-.non-10 {
-  width: 80.53333%;
-}
+.grid-10, .non-10 {
+  width: 80.53333%; }
 
-.grid-11,
-.non-11 {
-  width: 88.76667%;
-}
+.grid-11, .non-11 {
+  width: 88.76667%; }
 
-.grid-12,
-.non-12 {
-  width: 97%;
-}
+.grid-12, .non-12 {
+  width: 97%; }
 
 @media screen and (max-width: 700px) {
   .grids {
     margin: 0;
-    width: auto;
-  }
+    width: auto; }
 
   .grids [class*="grid-"] {
     display: block;
     width: 100%;
-    margin: 0;
-  }
-}
+    margin: 0; } }

@@ -26,6 +26,9 @@ $margin6 : 1.5em;
 
 $margin7 : 1.5em;
 
+$color1 : #333;
+$color2 : #02A2E9;
+
 @font-face {
     font-family: 'Lato';
     src: url("fonts/Lato.woff") format('woff');
@@ -34,6 +37,7 @@ $margin7 : 1.5em;
 /*DOM Elements*/
 body {
 	font: 100%/1.5 'Lato','Helvetica Neue', sans-serif;
+    color : $color1;
 }
 
 h1, .size-1 {
@@ -45,7 +49,7 @@ h2, .size-2 {
     font-size: $size2; /* 36 / 16 */
     line-height: $line2; /* 48 / 36 */
     margin-bottom: $margin2; /* 24 / 36 */
-    color: #02A2E9;
+    color: $color2;
 }
 h3, .size-3 {
     font-size: $size3; /* 24 / 16 */

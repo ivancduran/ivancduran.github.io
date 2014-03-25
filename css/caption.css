@@ -13,7 +13,7 @@
 }
 
 .effeckt-caption figcaption {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.2);
   color: white;
   padding: 1rem;
 }
@@ -37,13 +37,11 @@
 }
 
 .effeckt-caption img {
-  -webkit-transition: 500ms;
   transition: 500ms;
 }
 
 .effeckt-caption figcaption {
   position: absolute;
-  -webkit-transition: 500ms;
   transition: 500ms;
   width: 100%;
 }
@@ -54,8 +52,7 @@
   opacity: 0;
 }
 
-.effeckt-caption-1:hover figcaption,
-.effeckt-caption-1:active figcaption {
+.effeckt-caption-1:hover figcaption, .effeckt-caption-1:active figcaption {
   opacity: 1;
 }
 
@@ -66,7 +63,6 @@
   opacity: 0;
 }
 
-.effeckt-caption-5:hover figcaption,
-.effeckt-caption-5:active figcaption {
+.effeckt-caption-5:hover figcaption, .effeckt-caption-5:active figcaption {
   opacity: 1;
 }
