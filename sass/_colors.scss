@@ -1,2 +1,49 @@
+// palette 1
+$palette_1_1 : #1BBC9B; // aurora
+$palette_1_2 : #2DCC70; // green
+$palette_1_3 : #3598DB; // blue
+$palette_1_4 : #9A59B5; // purple
+$palette_1_5 : #34495E; // blue 2
+
+$palette_2_1 : #16A186; // aurora strong
+$palette_2_2 : #28AE61; // green strong
+$palette_2_3 : #2980B7; // blue strong
+$palette_2_4 : #8D45AD; // purple strong
+$palette_2_5 : #2D3E50; // blue 2 strong
+
+$palette_3_1 : #F2C40F; // yellow
+$palette_3_2 : #E77F21; // orange
+$palette_3_3 : #E84C3D; // red
+$palette_3_4 : #ECF0F1; // white
+$palette_3_5 : #95A5A5; // gray
+
+$palette_4_1 : #F39C11; // yellow strong
+$palette_4_2 : #D25302; // orange strong
+$palette_4_3 : #C0392B; // red strong
+$palette_4_4 : #BEC3C7; // white / gray
+$palette_4_5 : #7E8C8D; // gray strong
+
+// stlye.scss
+$Style_Box : #fafafa;
+$Style_Caption : rgba(0, 0, 0, 0.2);
+$Style_Solid_Border : #c1ccd4;
+$Style_Solid_BG : #fafafa;
+
+$Style_Footer_BG : #474747;
+
+// toltip.scss
+$Toltip_BG : #333333;
+
+// footer.scss
+$Footer_BG : #474747;
+
 // anim.scss
 $Anim_Color1 : #4db8d6;
+
+// buttons.scss
+// $Buttons_Bg : #ECECEC;
+$Buttons_BG : darken(desaturate(adjust_hue($palette_3_4, 207), 15), 0);
+
+// menu.scss
+$Menu_BG : #343131;
+$Menu_Hover : #999999;

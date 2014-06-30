@@ -1,6 +1,8 @@
+@import '_colors';
+
 .progress {
   height: 20px;
-  background: #fafafa;  
+  background: $Style_Box;
   border-radius: 0;
 }
 .progress > span {
@@ -11,7 +13,7 @@
   height: 3px;
   line-height: 20px;
   text-align: right;
-  background: #cccccc;
+  background: $palette_3_5;
   border: 0; 
 }
 .progress > span > span {
@@ -35,18 +37,22 @@
   border-radius: 10px;
 }
 .progress .green {
-  background: #85c440;
+  background: $palette_2_2;
+  // background: #85c440;
   border-color: #78b337 #6ba031 #568128;
 }
 .progress .red {
-  background: #db3a27;
+  background: $palette_4_3;
+  // background: #db3a27;
   border-color: #c73321 #b12d1e #8e2418;
 }
 .progress .orange {
-  background: #f2b63c;
+  background: $palette_3_2;
+  // background: #f2b63c;
   border-color: #f0ad24 #eba310 #c5880d;
 }
 .progress .blue {
-  background: #5aaadb;
+  background: $palette_2_3;
+  // background: #5aaadb;
   border-color: #459fd6 #3094d2 #277db2;
 }

@@ -48,19 +48,19 @@
 }
 
 @-moz-keyframes bounceOut {
-        0%{ box-shadow: 0 0 0 4px $Anim_Color1; opacity:1;}
-        25%{ box-shadow: 0 0 0 1px $Anim_Color1; opacity:1;}
-        50%{ box-shadow: 0 0 0 7px $Anim_Color1; opacity:1; }
-        75%{ box-shadow: 0 0 0 4px $Anim_Color1; opacity:1;}
-        100%{ box-shadow: 0 0 0 5px $Anim_Color1; opacity:1;}
+        0%{ box-shadow: 0 0 0 4px lighten( $palette_1_3 , 10%); opacity:1;}
+        25%{ box-shadow: 0 0 0 1px lighten( $palette_1_3 , 10%); opacity:1;}
+        50%{ box-shadow: 0 0 0 7px lighten( $palette_1_3 , 10%); opacity:1; }
+        75%{ box-shadow: 0 0 0 4px lighten( $palette_1_3 , 10%); opacity:1;}
+        100%{ box-shadow: 0 0 0 5px lighten( $palette_1_3 , 10%); opacity:1;}
 }
 
 @-webkit-keyframes bounceOut {
-        0%{ box-shadow: 0 0 0 4px $Anim_Color1; opacity:1;}
-        25%{ box-shadow: 0 0 0 1px $Anim_Color1; opacity:1;}
-        50%{ box-shadow: 0 0 0 7px $Anim_Color1; opacity:1; }
-        75%{ box-shadow: 0 0 0 4px $Anim_Color1; opacity:1;}
-        100%{ box-shadow: 0 0 0 5px $Anim_Color1; opacity:1;}
+        0%{ box-shadow: 0 0 0 4px lighten( $palette_1_3 , 10%); opacity:1;}
+        25%{ box-shadow: 0 0 0 1px lighten( $palette_1_3 , 10%); opacity:1;}
+        50%{ box-shadow: 0 0 0 7px lighten( $palette_1_3 , 10%); opacity:1; }
+        75%{ box-shadow: 0 0 0 4px lighten( $palette_1_3 , 10%); opacity:1;}
+        100%{ box-shadow: 0 0 0 5px lighten( $palette_1_3 , 10%); opacity:1;}
 }
 
 .animated{
@@ -96,7 +96,7 @@
   border-radius: 50%;
   @include vendorize(animation,spin 1s linear infinite);
   border-style: double;
-  border-color: $Anim_Color1 transparent;
+  border-color: lighten( $palette_1_3, 10%) transparent;
 }
 
 .animbubble{
@@ -108,15 +108,14 @@
   padding: 10px;
 
   img.user {
-    background-color: $Anim_Color1 ;
-    box-shadow: 0 0 0 3px $Anim_Color1 ;
     border-radius: 50%;
 
      &:hover {
+      background-color: lighten( $palette_1_3, 10%);
+      box-shadow: 0 0 0 3px lighten( $palette_1_3, 10%);
       cursor: pointer; 
       -moz-animation:bounceOut .5s linear;
       -webkit-animation:bounceOut .5s linear;
-      // @include vendorize(transform,scale(1));
     }
   
   }
@@ -124,12 +123,11 @@
 }
 
 .focus{
-    // background-color: $Anim_Color1 ;
 
-     &:hover {
-	  box-shadow: 0 0 8px 1px $Anim_Color1 ;
+    &:hover {
+      box-shadow: 0 0 0 3px lighten( $palette_1_3, 10%);
       cursor: pointer; 
-      -moz-animation:bounceOut .4s linear;
-      -webkit-animation:bounceOut .4s linear;
+      -moz-animation:bounceOut .5s linear;
+      -webkit-animation:bounceOut .5s linear;
     }
 }

@@ -1,4 +1,5 @@
 /*Font Face*/
+@import '_colors';
 
 $size1   : 3em;
 $line1   : 1em;
@@ -49,7 +50,7 @@ h2, .size-2 {
     font-size: $size2; /* 36 / 16 */
     line-height: $line2; /* 48 / 36 */
     margin-bottom: $margin2; /* 24 / 36 */
-    color: $color2;
+    color: $palette_1_3;
 }
 h3, .size-3 {
     font-size: $size3; /* 24 / 16 */

@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "16828",
+"creatorBuild": "17018",
 "files": {
 	"\/css\/anim.css": {
 		"fileType": 16,
@@ -8,6 +8,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/anim.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/css\/buttons.css": {
@@ -16,6 +17,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/buttons.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/css\/caption.css": {
@@ -24,6 +26,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/caption.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/css\/compile.css": {
@@ -32,6 +35,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/compile.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/css\/custom.css": {
@@ -40,6 +44,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/custom.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/css\/font.css": {
@@ -48,6 +53,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/font.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/css\/grid.css": {
@@ -56,6 +62,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/grid.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/css\/kraken.css": {
@@ -64,6 +71,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/kraken.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/css\/media.css": {
@@ -72,6 +80,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/media.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/css\/menu.css": {
@@ -80,6 +89,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/menu.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/css\/modal.css": {
@@ -88,6 +98,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/modal.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/css\/progressbar.css": {
@@ -96,6 +107,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/progressbar.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/css\/reset.css": {
@@ -104,6 +116,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/reset.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/css\/responsiveslides.css": {
@@ -112,6 +125,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/responsiveslides.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/css\/style.css": {
@@ -120,6 +134,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/style.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/css\/switch.css": {
@@ -128,6 +143,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/switch.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/css\/template.custom.css": {
@@ -136,6 +152,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/template.custom.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/css\/tooltip.css": {
@@ -144,6 +161,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/tooltip.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/Gruntfile.js": {
@@ -152,6 +170,7 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/Gruntfile.js",
 		"outputAbbreviatedPath": "\/min\/Gruntfile-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -163,196 +182,7 @@
 		"initialSize": 12563,
 		"inputAbbreviatedPath": "\/img\/bg-uniform.png",
 		"outputAbbreviatedPath": "\/img\/bg-uniform.png",
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/bg\/000.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 106,
-		"inputAbbreviatedPath": "\/img\/bg\/000.png",
-		"outputAbbreviatedPath": "\/img\/bg\/000.png",
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/bg\/001.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 116,
-		"inputAbbreviatedPath": "\/img\/bg\/001.png",
-		"outputAbbreviatedPath": "\/img\/bg\/001.png",
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/bg\/002.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 102,
-		"inputAbbreviatedPath": "\/img\/bg\/002.png",
-		"outputAbbreviatedPath": "\/img\/bg\/002.png",
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/bg\/003.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 415,
-		"inputAbbreviatedPath": "\/img\/bg\/003.png",
-		"outputAbbreviatedPath": "\/img\/bg\/003.png",
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/bg\/004.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 4045,
-		"inputAbbreviatedPath": "\/img\/bg\/004.png",
-		"outputAbbreviatedPath": "\/img\/bg\/004.png",
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/bg\/005.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 626,
-		"inputAbbreviatedPath": "\/img\/bg\/005.png",
-		"outputAbbreviatedPath": "\/img\/bg\/005.png",
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/bg\/006.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 542,
-		"inputAbbreviatedPath": "\/img\/bg\/006.png",
-		"outputAbbreviatedPath": "\/img\/bg\/006.png",
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/bg\/007.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1133,
-		"inputAbbreviatedPath": "\/img\/bg\/007.png",
-		"outputAbbreviatedPath": "\/img\/bg\/007.png",
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/bg\/008.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1268,
-		"inputAbbreviatedPath": "\/img\/bg\/008.png",
-		"outputAbbreviatedPath": "\/img\/bg\/008.png",
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/bg\/009.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1100,
-		"inputAbbreviatedPath": "\/img\/bg\/009.png",
-		"outputAbbreviatedPath": "\/img\/bg\/009.png",
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/bg\/010.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 10588,
-		"inputAbbreviatedPath": "\/img\/bg\/010.png",
-		"outputAbbreviatedPath": "\/img\/bg\/010.png",
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/bg\/011.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 12115,
-		"inputAbbreviatedPath": "\/img\/bg\/011.png",
-		"outputAbbreviatedPath": "\/img\/bg\/011.png",
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/bg\/012.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 54881,
-		"inputAbbreviatedPath": "\/img\/bg\/012.png",
-		"outputAbbreviatedPath": "\/img\/bg\/012.png",
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/bg\/013.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 43419,
-		"inputAbbreviatedPath": "\/img\/bg\/013.png",
-		"outputAbbreviatedPath": "\/img\/bg\/013.png",
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/bg\/014.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 13368,
-		"inputAbbreviatedPath": "\/img\/bg\/014.png",
-		"outputAbbreviatedPath": "\/img\/bg\/014.png",
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/bg\/015.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 816,
-		"inputAbbreviatedPath": "\/img\/bg\/015.png",
-		"outputAbbreviatedPath": "\/img\/bg\/015.png",
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/bg\/016.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 15227,
-		"inputAbbreviatedPath": "\/img\/bg\/016.png",
-		"outputAbbreviatedPath": "\/img\/bg\/016.png",
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/bg\/017.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 73265,
-		"inputAbbreviatedPath": "\/img\/bg\/017.png",
-		"outputAbbreviatedPath": "\/img\/bg\/017.png",
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/bg\/018.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 66623,
-		"inputAbbreviatedPath": "\/img\/bg\/018.png",
-		"outputAbbreviatedPath": "\/img\/bg\/018.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -363,6 +193,7 @@
 		"initialSize": 145,
 		"inputAbbreviatedPath": "\/img\/bgBorde.png",
 		"outputAbbreviatedPath": "\/img\/bgBorde.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -373,6 +204,7 @@
 		"initialSize": 2445,
 		"inputAbbreviatedPath": "\/img\/break-a.png",
 		"outputAbbreviatedPath": "\/img\/break-a.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -383,6 +215,7 @@
 		"initialSize": 629,
 		"inputAbbreviatedPath": "\/img\/break-b.png",
 		"outputAbbreviatedPath": "\/img\/break-b.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -393,6 +226,7 @@
 		"initialSize": 1661,
 		"inputAbbreviatedPath": "\/img\/down.png",
 		"outputAbbreviatedPath": "\/img\/down.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -403,6 +237,7 @@
 		"initialSize": 30572,
 		"inputAbbreviatedPath": "\/img\/github.png",
 		"outputAbbreviatedPath": "\/img\/github.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -413,6 +248,7 @@
 		"initialSize": 277,
 		"inputAbbreviatedPath": "\/img\/icon-check.png",
 		"outputAbbreviatedPath": "\/img\/icon-check.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -423,6 +259,7 @@
 		"initialSize": 2751,
 		"inputAbbreviatedPath": "\/img\/icon-menu.png",
 		"outputAbbreviatedPath": "\/img\/icon-menu.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -433,6 +270,7 @@
 		"initialSize": 3948,
 		"inputAbbreviatedPath": "\/img\/icons.png",
 		"outputAbbreviatedPath": "\/img\/icons.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -443,6 +281,7 @@
 		"initialSize": 21139,
 		"inputAbbreviatedPath": "\/img\/kraken.png",
 		"outputAbbreviatedPath": "\/img\/kraken.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -453,6 +292,7 @@
 		"initialSize": 49181,
 		"inputAbbreviatedPath": "\/img\/kraken2.png",
 		"outputAbbreviatedPath": "\/img\/kraken2.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -463,6 +303,7 @@
 		"initialSize": 5938,
 		"inputAbbreviatedPath": "\/img\/minKraken.png",
 		"outputAbbreviatedPath": "\/img\/minKraken.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -473,6 +314,7 @@
 		"initialSize": 78067,
 		"inputAbbreviatedPath": "\/img\/nav-bg.png",
 		"outputAbbreviatedPath": "\/img\/nav-bg.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -483,6 +325,18 @@
 		"initialSize": 1994,
 		"inputAbbreviatedPath": "\/img\/noise.png",
 		"outputAbbreviatedPath": "\/img\/noise.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/palette.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4932,
+		"inputAbbreviatedPath": "\/img\/palette.png",
+		"outputAbbreviatedPath": "\/img\/palette.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -493,6 +347,7 @@
 		"initialSize": 130,
 		"inputAbbreviatedPath": "\/img\/progress.png",
 		"outputAbbreviatedPath": "\/img\/progress.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -502,6 +357,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/js\/jquery.min.js": {
@@ -510,6 +366,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/jquery.min.js",
 		"outputAbbreviatedPath": "\/js\/min\/jquery.min-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -520,6 +377,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/kraken.js",
 		"outputAbbreviatedPath": "\/js\/kraken.min.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
@@ -530,6 +388,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/kraken.min.js",
 		"outputAbbreviatedPath": "\/js\/min\/kraken.min-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -540,6 +399,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/responsiveslides.min.js",
 		"outputAbbreviatedPath": "\/js\/min\/responsiveslides.min-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -550,6 +410,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/pages\/buttons.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/pages\/fonts.html": {
@@ -558,6 +419,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/pages\/fonts.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/pages\/grids.html": {
@@ -566,6 +428,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/pages\/grids.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/pages\/modal.html": {
@@ -574,6 +437,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/pages\/modal.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/pages\/others.html": {
@@ -582,6 +446,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/pages\/others.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/pages\/progress.html": {
@@ -590,6 +455,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/pages\/progress.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/pages\/slider.html": {
@@ -598,6 +464,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/pages\/slider.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/README.md": {
@@ -609,6 +476,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/README.md",
 		"outputAbbreviatedPath": "\/README.html",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/sass\/_colors.scss": {
@@ -620,6 +488,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/sass\/_colors.scss",
 		"outputAbbreviatedPath": "\/css\/_colors.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -635,6 +504,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/sass\/_mixins.scss",
 		"outputAbbreviatedPath": "\/css\/_mixins.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -650,6 +520,7 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sass\/anim.scss",
 		"outputAbbreviatedPath": "\/css\/anim.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"shouldRunAutoprefixer": 0,
@@ -665,6 +536,7 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sass\/buttons.scss",
 		"outputAbbreviatedPath": "\/css\/buttons.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"shouldRunAutoprefixer": 0,
@@ -680,6 +552,7 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sass\/caption.scss",
 		"outputAbbreviatedPath": "\/css\/caption.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"shouldRunAutoprefixer": 0,
@@ -695,6 +568,7 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sass\/compile.scss",
 		"outputAbbreviatedPath": "\/css\/compile.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 0,
@@ -710,6 +584,7 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sass\/custom.scss",
 		"outputAbbreviatedPath": "\/css\/custom.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"shouldRunAutoprefixer": 0,
@@ -725,6 +600,7 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sass\/font.scss",
 		"outputAbbreviatedPath": "\/css\/font.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"shouldRunAutoprefixer": 0,
@@ -740,6 +616,7 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sass\/grid.scss",
 		"outputAbbreviatedPath": "\/css\/grid.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"shouldRunAutoprefixer": 0,
@@ -755,6 +632,7 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sass\/kraken.scss",
 		"outputAbbreviatedPath": "\/css\/kraken.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"shouldRunAutoprefixer": 0,
@@ -770,6 +648,7 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sass\/media.scss",
 		"outputAbbreviatedPath": "\/css\/media.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"shouldRunAutoprefixer": 0,
@@ -785,6 +664,7 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sass\/menu.scss",
 		"outputAbbreviatedPath": "\/css\/menu.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"shouldRunAutoprefixer": 0,
@@ -800,6 +680,7 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sass\/modal.scss",
 		"outputAbbreviatedPath": "\/css\/modal.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"shouldRunAutoprefixer": 0,
@@ -815,6 +696,7 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sass\/progressbar.scss",
 		"outputAbbreviatedPath": "\/css\/progressbar.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"shouldRunAutoprefixer": 0,
@@ -830,6 +712,7 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sass\/reset.scss",
 		"outputAbbreviatedPath": "\/css\/reset.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"shouldRunAutoprefixer": 0,
@@ -845,6 +728,7 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sass\/responsiveslides.scss",
 		"outputAbbreviatedPath": "\/css\/responsiveslides.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"shouldRunAutoprefixer": 0,
@@ -860,6 +744,7 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sass\/style.scss",
 		"outputAbbreviatedPath": "\/css\/style.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"shouldRunAutoprefixer": 0,
@@ -875,6 +760,7 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sass\/switch.scss",
 		"outputAbbreviatedPath": "\/css\/switch.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"shouldRunAutoprefixer": 0,
@@ -890,6 +776,7 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sass\/template.custom.scss",
 		"outputAbbreviatedPath": "\/css\/template.custom.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"shouldRunAutoprefixer": 0,
@@ -905,6 +792,7 @@
 		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/sass\/tooltip.scss",
 		"outputAbbreviatedPath": "\/css\/tooltip.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"shouldRunAutoprefixer": 0,
@@ -980,12 +868,16 @@
 			"active": 0,
 			"flagValue": 3
 			},
-		"no-unnecessary_fat_arrows": {
+		"no_backticks": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"no_backticks": {
+		"no_debugger": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"no_empty_functions": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"no_empty_param_list": {
@@ -997,6 +889,10 @@
 			"flagValue": -1
 			},
 		"no_implicit_parens": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_interpolation_in_single_quotes": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -1021,6 +917,14 @@
 			"flagValue": -1
 			},
 		"no_trailing_whitespace": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_unnecessary_double_quotes": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_unnecessary_fat_arrows": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -1142,10 +1046,6 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"gcl": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"globalstrict": {
 			"active": 0,
 			"flagValue": -1
@@ -1258,10 +1158,6 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"onevar": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"phantom": {
 			"active": 0,
 			"flagValue": -1
@@ -1298,10 +1194,6 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"smarttabs": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"strict": {
 			"active": 0,
 			"flagValue": -1
@@ -1314,10 +1206,6 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"trailing": {
-			"active": 1,
-			"flagValue": -1
-			},
 		"typed": {
 			"active": 0,
 			"flagValue": -1
@@ -1328,10 +1216,6 @@
 			},
 		"unused": {
 			"active": 1,
-			"flagValue": -1
-			},
-		"white": {
-			"active": 0,
 			"flagValue": -1
 			},
 		"withstmt": {

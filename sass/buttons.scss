@@ -1,3 +1,5 @@
+@import '_colors';
+
 .button {
     position: relative;
     overflow: visible;
@@ -7,19 +9,78 @@
     margin: 0;
     text-decoration: none;
     text-align: center;
-    // text-shadow: 1px 1px 0 #fff;
     font:11px/normal sans-serif;
     color: #333;
     white-space: nowrap;
     cursor: pointer;
     outline: none;
-    background-color: #ececec;
+    background-color: $Buttons_BG;
     -moz-background-clip: padding; /* for Firefox 3.6 */
     background-clip: padding-box;
     border-radius: 0.2em;
     /* IE hacks */
     zoom: 1;
     *display: inline;
+
+    &:focus{
+      box-shadow:none;
+    }
+    
+    &.green{
+      &:hover{
+        background-color: $palette_1_2;
+        border-color: $palette_2_2;
+      }
+      &:focus,&:active{
+        border-color: $palette_2_2;
+        background-color: $palette_2_2;
+      }
+    }
+
+    &.orange{
+      &:hover{
+        background-color: $palette_3_2;
+        border-color: $palette_4_2;
+      }
+      &:focus,&:active{
+        border-color: $palette_4_2;
+        background-color: $palette_4_2;
+      }
+    }
+
+    &.purple{
+      &:hover{
+        background-color: $palette_1_4;
+        border-color: $palette_2_4;
+      }
+      &:focus,&:active{
+        border-color: $palette_2_4;
+        background-color: $palette_2_4;
+      }
+    }
+
+    &.gray{
+      &:hover{
+        background-color: $palette_3_5;
+        border-color: $palette_4_5;
+      }
+      &:focus,&:active{
+        border-color: $palette_4_5;
+        background-color: $palette_4_5;
+      }
+    }
+
+    &.aurora{
+      &:hover{
+        background-color: $palette_1_1;
+        border-color: $palette_2_1;
+      }
+      &:focus,&:active{
+        border-color: $palette_2_1;
+        background-color: $palette_2_1;
+      }
+    }
+
 }
 
 .button:hover,
@@ -365,7 +426,7 @@
 }
 
 .bubble{
-  background: #e02424;
+  background: $palette_3_3;
   position: absolute;
   right: 5px;
   top: -12px;

@@ -72,53 +72,53 @@
 }
 @-moz-keyframes bounceOut {
   0% {
-    box-shadow: 0 0 0 4px #4db8d6;
+    box-shadow: 0 0 0 4px #60aee3;
     opacity: 1;
   }
 
   25% {
-    box-shadow: 0 0 0 1px #4db8d6;
+    box-shadow: 0 0 0 1px #60aee3;
     opacity: 1;
   }
 
   50% {
-    box-shadow: 0 0 0 7px #4db8d6;
+    box-shadow: 0 0 0 7px #60aee3;
     opacity: 1;
   }
 
   75% {
-    box-shadow: 0 0 0 4px #4db8d6;
+    box-shadow: 0 0 0 4px #60aee3;
     opacity: 1;
   }
 
   100% {
-    box-shadow: 0 0 0 5px #4db8d6;
+    box-shadow: 0 0 0 5px #60aee3;
     opacity: 1;
   }
 }
 @-webkit-keyframes bounceOut {
   0% {
-    box-shadow: 0 0 0 4px #4db8d6;
+    box-shadow: 0 0 0 4px #60aee3;
     opacity: 1;
   }
 
   25% {
-    box-shadow: 0 0 0 1px #4db8d6;
+    box-shadow: 0 0 0 1px #60aee3;
     opacity: 1;
   }
 
   50% {
-    box-shadow: 0 0 0 7px #4db8d6;
+    box-shadow: 0 0 0 7px #60aee3;
     opacity: 1;
   }
 
   75% {
-    box-shadow: 0 0 0 4px #4db8d6;
+    box-shadow: 0 0 0 4px #60aee3;
     opacity: 1;
   }
 
   100% {
-    box-shadow: 0 0 0 5px #4db8d6;
+    box-shadow: 0 0 0 5px #60aee3;
     opacity: 1;
   }
 }
@@ -187,7 +187,7 @@
   -o-animation: spin 1s linear infinite;
   animation: spin 1s linear infinite;
   border-style: double;
-  border-color: #4db8d6 transparent;
+  border-color: #60aee3 transparent;
 }
 
 .animbubble {
@@ -207,19 +207,19 @@
   padding: 10px;
 }
 .circle img.user {
-  background-color: #4db8d6;
-  box-shadow: 0 0 0 3px #4db8d6;
   border-radius: 50%;
 }
 .circle img.user:hover {
+  background-color: #60aee3;
+  box-shadow: 0 0 0 3px #60aee3;
   cursor: pointer;
   -moz-animation: bounceOut .5s linear;
   -webkit-animation: bounceOut .5s linear;
 }
 
 .focus:hover {
-  box-shadow: 0 0 8px 1px #4db8d6;
+  box-shadow: 0 0 0 3px #60aee3;
   cursor: pointer;
-  -moz-animation: bounceOut .4s linear;
-  -webkit-animation: bounceOut .4s linear;
+  -moz-animation: bounceOut .5s linear;
+  -webkit-animation: bounceOut .5s linear;
 }

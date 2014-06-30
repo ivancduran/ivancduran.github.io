@@ -1,3 +1,5 @@
+@import '_colors';
+
 [tooltip-text] {
   position: relative; }
 
@@ -11,7 +13,8 @@
   transform: translateX(-50%);
   bottom: 125%;
   border-radius: 10px;
-  background: #333333;
+  // background: #333333;
+  background: $Toltip_BG;
   color: white;
   padding: 0.45rem 0.8rem;
   font-size: 90%;

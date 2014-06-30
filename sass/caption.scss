@@ -1,44 +1,44 @@
-.effeckt-caption {
+.k-caption {
   width: 48%;
   margin: 0 4% 1rem 0; }
-  .effeckt-caption:nth-child(2n) {
+  .k-caption:nth-child(2n) {
     margin-right: 0; }
-  .effeckt-caption img {
+  .k-caption img {
     width: 100%;
     display: block; }
-  .effeckt-caption figcaption {
+  .k-caption figcaption {
     background: rgba(0, 0, 0, 0.2);
     color: white;
     padding: 1rem; }
-    .effeckt-caption figcaption h3 {
+    .k-caption figcaption h3 {
       font-size: 1.2rem; }
-    .effeckt-caption figcaption p {
+    .k-caption figcaption p {
       margin: 0; }
 
-.effeckt-caption {
+.k-caption {
   position: relative;
   float: left;
   overflow: hidden; }
-  .effeckt-caption:nth-child(2n) {
+  .k-caption:nth-child(2n) {
     margin-right: 0; }
-  .effeckt-caption img {
+  .k-caption img {
     transition: 500ms; }
-  .effeckt-caption figcaption {
+  .k-caption figcaption {
     position: absolute;
     transition: 500ms;
     width: 100%; }
 
-.effeckt-caption-1 figcaption {
+.k-caption-1 figcaption {
   bottom: 0;
   left: 0;
   opacity: 0; }
-.effeckt-caption-1:hover figcaption, .effeckt-caption-1:active figcaption {
+.k-caption-1:hover figcaption, .k-caption-1:active figcaption {
   opacity: 1; }
 
-.effeckt-caption-5 figcaption {
+.k-caption-5 figcaption {
   top: 0;
   left: 0;
   height: 100%;
   opacity: 0; }
-.effeckt-caption-5:hover figcaption, .effeckt-caption-5:active figcaption {
+.k-caption-5:hover figcaption, .k-caption-5:active figcaption {
   opacity: 1; }

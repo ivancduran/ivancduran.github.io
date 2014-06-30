@@ -12,14 +12,57 @@
   white-space: nowrap;
   cursor: pointer;
   outline: none;
-  background-color: #ececec;
+  background-color: #efefee;
+  -moz-background-clip: padding;
   /* for Firefox 3.6 */
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border-radius: 0.2em;
   /* IE hacks */
   zoom: 1;
   *display: inline;
+}
+.button:focus {
+  box-shadow: none;
+}
+.button.green:hover {
+  background-color: #2dcc70;
+  border-color: #28ae61;
+}
+.button.green:focus, .button.green:active {
+  border-color: #28ae61;
+  background-color: #28ae61;
+}
+.button.orange:hover {
+  background-color: #e77f21;
+  border-color: #d25302;
+}
+.button.orange:focus, .button.orange:active {
+  border-color: #d25302;
+  background-color: #d25302;
+}
+.button.purple:hover {
+  background-color: #9a59b5;
+  border-color: #8d45ad;
+}
+.button.purple:focus, .button.purple:active {
+  border-color: #8d45ad;
+  background-color: #8d45ad;
+}
+.button.gray:hover {
+  background-color: #95a5a5;
+  border-color: #7e8c8d;
+}
+.button.gray:focus, .button.gray:active {
+  border-color: #7e8c8d;
+  background-color: #7e8c8d;
+}
+.button.aurora:hover {
+  background-color: #1bbc9b;
+  border-color: #16a186;
+}
+.button.aurora:focus, .button.aurora:active {
+  border-color: #16a186;
+  background-color: #16a186;
 }
 
 .button:hover,
@@ -41,7 +84,6 @@
 }
 
 /* overrides extra padding on button elements in Firefox */
-
 .button::-moz-focus-inner {
   padding: 0;
   border: 0;
@@ -50,7 +92,6 @@
 /* =============================================================================
    Button icons
    ========================================================================== */
-
 .button.icon:before {
   content: "";
   position: relative;
@@ -377,17 +418,14 @@
 /* =============================================================================
    Button extensions
    ========================================================================== */
-
 /* Primary button
    ========================================================================== */
-
 .button.primary {
   font-weight: bold;
 }
 
 /* Danger button
    ========================================================================== */
-
 .button.danger {
   color: #900;
 }
@@ -410,21 +448,18 @@
 
 /* Pill button
    ========================================================================== */
-
 .button.pill {
   border-radius: 50em;
 }
 
 /* Disabled button
    ========================================================================== */
-
 .button.disable {
   opacity: 0.5;
 }
 
 /* Big button
    ========================================================================== */
-
 .button.big {
   font-size: 14px;
 }
@@ -436,10 +471,8 @@
 /* =============================================================================
    Button groups
    ========================================================================== */
-
 /* Standard group
    ========================================================================== */
-
 .button-group {
   display: inline-block;
   list-style: none;
@@ -488,7 +521,6 @@
 
 /* Minor group
    ========================================================================== */
-
 .button-group.minor-group .button {
   border: 1px solid #d4d4d4;
   text-shadow: none;
@@ -513,18 +545,19 @@
 /* =============================================================================
    Button container (mixing buttons and groups, e.g., nav bar)
    ========================================================================== */
-
 .button-container .button,
 .button-container .button-group {
   vertical-align: top;
 }
 
 .bubble {
-  background: #e02424;
+  background: #e84c3d;
   position: absolute;
   right: 5px;
   top: -12px;
   padding: 2px 6px;
   color: #fff;
   border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
 }

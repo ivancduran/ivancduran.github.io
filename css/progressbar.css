@@ -12,7 +12,7 @@
   height: 3px;
   line-height: 20px;
   text-align: right;
-  background: #cccccc;
+  background: #95a5a5;
   border: 0;
 }
 
@@ -38,21 +38,21 @@
 }
 
 .progress .green {
-  background: #85c440;
+  background: #28ae61;
   border-color: #78b337 #6ba031 #568128;
 }
 
 .progress .red {
-  background: #db3a27;
+  background: #c0392b;
   border-color: #c73321 #b12d1e #8e2418;
 }
 
 .progress .orange {
-  background: #f2b63c;
+  background: #e77f21;
   border-color: #f0ad24 #eba310 #c5880d;
 }
 
 .progress .blue {
-  background: #5aaadb;
+  background: #2980b7;
   border-color: #459fd6 #3094d2 #277db2;
 }

@@ -1,31 +1,27 @@
-// Kraken Framework 0.8
+// Kraken Framework 0.9
 ;(function ( $, window, document, undefined ) {
 
 var pluginName = "Kraken",
-			_default = {
+		_default = {
 			relative   : { state : true },
 			pagesize   : { state : true, width: 1024, },
 			overflow   : { state : true, x : false, y : true },
-			bgimg      : { state : false, img : '004', size : 'default'},
-			bgcolor    : { state : false, color : '0fa1e0' },
 			largewrap  : { state : true, rest : 'default' },
 			wrapshadow : { state : true, intense : 'default', size : 'default'},
 			slider     : { state : true, auto : true, pager : false, nav : true, speed : 500},
 			menu       : { state : true, submenu : true, move : true},
-			span       : { state : true, multiply : '10' },
-			interval   : { state : false, timer : '2000'},
 			hide       : { state : true, resize : true, size : 700 },
 			show       : { state : false, resize : true, size : 700 },
 			footer     : { state : true, resize : true },
-			modal      : { state : true },
-			fonts      : {},
+			modal      : { state : true }
 		};
 
 var PNTrigger  =  pluginName+'Trigger';
 var arrSuccess = [];
 var arrError   = [];
 
-var Plugin = function ( _options ){
+var Plugin = function ( _options )
+{
 
 	this.settings  = $.extend(true, _default, _options);
 	this._defaults = _default;
@@ -35,13 +31,10 @@ var Plugin = function ( _options ){
 	// if(this.settings.relative.state) 		this.relative(this.settings.relative);
 	if(this.settings.pagesize.state) 		this.pagesize(this.settings.pagesize);
 	if(this.settings.overflow.state) 		this.overflow(this.settings.overflow);
-	if(this.settings.bgimg.state) 			this.bgimg(this.settings.bgimg);
-	if(this.settings.bgcolor.state) 		this.bgcolor(this.settings.bgcolor);
 	if(this.settings.largewrap.state) 		this.largewrap(this.settings.largewrap);
 	if(this.settings.wrapshadow.state) 		this.wrapshadow(this.settings.wrapshadow);
 	if(this.settings.slider.state) 			this.slider(this.settings.slider);
 	if(this.settings.menu.state) 			this.menu(this.settings.menu, this.settings.hide);
-	if(this.settings.span.state) 			this.span(this.settings.span);
 	if(this.settings.hide.state) 			this.hide(this.settings.hide);
 	if(this.settings.show.state) 			this.show(this.settings.show);
 	if(this.settings.footer.state) 			this.footer(this.settings.pagesize);
@@ -51,7 +44,9 @@ var Plugin = function ( _options ){
 
 globals = {
 
-	Menu : function( options ){
+	Menu : function( options )
+	{
+	
 		$(".nav a").one('click',function(event) {
 			if(!$('.menuBack').is(":visible")){
 				if( $(window).width() < 700){
@@ -68,33 +63,50 @@ globals = {
 		$('.nav ul li').css('');
 		$('.menuBack').animate({ opacity: 0}).fadeOut(200);
 		$('.nav ul li').removeAttr('style');
+
 	},
-	eval : {
-		success: function ( options ){
+	eval :
+	{
+
+		success: function ( options )
+		{
+		
 			arrSuccess.push(options);
+		
 		},
-		error : function ( options ){
+		error : function ( options )
+		{
+		
 			arrError.push(options);
+		
 		},
-		count : function (){
+		count : function ()
+		{
+		
 			arrShow = arrSuccess;
 			arrSuccess = null;
 			arrSuccess = Array();
 			return arrShow.length;
+		
 		}
 	}
 }
 
 Plugin.prototype = {
-		init: function () {
+		init: function ()
+		{
+		
 			globals.Menu();
 			$('body').append('<div class="menuBack"></div>');
 
 			$('.menuBack').on('click',function(){
 				globals.Menu();
 			});
+		
 		},
-		relative: function(kraken){
+		relative: function(kraken)
+		{
+		
 				var settings = {};
 				settings.basePath = null;
 
@@ -128,26 +140,26 @@ Plugin.prototype = {
 				  };
 
 				}
+
 		},
-		pagesize: function (kraken){
+		pagesize: function (kraken)
+		{
+		
 			// Page Width size
 			$('.grids').css({'max-width' : kraken.width}), $('.wrap').css({'max-width' : kraken.width});
+		
 		},
-		overflow: function (kraken){
+		overflow: function (kraken)
+		{
+
 			// Overflow in Short pages
 			if(kraken.x) $('html').css('overflow-x','scroll');
 			if(kraken.y) $('html').css('overflow-y','scroll');
+		
 		},
-		bgimg: function (kraken){
-			// Background Image in directory img/bg/
-			if(this.relative() != null) var path = this.relative();
-				$('html').css({'background' : 'url("'+path+'img/bg/'+kraken.img+'.png")' , 'background-size' : kraken.size });
-		},
-		bgcolor: function (kraken){
-			// Background Color
-			$('html').css('background-color','#'+kraken.color+'');
-		},
-		largewrap: function (kraken){
+		largewrap: function (kraken)
+		{
+		
 			// Wrap height of the screen
 			var wrap = '.wrap';
 			var RestWarp = ( kraken.rest == 'default' ) ? '14' : kraken.rest;
@@ -158,12 +170,18 @@ Plugin.prototype = {
 			// 		$(wrap).css('min-height',$(document).height() - RestWarp - $('footer').height() );
 			// 	}
 			// },250);
+
 		},
-		wrapshadow: function (kraken){
+		wrapshadow: function (kraken)
+		{
+
 			// BorderShadow on Wrap shadow="on"
 			if(kraken.state) $('.wrap').addClass('shadowWrap');
+
 		},
-		slider: function (kraken){
+		slider: function (kraken)
+		{
+
 			// Slider
 			$("#slider").responsiveSlides({
 				auto      : kraken.auto,
@@ -179,37 +197,13 @@ Plugin.prototype = {
 				}
 			});
 		},
-		menu: function (krakenMenu, krakenSize){
+		menu: function (krakenMenu, krakenSize)
+		{
+
 			//SubMenu
 			$('.grids > #menu').css({'position':'relative', 'width':'auto', 'z-index':'8'});
 			$('.subMenu').hide();
 			var togglesub = true;
-			// $('#soluciones').on('click',function(event){
-			// 	event.preventDefault();
-			// 	console.log('click');
-			// 	if(togglesub){
-			// 		$('.subMenu').show().effect("slide", { direction:'up', times: 5 }, 450);
-			// 		$('.subMenu').show().effect("highlight", { color: "#fff", times: 5 }, 450);
-			// 		togglesub = false;
-			// 	}else{
-			// 		$('.subMenu').hide('slow');
-			// 		togglesub = true;
-			// 	}
-			// });
-			if($(document).width() > krakenSize.size){
-				function openSubMenu() {
-					// $(this).find('ul').css({opacity: 0, visibility: "visible"}).animate({opacity: 1, top: 32}, 400);
-					 $(this).find('ul').css('visibility', 'visible');
-				};
-				function closeSubMenu() {
-					// $(this).find('ul').css({opacity: 1.0, visibility: "hidden"}).animate({opacity: 0}, 400);
-					$(this).find('ul').css('visibility', 'hidden');
-				};
-				$('.nav > ul > li,a').bind('mouseover', openSubMenu);
-				$('.nav > ul > li').bind('mouseout', closeSubMenu);
-			}else{
-				$(this).find('ul').css('visibility', 'visible');
-			}
 
 			if(krakenMenu.move==true){
 				 var Menu = '#menu';
@@ -227,24 +221,11 @@ Plugin.prototype = {
 				    }
 				  });
 			}
+
 		},
-		span: function (kraken){
-			// Span example in html: <div class="span" value="2.5"></div>
-			$('.span').each(function(){
-				var spanValue = $(this).attr('value');
-				sumValue = spanValue * kraken.multiply;
-				$(this).css('margin-bottom',sumValue);
-			});
-		},
-		interval: function (kraken){
-			// Set interval to responsive js
-			setInterval(function () {
-				// Functions here:
-				console.log('start');
-				// End Functions
-			}, kraken.timer);
-		},
-		hide: function (kraken){
+		hide: function (kraken)
+		{
+
 			if($(document).width() < kraken.size){
 				$('.hide').each(function(){
 					$(this).hide();
@@ -263,11 +244,14 @@ Plugin.prototype = {
 					}
 				});
 			}
-		},
-		show: function(kraken){
 
 		},
-		footer: function(kraken){
+		show: function(kraken)
+		{
+
+		},
+		footer: function(kraken)
+		{
 			var re = function(){
 				val = ($('footer').height() - 10 - $('.wrap').offset().top);
 				$('.wrap').css({'margin-bottom': val });
@@ -279,7 +263,8 @@ Plugin.prototype = {
 			});
 
 		},
-		modal : function(kraken){
+		modal : function(kraken)
+		{
 			
 			$('.md-trigger').each(function(index, v) {
 				$(this).on('click', function(){
@@ -308,7 +293,8 @@ Plugin.prototype = {
 
 };
 
-Triggers = function (func, options, element){
+Triggers = function (func, options, element)
+{
 	this.element     = element;
 	// this.settings = $.extend(true, t_default, t_options);
 	this._defaults   = _default;
@@ -324,6 +310,9 @@ Triggers = function (func, options, element){
 	case 'Modal':
 		$.data(this.element ,"return", this.Modal(this.element, options));
 	break;
+	case 'Shake':
+		$.data(this.element ,"return", this.Shake(this.element, options));
+	break;
 	default:
 		console.log('Trigger undefined');
 	break;
@@ -333,7 +322,9 @@ Triggers = function (func, options, element){
 
 Triggers.prototype = {
 
-	Progress : function (element, options){
+	Progress : function (element, options)
+	{
+
 		if(!isNaN(options.progress)){
 			$(element).children().css('width',''+options.progress+'%').html('<span>'+options.progress+'%</span>');
 			// return this;
@@ -341,8 +332,11 @@ Triggers.prototype = {
 		}else{
 			console.log('Progress is not a number');
 		}
+
 	},
-	Eval : function(element, options){
+	Eval : function(element, options)
+	{
+
 		defaults = {
 			type : 'none',
 			get  : false,
@@ -382,7 +376,9 @@ Triggers.prototype = {
 		}
 
 	},
-	Modal : function(element, options){
+	Modal : function(element, options)
+	{
+
 		if( (typeof options == "object") && (options !== null) ){
 			$(element).children().find('h3').text(options.title);
 			$(element).children().find('div > .md-text').text(options.text);
@@ -398,17 +394,25 @@ Triggers.prototype = {
 				$('.md-overlay').css({ "opacity": "0", "visibility":"hidden" });
 			}
 		}
+
+	},
+	Shake : function(element, options)
+	{
+		$(element).addClass('animated shake');
+		setTimeout(function(){
+			$(element).removeClass('animated shake');
+		},1000);
 	}
 
 }
 
 $.fn[ PNTrigger ] = function ( func, options ) {
-				return this.each(function() {
-						// if ( !$.data( this, "plugin_" + PNTrigger ) ) {
-								$.data( this, "plugin_" + PNTrigger, new Triggers( func, options, this ));
-						// }
-				});
-		};
+	return this.each(function() {
+		// if ( !$.data( this, "plugin_" + PNTrigger ) ) {
+				$.data( this, "plugin_" + PNTrigger, new Triggers( func, options, this ));
+		// }
+	});
+};
 
 $[pluginName] = function (_options) {
     if(!(this instanceof $)) { 
