@@ -119,8 +119,14 @@ footer {
 	border: 1px solid #c1ccd4;
 }
 
+$space : 35;
 .span{
-	margin-bottom: 35px;
+	@for $i from 1 through 12 {
+		&[value="#{$i}"]{
+			$num : $space * $i;
+			margin-bottom: $num+px;
+		}
+	}
 }
 
 .shadow{

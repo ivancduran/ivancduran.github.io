@@ -7,9 +7,6 @@ JS, Css, html Framework
 Features for the new version:
 ----------------------------
 
-- Modal Engine (0.8)
-- Mobile for Phonegap/Cordova (***)
-- Express/Jade snippets (***)
 
 **Changelog:**
 
