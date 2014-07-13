@@ -140,10 +140,17 @@ ul li:hover ul{
     border: solid 0px #aaa;
     box-shadow: 0 1px 2px rgba(0,0,0,.3);
 
+    max-height: 250px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
+
     @include vendorize(border-bottom-right-radius,5px);
     @include vendorize(border-bottom-left-radius,5px);
     
   }
+
   .nav li {
     display: none; /* hide all <li> items */
     margin: 0;

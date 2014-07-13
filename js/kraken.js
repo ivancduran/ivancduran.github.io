@@ -302,16 +302,16 @@ Triggers = function (func, options, element)
 
 	switch(func){
 	case 'Progress':
-		$.data(this.element ,"return", this.Progress(this.element, options));
+		$.data(this.element ,"callback", this.Progress(this.element, options));
 	break;
 	case 'Eval':
-		$.data(this.element ,"return", this.Eval(this.element, options));
+		$.data(this.element ,"callback", this.Eval(this.element, options));
 	break;
 	case 'Modal':
-		$.data(this.element ,"return", this.Modal(this.element, options));
+		$.data(this.element ,"callback", this.Modal(this.element, options));
 	break;
 	case 'Shake':
-		$.data(this.element ,"return", this.Shake(this.element, options));
+		$.data(this.element ,"callback", this.Shake(this.element, options));
 	break;
 	default:
 		console.log('Trigger undefined');

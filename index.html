@@ -23,6 +23,24 @@ $(document).ready(function(){
     pagesize : { width: 1024 },
   });
 
+  pagsc = $(window).scrollTop();
+
+  $(window).scroll(function() {
+    sc = $(this).scrollTop();
+    if(sc > pagsc){
+      $('.ulul').scrollTop($('.ulul').scrollTop()+3);
+      pagsc = sc;
+      // console.log('scroll aumenta');
+    }
+    else{
+      $('.ulul').scrollTop($('.ulul').scrollTop()-3);
+      pagsc = sc; 
+      // console.log('scroll dimsminulle');
+    }
+
+
+  });
+
 });
 
 </script>
@@ -45,7 +63,7 @@ $(document).ready(function(){
 
 <div id='menu'>
   <nav class="nav center">
-    <ul>
+    <ul class="ulul">
       <li class="current"><a href="#">Home</a></li>
       <li><a href="pages/grids.html">Grids</a></li>
       <li><a href="pages/slider.html">Slider</a></li>

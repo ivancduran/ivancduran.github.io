@@ -135,6 +135,11 @@ ul li:hover ul {
     background: white url("../img/icon-menu.png") no-repeat 10px 11px;
     border: solid 0px #aaa;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    max-height: 250px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
     -webkit-border-bottom-right-radius: 5px;
     -moz-border-bottom-right-radius: 5px;
     -ms-border-bottom-right-radius: 5px;
