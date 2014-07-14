@@ -7,8 +7,8 @@ h1 {
   color: #333333;
 }
 
-.wrap {
-  margin-top: 4%;
+.container {
+  padding-top: 4%;
 }
 
 /*landscape phone*/

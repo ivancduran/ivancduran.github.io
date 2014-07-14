@@ -7,7 +7,6 @@ var pluginName = "Kraken",
 			pagesize   : { state : true, width: 1024, },
 			overflow   : { state : true, x : false, y : true },
 			largewrap  : { state : true, rest : 'default' },
-			wrapshadow : { state : true, intense : 'default', size : 'default'},
 			slider     : { state : true, auto : true, pager : false, nav : true, speed : 500},
 			menu       : { state : true, submenu : true, move : true},
 			hide       : { state : true, resize : true, size : 700 },
@@ -32,7 +31,6 @@ var Plugin = function ( _options )
 	if(this.settings.pagesize.state) 		this.pagesize(this.settings.pagesize);
 	if(this.settings.overflow.state) 		this.overflow(this.settings.overflow);
 	if(this.settings.largewrap.state) 		this.largewrap(this.settings.largewrap);
-	if(this.settings.wrapshadow.state) 		this.wrapshadow(this.settings.wrapshadow);
 	if(this.settings.slider.state) 			this.slider(this.settings.slider);
 	if(this.settings.menu.state) 			this.menu(this.settings.menu, this.settings.hide);
 	if(this.settings.hide.state) 			this.hide(this.settings.hide);
@@ -172,13 +170,6 @@ Plugin.prototype = {
 			// },250);
 
 		},
-		wrapshadow: function (kraken)
-		{
-
-			// BorderShadow on Wrap shadow="on"
-			if(kraken.state) $('.wrap').addClass('shadowWrap');
-
-		},
 		slider: function (kraken)
 		{
 
@@ -254,7 +245,7 @@ Plugin.prototype = {
 		{
 			var re = function(){
 				val = ($('footer').height() - 10 - $('.wrap').offset().top);
-				$('.wrap').css({'margin-bottom': val });
+				$('.container').css({'margin-bottom': val });
 			}
 				re();
 

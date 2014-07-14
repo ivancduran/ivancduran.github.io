@@ -20,6 +20,7 @@
   max-width: 630px;
   min-width: 320px;
   height: auto;
+  max-height: 100%;
   z-index: 2000;
   visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -63,6 +64,7 @@
   position: relative;
   border-radius: 3px;
   margin: 0 auto;
+  height: 100%;
 }
 
 .md-content h3 {
@@ -81,6 +83,8 @@
   margin: 0;
   font-weight: 300;
   font-size: 1.15em;
+  overflow-y:scroll;
+  max-height:80%;
 }
 
 .md-content > div p {
@@ -184,4 +188,18 @@
   -ms-transform: rotateX(0deg);
   transform: rotateX(0deg);
   opacity: 1;
+}
+
+@media screen and (max-width: 700px) {
+  .md-modal {
+    height: 99%;
+  }
+
+  .md-content {
+    height: 100%;
+  }
+  
+  .md-content > div {
+    max-height:80%;
+  }
 }

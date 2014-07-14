@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kraken Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, user-scalable=no">
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/kraken.css">
+
+  <script lang="javascript" src="../js/jquery.min.js"></script>
+  <!-- // <script lang="javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+  <script src="../js/responsiveslides.min.js"></script>
+  <script src="../js/kraken.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+<script>
+$(document).ready(function(){
+
+  //New version
+  $.Kraken({
+    pagesize : { width: 1024 },
+    largewrap : { status : false }
+  });
+
+});
+</script>
+
+  <meta property="og:description" content="Kraken FrameWork" />
+</head>
+
+<body>
+
+
+<!--MENU-->
+<div id='menu'>
+  <nav class="nav center">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li class="current"><a href="grids.html">Grids</a></li>
+      <li><a href="slider.html">Slider</a></li>
+      <li><a href="#">Menu Test</a>
+        <ul>
+          <li><a href="#">Test 1</a></li>
+          <li><a href="#" class="MenuClose">Test 2</a></li>
+        </ul>
+      </li>
+      <li><a href="fonts.html">Fonts</a></li>
+      <li><a href="progress.html">Progress</a></li>
+      <li><a href="buttons.html">Buttons</a></li>
+      <li><a href="modal.html">Modal</a></li>
+      <li><a href="others.html">Others</a></li>
+    </ul>
+  </nav>
+</div>
+
+<br>
+<br>
+
+<div class="wrap">
+  <div class="grids">
+    <div class="grid-12 bgGray center">hola mundo1</div>
+    <div class="grid-11 bgGray center">hola mundo2</div>
+    <div class="grid-1 bgGray center">hola</div>
+
+  </div>
+</div>
+
+<hr>
+testing
+
+<div class="wrap">
+  <div class="grids">
+    <div class="grid-12 bgGray center">hola mundo2</div>
+    <div class="grid-11 bgGray center">hola mundo3</div>
+    <div class="grid-1 bgGray center">hola</div>
+  </div>
+</div>
+
+<hr>
+hola mundo
+
+
+</body>
+</html>

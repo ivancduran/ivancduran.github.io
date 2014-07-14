@@ -1,20 +1,24 @@
 .wrap {
-  max-width: 960pc;
+  max-width: 960px;
   padding: 0 10px;
   margin: 0 auto;
-  min-height: 100%;
+  clear: both;
   position: relative;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+.max-height {
+  min-height: 100%;
+}
+
 .grids {
   width: auto;
-  max-width: 960pc;
+  max-width: 960px;
   list-style: none;
   /* So we can make grids out of lists. */
-  overflow: visible;
+  overflow: hidden;
   /* Clear the floats */
   clear: both;
 }

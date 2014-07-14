@@ -31,10 +31,10 @@ input, textarea {
 
 
 hr{
-	border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 footer {
@@ -56,11 +56,6 @@ footer {
 	padding-left: 5px;
 	@include vendorize(border-radius,3px);
 	@include vendorize(box-shadow,inset 0px 0px 15px #c9c9c9);
-}
-
-.shadowWrap{
-	// -webkit-box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, .1);
-	// box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, .1);
 }
 
 .arrowL{
@@ -110,7 +105,7 @@ footer {
 }
 
 .inset{
-	@include vendorize(box-shadow,inset 1px 1px 17px #6e6d6e);
+	@include vendorize(box-shadow,inset 1px 1px 17px rgba(110, 109, 110, .15));
 }
 
 .solid{
@@ -231,12 +226,11 @@ $space : 35;
 	padding-top: 10px;
 }
 
-
 .break-a{
 	max-width:100%;
 	height: 21px;
 	background: url("../img/break-a.png") no-repeat 100%;
-	background-position: center; 
+	background-position: center;
 	margin: 0 auto;
 }
 

@@ -125,11 +125,11 @@ footer {
 }
 
 .inset {
-  -webkit-box-shadow: inset 1px 1px 17px #6e6d6e;
-  -moz-box-shadow: inset 1px 1px 17px #6e6d6e;
-  -ms-box-shadow: inset 1px 1px 17px #6e6d6e;
-  -o-box-shadow: inset 1px 1px 17px #6e6d6e;
-  box-shadow: inset 1px 1px 17px #6e6d6e;
+  -webkit-box-shadow: inset 1px 1px 17px rgba(110, 109, 110, 0.15);
+  -moz-box-shadow: inset 1px 1px 17px rgba(110, 109, 110, 0.15);
+  -ms-box-shadow: inset 1px 1px 17px rgba(110, 109, 110, 0.15);
+  -o-box-shadow: inset 1px 1px 17px rgba(110, 109, 110, 0.15);
+  box-shadow: inset 1px 1px 17px rgba(110, 109, 110, 0.15);
 }
 
 .solid {
