@@ -38,20 +38,20 @@ var Plugin = function ( _options )
 	if(this.settings.footer.state) 			this.footer(this.settings.pagesize);
 	if(this.settings.modal.state)			this.modal(this.settings.modal);
 
-}
+};
 
 globals = {
 
 	Menu : function( options )
 	{
-	
+
 		$(".nav a").one('click',function(event) {
 			if(!$('.menuBack').is(":visible")){
 				if( $(window).width() < 700){
 					event.preventDefault();
 					// console.log('Show '+$(window).width());
 						height = $('body').height();
-						$('.menuBack').css({'height' : height }).animate({ opacity: .8 }).fadeIn(200);
+						$('.menuBack').css({'height' : height }).animate({ opacity: 0.8 }).fadeIn(200);
 						$('.nav ul li').css({'display' : 'block', 'margin' : '0 0 5px', 'z-index' : '999'});
 				}
 			}
@@ -63,48 +63,48 @@ globals = {
 		$('.nav ul li').removeAttr('style');
 
 	},
-	eval :
+	evalue :
 	{
 
 		success: function ( options )
 		{
-		
+
 			arrSuccess.push(options);
-		
+
 		},
 		error : function ( options )
 		{
-		
+
 			arrError.push(options);
-		
+
 		},
 		count : function ()
 		{
-		
+
 			arrShow = arrSuccess;
 			arrSuccess = null;
 			arrSuccess = Array();
 			return arrShow.length;
-		
+
 		}
 	}
-}
+};
 
 Plugin.prototype = {
 		init: function ()
 		{
-		
+
 			globals.Menu();
 			$('body').append('<div class="menuBack"></div>');
 
 			$('.menuBack').on('click',function(){
 				globals.Menu();
 			});
-		
+
 		},
 		relative: function(kraken)
 		{
-		
+
 				var settings = {};
 				settings.basePath = null;
 
@@ -127,25 +127,25 @@ Plugin.prototype = {
 				    }
 				  })('kraken.js');
 
-				  if(settings.basePath != null){
+				  if(settings.basePath !== null){
 					var spliter = settings.basePath.split('/');
 					var location = Array();
 					  for (var i = 0; i < spliter.length - 2; i++) {
-					  	if(spliter[i]!="") location.push(spliter[i]); location.push('/');
-					  	
+					  	if(spliter[i]!=="") location.push(spliter[i]); location.push('/');
+
 					  }
-					return location.join("");		  
-				  };
+					return location.join("");
+				  }
 
 				}
 
 		},
 		pagesize: function (kraken)
 		{
-		
+
 			// Page Width size
-			$('.grids').css({'max-width' : kraken.width}), $('.wrap').css({'max-width' : kraken.width});
-		
+			$('.grids').css({'max-width' : kraken.width }); $('.wrap').css({'max-width' : kraken.width });
+
 		},
 		overflow: function (kraken)
 		{
@@ -153,11 +153,11 @@ Plugin.prototype = {
 			// Overflow in Short pages
 			if(kraken.x) $('html').css('overflow-x','scroll');
 			if(kraken.y) $('html').css('overflow-y','scroll');
-		
+
 		},
 		largewrap: function (kraken)
 		{
-		
+
 			// Wrap height of the screen
 			var wrap = '.wrap';
 			var RestWarp = ( kraken.rest == 'default' ) ? '14' : kraken.rest;
@@ -181,10 +181,10 @@ Plugin.prototype = {
 				speed     : kraken.speed,
 				namespace : "callbacks",
 				before    : function () {
-				
+
 				},
 				after     : function () {
-				
+
 				}
 			});
 		},
@@ -196,14 +196,14 @@ Plugin.prototype = {
 			$('.subMenu').hide();
 			var togglesub = true;
 
-			if(krakenMenu.move==true){
+			if(krakenMenu.move===true){
 				 var Menu = '#menu';
 				 var pageTop = $(window).scrollTop();
-				    if(pageTop==0){
+				    if(pageTop===0){
 				      $(Menu).addClass('menuTop');
 				    }
 				  $(window).scroll(function(event) {
-				    pageTop = $(window).scrollTop()
+				    pageTop = $(window).scrollTop();
 				    if(pageTop<20){
 				      $(Menu).addClass('menuTop');
 				    }else{
@@ -246,7 +246,8 @@ Plugin.prototype = {
 			var re = function(){
 				val = ($('footer').height() - 10 - $('.wrap').offset().top);
 				$('.container').css({'margin-bottom': val });
-			}
+			};
+
 				re();
 
 			$(window).resize(function(){
@@ -256,7 +257,7 @@ Plugin.prototype = {
 		},
 		modal : function(kraken)
 		{
-			
+
 			$('.md-trigger').each(function(index, v) {
 				$(this).on('click', function(){
 					modal = $(this).attr('data-modal');
@@ -268,7 +269,7 @@ Plugin.prototype = {
 			var remove = function(){
 				$('.md-show').removeClass('md-show');
 				$('.md-overlay').css({ "opacity": "0", "visibility":"hidden" });
-			}
+			};
 
 			$(document).keyup(function(e) {
 			  if (e.keyCode == 27) {
@@ -279,7 +280,7 @@ Plugin.prototype = {
 			$(document).on('click', '.md-close, .md-overlay', function() {
             	remove();
        		});
-       		
+
 		}
 
 };
@@ -309,7 +310,7 @@ Triggers = function (func, options, element)
 	break;
 	}
 
-}
+};
 
 Triggers.prototype = {
 
@@ -332,7 +333,7 @@ Triggers.prototype = {
 			type : 'none',
 			get  : false,
 			show : false
-		}
+		};
 
     	var settings = $.extend(true, defaults, options);
 
@@ -346,19 +347,19 @@ Triggers.prototype = {
 			'user'    : /^[a-z\d_]{4,15}$/,
 			'credit'  : /^((67\d{2})|(4\d{3})|(5[1-5]\d{2})|(6011))(-?\s?\d{4}){3}|(3[4,7])\ d{2}-?\s?\d{6}-?\s?\d{5}$/,
 			'zipcode' : /^([1-9]{2}|[0-9][1-9]|[1-9][0-9])[0-9]{3}$/,
-		}
+		};
 
-		if(settings.get == true){
-			if(settings.show == true ){
-				$(element).val(globals.eval.count);
+		if(settings.get === true){
+			if(settings.show === true ){
+				$(element).val(globals.evalue.count);
 			}
-			return globals.eval.count;
+			return globals.evalue.count;
 		}else{
-			if(settings.type in regex && $(element).val().match(regex[settings.type]) && settings.get == false){
-				globals.eval.success(settings.type);
+			if(settings.type in regex && $(element).val().match(regex[settings.type]) && settings.get === false){
+				globals.evalue.success(settings.type);
 			}else{
 				$(element).addClass('animated shake');
-				globals.eval.error(settings.type);
+				globals.evalue.error(settings.type);
 				setTimeout(function(){
 					$(element).removeClass('animated shake');
 				},1000);
@@ -377,7 +378,7 @@ Triggers.prototype = {
 				$(element).children().find('.md-close').text(options.close);
 			}
 		}else{
-			if(options){	
+			if(options){
 				$(element).addClass('md-show');
 				$('.md-overlay').css({ "opacity": "1", "visibility":"visible" });
 			}else{
@@ -395,7 +396,7 @@ Triggers.prototype = {
 		},1000);
 	}
 
-}
+};
 
 $.fn[ PNTrigger ] = function ( func, options ) {
 	return this.each(function() {
@@ -406,9 +407,9 @@ $.fn[ PNTrigger ] = function ( func, options ) {
 };
 
 $[pluginName] = function (_options) {
-    if(!(this instanceof $)) { 
+    if(!(this instanceof $)) {
     	var settings = $.extend(true, _default, _options);
-    	jQuery.pluginName = new Plugin(settings); 
+    	jQuery.pluginName = new Plugin(settings);
     }
     return this.each(function () {
         if (!$.data(this, "plugin_" + pluginName)) {
@@ -435,4 +436,4 @@ $[pluginName] = function (_options) {
 // new tester('hola');
 
 
-})( jQuery, window, document );	
+})( jQuery, window, document );

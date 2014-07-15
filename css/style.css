@@ -71,11 +71,11 @@ footer {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: inset 0px 0px 15px #c9c9c9;
-  -moz-box-shadow: inset 0px 0px 15px #c9c9c9;
-  -ms-box-shadow: inset 0px 0px 15px #c9c9c9;
-  -o-box-shadow: inset 0px 0px 15px #c9c9c9;
-  box-shadow: inset 0px 0px 15px #c9c9c9;
+  -webkit-box-shadow: inset 1px 1px 17px rgba(110, 109, 110, 0.15);
+  -moz-box-shadow: inset 1px 1px 17px rgba(110, 109, 110, 0.15);
+  -ms-box-shadow: inset 1px 1px 17px rgba(110, 109, 110, 0.15);
+  -o-box-shadow: inset 1px 1px 17px rgba(110, 109, 110, 0.15);
+  box-shadow: inset 1px 1px 17px rgba(110, 109, 110, 0.15);
 }
 
 .arrowL {

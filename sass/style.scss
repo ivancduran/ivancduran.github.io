@@ -55,7 +55,7 @@ footer {
 	border: 1px solid #aaaaaa;
 	padding-left: 5px;
 	@include vendorize(border-radius,3px);
-	@include vendorize(box-shadow,inset 0px 0px 15px #c9c9c9);
+	@include vendorize(box-shadow,inset 1px 1px 17px $Style_Inset);
 }
 
 .arrowL{
@@ -105,7 +105,7 @@ footer {
 }
 
 .inset{
-	@include vendorize(box-shadow,inset 1px 1px 17px rgba(110, 109, 110, .15));
+	@include vendorize(box-shadow,inset 1px 1px 17px $Style_Inset);
 }
 
 .solid{
